@@ -1,0 +1,8 @@
+body {
+  transition: all 0.5s ease-in-out;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border: 10px solid #000;
+}
