@@ -5,8 +5,13 @@ body {
 
 .column {
   transition: all 0.5s ease-in-out;
-  height: 100vh;
-  width: 100vw;
+  height: 90px;
+  border-radius: 20px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  outline: none;
 }
 
 .is-vertical-center {

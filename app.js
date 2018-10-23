@@ -37,6 +37,7 @@ var b = document.querySelector('.b');
 var c = document.querySelector('.c');
 var d = document.querySelector('.d');
 var e = document.querySelector('.e');
+var f = document.querySelector('.f');
 
 
 
@@ -44,7 +45,7 @@ var e = document.querySelector('.e');
 // Sets the background color to the value returned from the getColor() function
 function setBackground(){
 var color = randomColor({
-  count: 5,
+  count: 6,
   luminosity: 'light',
   format: 'rgb'
 })
@@ -55,6 +56,7 @@ b.textContent = color[1];
 c.textContent = color[2];
 d.textContent = color[3];
 e.textContent = color[4];
+f.textContent = color[5];
 
 // Set the color of the containers
 a.style.background = color[0];
@@ -62,6 +64,9 @@ b.style.background = color[1];
 c.style.background = color[2];
 d.style.background = color[3];
 e.style.background = color[4];
+f.style.background = color[5];
+
+
 
 
 
