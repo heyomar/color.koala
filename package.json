@@ -1,0 +1,27 @@
+{
+  "name": "colorkoala",
+  "version": "1.0.0",
+  "description": "A color generator that also helps create sass color files",
+  "main": "index.html",
+  "scripts": {
+    "start": "browser-sync start -s --port '4000' --index 'index.html' --watch '*.html *.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/omarrasool/colorkoala.git"
+  },
+  "keywords": [],
+  "author": "Omar Rasool",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/omarrasool/colorkoala/issues"
+  },
+  "homepage": "https://gitlab.com/omarrasool/colorkoala#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.9.4",
+    "parallel": "^1.2.0",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
