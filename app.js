@@ -38,22 +38,37 @@ var c = document.querySelector('.c');
 var d = document.querySelector('.d');
 
 
-a.addEventListener('mouseenter', function(event){
-    event.target.style.bottom = "25px";
+function moveSwatch(e){
+    e.target.style.bottom = "-50px";
+    this.onmouseout = function(event){
+        e.target.style.bottom = "-100px";
+    };
+}
 
-    setTimeout(function() {
-        event.target.style.color = "";
-    }, 500)
-
+a.addEventListener('mouseenter', function(e){
+    moveSwatch(e);
 });
+b.addEventListener('mouseenter', function(e){
+    moveSwatch(e);
+});
+c.addEventListener('mouseenter', function(e){
+    moveSwatch(e);
+});
+d.addEventListener('mouseenter', function(e){
+    moveSwatch(e);
+});
+
+
+
+
+// move swatch on hover
 
 
 // Sets the background color to the value returned from the getColor() function
 function setBackground(){
 var color = randomColor({
   count: 6,
-  luminosity: 'light',
-  format: 'rgb'
+  luminosity: 'light'
 })
 
 // Print the color hex values
