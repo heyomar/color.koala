@@ -38,6 +38,12 @@ var c = document.querySelector('.c');
 var d = document.querySelector('.d');
 
 
+
+
+
+// move swatch on hover
+const swatches = document.querySelectorAll('.swatch');
+
 function moveSwatch(e){
     e.target.style.bottom = "-50px";
     this.onmouseout = function(event){
@@ -45,23 +51,15 @@ function moveSwatch(e){
     };
 }
 
-a.addEventListener('mouseenter', function(e){
-    moveSwatch(e);
-});
-b.addEventListener('mouseenter', function(e){
-    moveSwatch(e);
-});
-c.addEventListener('mouseenter', function(e){
-    moveSwatch(e);
-});
-d.addEventListener('mouseenter', function(e){
-    moveSwatch(e);
+swatches.forEach(function(elem) {
+    elem.addEventListener("mouseenter", function(e) {
+        moveSwatch(e);
+    });
 });
 
 
 
 
-// move swatch on hover
 
 
 // Sets the background color to the value returned from the getColor() function

@@ -29,7 +29,8 @@ body {
   border-radius: 20px;
   outline: none;
   position: relative;
-  bottom: 0px;
+  bottom: -100px;
+  cursor: pointer;
 
   color:rgba(255, 255, 255, 0.90);
   font-weight: bold;
