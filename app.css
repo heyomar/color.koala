@@ -4,21 +4,31 @@ body {
 }
 
 .column {
-  transition: all 0.5s ease-in-out;
-  height: 90px;
-  border-radius: 20px;
+  transition: all 0.5s ease;
+  height: 300px;
+  border-radius: 25px;
   border-width: initial;
   border-style: none;
   border-color: initial;
   border-image: initial;
   outline: none;
+  margin: 0px 20px;
 }
+
+
 
 .is-vertical-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 34px;
+  font-size: 30px;
   color: #fff;
 
 }
+
+.pin {
+  position: fixed;
+  bottom: -50px;
+  width: 100%;
+}
+

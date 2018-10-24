@@ -36,10 +36,16 @@ var a = document.querySelector('.a');
 var b = document.querySelector('.b');
 var c = document.querySelector('.c');
 var d = document.querySelector('.d');
-var e = document.querySelector('.e');
-var f = document.querySelector('.f');
 
 
+a.addEventListener('mouseenter', function(event){
+    event.target.style.bottom = "25px";
+
+    setTimeout(function() {
+        event.target.style.color = "";
+    }, 500)
+
+});
 
 
 // Sets the background color to the value returned from the getColor() function
@@ -55,21 +61,13 @@ a.textContent = color[0];
 b.textContent = color[1];
 c.textContent = color[2];
 d.textContent = color[3];
-e.textContent = color[4];
-f.textContent = color[5];
+
 
 // Set the color of the containers
 a.style.background = color[0];
 b.style.background = color[1];
 c.style.background = color[2];
 d.style.background = color[3];
-e.style.background = color[4];
-f.style.background = color[5];
-
-
-
-
-
 
 };
 
@@ -85,15 +83,14 @@ if (e.keyCode == 32) {
 };
 
 
-var colorData = `
-/* RGB */
-$color1: ${color[0]};
-$color2: ${color[1]};
-$color3: ${color[2]};
-$color4: ${color[3]};
-$color5: ${color[4]};
-`
+// var colorData = `
+// /* RGB */
+// $color1: ${color[0]};
+// $color2: ${color[1]};
+// $color3: ${color[2]};
+// $color4: ${color[3]};
+// `
 
-download(colorData, 'colors.scss', ".scss")
+// download(colorData, 'colors.scss', ".scss")
 
 
