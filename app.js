@@ -119,32 +119,38 @@ function setBackground(){
 
 // Copy to clipboard
 // ------------------------------
+const aioColors = document.querySelectorAll('.swatch');
 
-swatches.forEach(function(elem) {
-  elem.addEventListener("click", function() {
-    var classname = this.className
-     CopyToClipboard();
+aioColors.forEach(color => {
+  color.addEventListener('click', () => {
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(color);
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    try {
+      document.execCommand('copy');
+      selection.removeAllRanges();
+
+      const original = color.textContent;
+      color.textContent = 'Copied!';
+      color.classList.add('success');
+
+      setTimeout(() => {
+        color.textContent = original;
+        color.classList.remove('success');
+      }, 1200);
+    } catch(e) {
+      const errorMsg = document.querySelector('.error-msg');
+      errorMsg.classList.add('show');
+
+      setTimeout(() => {
+        errorMsg.classList.remove('show');
+      }, 1200);
+    }
   });
 });
-
-
-function CopyToClipboard (classname) {
-  // Create a new textarea element and give it id='temp_element'
-  var textarea = document.createElement('textarea')
-  textarea.id = 'temp_element'
-  // Optional step to make less noise on the page, if any!
-  textarea.style.height = 0
-  // Now append it to your page somewhere, I chose <body>
-  document.body.appendChild(textarea)
-  // Give our textarea a value of whatever inside the div of id=containerid
-  textarea.value = document.getElementsByClassName(classname).innerText
-  // Now copy whatever inside the textarea to clipboard
-  var selector = document.querySelector('#temp_element')
-  selector.select()
-  document.execCommand('copy')
-  // Remove the textarea
-  document.body.removeChild(textarea)
-}
 
 
 document.addEventListener("DOMContentLoaded", function(event){
@@ -157,9 +163,9 @@ document.addEventListener("DOMContentLoaded", function(event){
 // Listens for spacebar press to change color
 // ------------------------------------
 document.body.onkeyup = function(e){
-if (e.keyCode == 32) {
-  setBackground();
-}
+  if (e.keyCode == 32) {
+    setBackground();
+  }
 };
 
 
