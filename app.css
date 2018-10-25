@@ -3,10 +3,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  border:1px solid red;
   position: relative;
-  overflow: hidden;
-  
+
+}
+
+@media screen and (min-width: 768px) {
+  html,body {
+    overflow: hidden;
+  }
 }
 
 
@@ -21,11 +25,12 @@ body {
 .is-relative {
   position: relative;
 }
+
 .swatch {
   text-align: center;
   max-width: 225px;
   transition: all 0.5s ease;
-  height: 200px;
+  height: 300px;
   border-radius: 20px;
   outline: none;
   position: relative;
@@ -36,5 +41,6 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 50px;
+  font-size: 20px;
 
 }
