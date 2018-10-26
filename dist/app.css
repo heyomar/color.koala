@@ -6552,6 +6552,9 @@ body {
   padding-top: 50px;
   font-size: 20px; }
 
+.swatch:hover {
+  bottom: -25px; }
+
 @media screen and (max-width: 768px) {
   .swatch {
     font-size: 18px;
