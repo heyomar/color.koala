@@ -24,7 +24,7 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
-    "watch": "npm-run-all --parallel css-watch js-watch",
-    "start": "browser-sync start -s --port '4000' --index 'index.html' --watch '*.html *.js *.css'"
+    "watch": "browser-sync start -s --port '4000' --index 'index.html' --watch '*.html css/*.css lib/*.js'",
+    "start": "npm-run-all --parallel css-watch js-watch watch"
   }
 }
