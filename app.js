@@ -49,9 +49,9 @@ var d = document.querySelector('.d');
 const swatches = document.querySelectorAll('.swatch');
 
 function moveSwatch(e){
-  e.target.style.bottom = "-50px";
+  e.target.style.bottom = "-25px";
   this.onmouseout = function(event){
-    e.target.style.bottom = "-100px";
+    e.target.style.bottom = "-70px";
   };
 }
 
@@ -119,9 +119,7 @@ function setBackground(){
 
 // Copy to clipboard
 // ------------------------------
-const aioColors = document.querySelectorAll('.swatch');
-
-aioColors.forEach(color => {
+swatches.forEach(color => {
   color.addEventListener('click', () => {
     const selection = window.getSelection();
     const range = document.createRange();
@@ -140,14 +138,14 @@ aioColors.forEach(color => {
       setTimeout(() => {
         color.textContent = original;
         color.classList.remove('success');
-      }, 1200);
+      }, 600);
     } catch(e) {
       const errorMsg = document.querySelector('.error-msg');
       errorMsg.classList.add('show');
 
       setTimeout(() => {
         errorMsg.classList.remove('show');
-      }, 1200);
+      }, 600);
     }
   });
 });

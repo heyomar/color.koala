@@ -1,16 +1,7 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  position: relative;
+html,body {
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif !important;
 
-}
-
-@media screen and (min-width: 768px) {
-  html,body {
-    overflow: hidden;
-  }
 }
 
 
@@ -19,6 +10,7 @@ body {
   bottom:0;
   left: 0;
   right: 0;
+  /* border: 1px solid red; */
 
 }
 
@@ -34,13 +26,38 @@ body {
   border-radius: 20px;
   outline: none;
   position: relative;
-  bottom: -100px;
+  bottom: -70px;
   cursor: pointer;
 
-  color:rgba(255, 255, 255, 0.90);
+  color:rgba(255, 255, 255, 0.85);
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 50px;
   font-size: 20px;
 
+}
+
+.constrain-960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:800px){
+  .swatch {
+    font-size: 14px;
+    border-radius: 10px;
+    height: 100px;
+    bottom: 0;
+  }
+}
+
+
+
+.do-button {
+
+}
+
+.is-vertical-center {
+  justify-content: center;
+  align-items: center;
 }
