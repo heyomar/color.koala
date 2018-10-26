@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello Bulma!');
-});
-
-
 //
 // Function to download data to a file
 // ------------------------------------
