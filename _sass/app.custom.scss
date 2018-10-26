@@ -1,23 +1,21 @@
-html,body {
-  overflow: hidden;
-  font-family: 'Roboto', sans-serif !important;
+// ---
+// HELPERS
+// -------------------------
+.is-ninesixty {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
+.is-vertical-center {
+  justify-content: center;
+  align-items: center;
 }
 
 
-.full-height {
-  position: absolute;
-  bottom:0;
-  left: 0;
-  right: 0;
-  /* border: 1px solid red; */
 
-}
-
-.is-relative {
-  position: relative;
-}
-
+// ---
+// SWATCHES
+// -------------------------
 .swatch {
   text-align: center;
   max-width: 225px;
@@ -37,11 +35,6 @@ html,body {
 
 }
 
-.constrain-960 {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 @media screen and (max-width:768px){
   .swatch {
     font-size: 18px;
@@ -52,19 +45,8 @@ html,body {
     padding-top: 30px;
     margin-bottom: 20px;
   }
-
-  .full-height {
-    padding: 0 32px;
-  }
 }
 
 
 
-.do-button {
 
-}
-
-.is-vertical-center {
-  justify-content: center;
-  align-items: center;
-}

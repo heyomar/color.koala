@@ -6524,19 +6524,17 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
-html, body {
-  overflow: hidden;
-  font-family: 'Roboto', sans-serif !important; }
+html,
+body {
+  overflow: hidden; }
 
-.full-height {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* border: 1px solid red; */ }
+.is-ninesixty {
+  max-width: 960px;
+  margin: 0 auto; }
 
-.is-relative {
-  position: relative; }
+.is-vertical-center {
+  justify-content: center;
+  align-items: center; }
 
 .swatch {
   text-align: center;
@@ -6554,10 +6552,6 @@ html, body {
   padding-top: 50px;
   font-size: 20px; }
 
-.constrain-960 {
-  max-width: 960px;
-  margin: 0 auto; }
-
 @media screen and (max-width: 768px) {
   .swatch {
     font-size: 18px;
@@ -6566,10 +6560,4 @@ html, body {
     bottom: 0;
     margin: 0 auto;
     padding-top: 30px;
-    margin-bottom: 20px; }
-  .full-height {
-    padding: 0 32px; } }
-
-.is-vertical-center {
-  justify-content: center;
-  align-items: center; }
+    margin-bottom: 20px; } }

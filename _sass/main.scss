@@ -27,4 +27,5 @@ $primary-invert: $pink-invert;
 */
 
 @import "../node_modules/bulma/bulma";
-@import "app_custom";
+@import "app.base";
+@import "app.custom";
