@@ -1,9 +1,10 @@
 export default function copyToClipoard(){
+
+  const swatches = document.querySelectorAll('.swatch');
+  
   // ----------
   // Copy to clipboard
   // ------------------------
-  const swatches = document.querySelectorAll('.swatch');
-
   swatches.forEach(color => {
     color.addEventListener('click', () => {
       const selection = window.getSelection();

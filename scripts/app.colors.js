@@ -2,10 +2,14 @@ export default function generateColors() {
   // ----------
   // Variables
   // ------------------------------
+  const swatches = document.querySelectorAll('.swatch');
+  
   let a = document.querySelector('.a');
   let b = document.querySelector('.b');
   let c = document.querySelector('.c');
   let d = document.querySelector('.d');
+
+
   // ----------
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
@@ -28,30 +32,30 @@ export default function generateColors() {
       count: 6,
       luminosity: 'light',
     });
+
     // Print the color hex values
-    a.textContent = color[0];
-    b.textContent = color[1];
-    c.textContent = color[2];
-    d.textContent = color[3];
-  
+    for (let i = 0; i <= 3; i += 1) {
+      swatches[i].textContent = color[i];
+    }
+
+    // TODO - Turn into a loop
     const hexval = hexToRgb(color[0]);
     const hexval1 = hexToRgb(color[1]);
     const hexval2 = hexToRgb(color[2]);
     const hexval3 = hexToRgb(color[3]);
-  
+
     a.style["boxShadow"] = `0 -1px 30px rgba(${hexval.r}, ${hexval.g}, ${hexval.b}, 0.7)`;
     b.style["boxShadow"] = `0 -1px 30px rgba(${hexval1.r}, ${hexval1.g}, ${hexval1.b}, 0.7)`;
     c.style["boxShadow"] = `0 -1px 30px rgba(${hexval2.r}, ${hexval2.g}, ${hexval2.b}, 0.7)`;
     d.style["boxShadow"] = `0 -1px 30px rgba(${hexval3.r}, ${hexval3.g}, ${hexval3.b}, 0.7)`;
-  
+
     // Set the color of the containers
     a.style.background = color[0];
     b.style.background = color[1];
     c.style.background = color[2];
     d.style.background = color[3];
   };
-  
-  
+
   // ---------
   // Listens for spacebar press to change color
   // ------------------------------
@@ -60,10 +64,8 @@ export default function generateColors() {
       setBackground();
     }
   };
-  
+
   document.addEventListener("DOMContentLoaded", function (event) {
     setBackground();
   });
-
-  
 }
