@@ -1,4 +1,4 @@
-export default function colors(){
+export default function generateColors(){
 
   // ----------
   // Variables

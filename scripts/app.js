@@ -1,5 +1,13 @@
 'use strict';
 
-import colors from './app.colors';
+// DEPENDENCIES
+import foo from '../node_modules/randomcolor/randomColor';
 
-colors();
+
+
+// CUSTOM JS
+import generateColors from './app.colors';
+import copyToClipBoard from './app.copy';
+
+generateColors();
+copyToClipBoard();
