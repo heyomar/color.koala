@@ -1,26 +1,20 @@
 export default function generateColors() {
-  // ----------
+
   // Variables
   // ------------------------------
   const swatches = document.querySelectorAll('.swatch');
-  
-  let a = document.querySelector('.a');
-  let b = document.querySelector('.b');
-  let c = document.querySelector('.c');
-  let d = document.querySelector('.d');
 
 
-  // ----------
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
   function hexToRgb(hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+    const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, (m, r, g, b) => {
       return r + r + g + g + b + b;
     });
-  
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
       r: parseInt(result[1], 16),
       g: parseInt(result[2], 16),
@@ -33,39 +27,27 @@ export default function generateColors() {
       luminosity: 'light',
     });
 
-    // Print the color hex values
+    // - Print color values into div
+    // - set the backgrounf color to random color
+    // - convert hex to rgb
+    // - add the box shadow
     for (let i = 0; i <= 3; i += 1) {
       swatches[i].textContent = color[i];
+      swatches[i].style.background = color[i];
+      const hexval = hexToRgb(color[i]);
+      swatches[i].style.boxShadow = `0 -1px 30px rgba(${hexval.r}, ${hexval.g}, ${hexval.b}, 0.7)`;
     }
+  }
 
-    // TODO - Turn into a loop
-    const hexval = hexToRgb(color[0]);
-    const hexval1 = hexToRgb(color[1]);
-    const hexval2 = hexToRgb(color[2]);
-    const hexval3 = hexToRgb(color[3]);
-
-    a.style["boxShadow"] = `0 -1px 30px rgba(${hexval.r}, ${hexval.g}, ${hexval.b}, 0.7)`;
-    b.style["boxShadow"] = `0 -1px 30px rgba(${hexval1.r}, ${hexval1.g}, ${hexval1.b}, 0.7)`;
-    c.style["boxShadow"] = `0 -1px 30px rgba(${hexval2.r}, ${hexval2.g}, ${hexval2.b}, 0.7)`;
-    d.style["boxShadow"] = `0 -1px 30px rgba(${hexval3.r}, ${hexval3.g}, ${hexval3.b}, 0.7)`;
-
-    // Set the color of the containers
-    a.style.background = color[0];
-    b.style.background = color[1];
-    c.style.background = color[2];
-    d.style.background = color[3];
-  };
-
-  // ---------
   // Listens for spacebar press to change color
   // ------------------------------
-  document.body.onkeyup = function (e) {
-    if (e.keyCode == 32) {
+  document.body.onkeyup = (e) => {
+    if (e.keyCode === 32) {
       setBackground();
     }
   };
 
-  document.addEventListener("DOMContentLoaded", function (event) {
+  document.addEventListener('DOMContentLoaded', () => {
     setBackground();
   });
 }
