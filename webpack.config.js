@@ -1,12 +1,18 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './scripts/app.js',
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'app.js'
+    filename: 'app.js',
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      randomColor: 'randomcolor',
+    }),
+  ],
   module: {
     rules: [
       {

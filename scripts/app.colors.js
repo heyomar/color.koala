@@ -1,14 +1,11 @@
-export default function generateColors(){
-
+export default function generateColors() {
   // ----------
   // Variables
   // ------------------------------
-  var a = document.querySelector('.a');
-  var b = document.querySelector('.b');
-  var c = document.querySelector('.c');
-  var d = document.querySelector('.d');
-  
-  
+  let a = document.querySelector('.a');
+  let b = document.querySelector('.b');
+  let c = document.querySelector('.c');
+  let d = document.querySelector('.d');
   // ----------
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
@@ -26,23 +23,21 @@ export default function generateColors(){
       b: parseInt(result[3], 16)
     } : null;
   }
-  
   function setBackground() {
-    var color = randomColor({
+    const color = randomColor({
       count: 6,
-      luminosity: 'light'
+      luminosity: 'light',
     });
-  
     // Print the color hex values
     a.textContent = color[0];
     b.textContent = color[1];
     c.textContent = color[2];
     d.textContent = color[3];
   
-    var hexval = hexToRgb(color[0]);
-    var hexval1 = hexToRgb(color[1]);
-    var hexval2 = hexToRgb(color[2]);
-    var hexval3 = hexToRgb(color[3]);
+    const hexval = hexToRgb(color[0]);
+    const hexval1 = hexToRgb(color[1]);
+    const hexval2 = hexToRgb(color[2]);
+    const hexval3 = hexToRgb(color[3]);
   
     a.style["boxShadow"] = `0 -1px 30px rgba(${hexval.r}, ${hexval.g}, ${hexval.b}, 0.7)`;
     b.style["boxShadow"] = `0 -1px 30px rgba(${hexval1.r}, ${hexval1.g}, ${hexval1.b}, 0.7)`;
