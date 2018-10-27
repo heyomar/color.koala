@@ -1,8 +1,5 @@
-'use strict';
-
 // DEPENDENCIES
-import foo from '../node_modules/randomcolor/randomColor';
-
+import randomcolor from 'randomcolor';
 
 
 // CUSTOM JS
