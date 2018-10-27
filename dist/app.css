@@ -6528,14 +6528,6 @@ html,
 body {
   overflow: hidden; }
 
-.is-ninesixty {
-  max-width: 960px;
-  margin: 0 auto; }
-
-.is-vertical-center {
-  justify-content: center;
-  align-items: center; }
-
 .swatch {
   text-align: center;
   max-width: 225px;
@@ -6551,16 +6543,25 @@ body {
   text-transform: uppercase;
   padding-top: 50px;
   font-size: 20px; }
-
-.swatch:hover {
-  bottom: -25px; }
+  .swatch:hover {
+    bottom: -25px; }
 
 @media screen and (max-width: 768px) {
   .swatch {
-    font-size: 18px;
+    font-size: 25px;
     border-radius: 10px;
-    height: 50px;
+    height: 100px;
+    padding: 0;
     bottom: 0;
     margin: 0 auto;
-    padding-top: 30px;
-    margin-bottom: 20px; } }
+    line-height: 100px;
+    white-space: nowrap; } }
+
+.is-ninesixty {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.is-vert-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
