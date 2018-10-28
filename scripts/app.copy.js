@@ -1,8 +1,6 @@
-export default function copyToClipoard(){
-
+export default function copyToClipoard() {
   const swatches = document.querySelectorAll('.swatch');
-  
-  // ----------
+
   // Copy to clipboard
   // ------------------------
   swatches.forEach(color => {

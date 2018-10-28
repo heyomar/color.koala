@@ -8,52 +8,62 @@
 
   <!-- CSS -->
   <link rel="stylesheet" rel="text/css" href="dist/app.css">
-  
+
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
 </head>
 
 <body>
-  <section class="hero is-fullheight">
+  <section class="hero is-fullheight is-ninesixty">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-        <header class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
+      <header class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+            </a>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active">
+                <strong>Home</strong>
+              </a>
               <a class="navbar-item">
-                <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                Examples
+              </a>
+              <a class="navbar-item">
+                Documentation
               </a>
             </div>
-            <div id="navbarMenuHeroC" class="navbar-menu">
-              <div class="navbar-end">
-                <a class="navbar-item is-active">
-                  <strong>Home</strong>
-                </a>
-                <a class="navbar-item">
-                  Examples
-                </a>
-                <a class="navbar-item">
-                  Documentation
-                </a>
-              </div>
-            </div>
           </div>
-        </header>
-      </div>
-  
+        </div>
+      </header>
+    </div>
+
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title is-1 has-text-grey-light	">
           Press the spacebar..
         </h1>
-        <h2 class="subtitle">
+        <br>
+        <div class="has-text-centered">
+            <div class="action-box download-button">
+              <img src="/static/Flat/iconspace_Donnut_25px.svg" alt="">
+              .SCSS
+            </div>
+          <a href="" class="action-box">
+            <img class="is-large" src="/static/Flat/iconspace_Email_25px.svg" alt="">
+            Email
+          </a>
+        </div>
 
-        </h2>
+
       </div>
     </div>
-  
+
     <!-- Hero footer: will stick at the bottom -->
     <div class="hero-foot">
       <div class="is-ninesixty">
@@ -70,7 +80,7 @@
           <div class="column">
             <div class="swatch"></div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   </section>
@@ -78,4 +88,5 @@
   <!-- SCRIPTS -->
   <script src="dist/app.js" defer></script>
 </body>
+
 </html>

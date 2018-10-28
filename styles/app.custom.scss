@@ -39,5 +39,22 @@
 }
 
 
+.action-box {
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(192, 192, 192, 0.555);
+  min-width: 200px;
+  display: inline-block;
+  padding: 20px;
+}
 
+.il {
+  background-image: url('/static/undraw_outer_space_3v6n.svg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: center;
 
+}
+
+.download-button {
+  cursor: pointer;
+}

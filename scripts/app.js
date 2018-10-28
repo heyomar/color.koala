@@ -7,6 +7,7 @@ import randomcolor from 'randomcolor';
 // ------------------------------
 import generateColors from './app.colors';
 import copyToClipBoard from './app.copy';
+import downloadColors from './app.download';
 
 
 // // INITIALIZE
@@ -14,3 +15,4 @@ import copyToClipBoard from './app.copy';
 randomcolor();
 generateColors();
 copyToClipBoard();
+downloadColors();
