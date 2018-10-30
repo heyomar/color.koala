@@ -33,31 +33,30 @@ export default function downloadColors() {
     }
 
 
-    const colorData = `
-    @charset 'utf-8';
-    
-    // HSLA
-    // -------------------------
-    $color1: hsla(${hslColors[0][0]}, ${hslColors[0][1]}%, ${hslColors[0][2]}%, 1);
-    $color2: hsla(${hslColors[1][0]}, ${hslColors[1][1]}%, ${hslColors[1][2]}%, 1);
-    $color3: hsla(${hslColors[2][0]}, ${hslColors[2][1]}%, ${hslColors[2][2]}%, 1);
-    $color4: hsla(${hslColors[3][0]}, ${hslColors[3][1]}%, ${hslColors[3][2]}%, 1);
-    
+const colorData = `@charset 'utf-8';
 
-    // RGBA
-    // -------------------------
-    $color1: rgba(${convert.hex.rgb(hexColors[0])}, 1);
-    $color2: rgba(${convert.hex.rgb(hexColors[1])}, 1);
-    $color3: rgba(${convert.hex.rgb(hexColors[2])}, 1);
-    $color4: rgba(${convert.hex.rgb(hexColors[3])}, 1);
+// HSLA
+// ------------------------------
+$color1: hsla(${hslColors[0][0]}, ${hslColors[0][1]}%, ${hslColors[0][2]}%, 1);
+$color2: hsla(${hslColors[1][0]}, ${hslColors[1][1]}%, ${hslColors[1][2]}%, 1);
+$color3: hsla(${hslColors[2][0]}, ${hslColors[2][1]}%, ${hslColors[2][2]}%, 1);
+$color4: hsla(${hslColors[3][0]}, ${hslColors[3][1]}%, ${hslColors[3][2]}%, 1);
 
-    // HEX
-    // -------------------------
-    $color1: ${hexColors[0]};
-    $color2: ${hexColors[1]};
-    $color3: ${hexColors[2]};
-    $color4: ${hexColors[3]};
-    `;
+
+// RGBA
+// ------------------------------
+$color1: rgba(${convert.hex.rgb(hexColors[0])}, 1);
+$color2: rgba(${convert.hex.rgb(hexColors[1])}, 1);
+$color3: rgba(${convert.hex.rgb(hexColors[2])}, 1);
+$color4: rgba(${convert.hex.rgb(hexColors[3])}, 1);
+
+// HEX
+// ------------------------------
+$color1: ${hexColors[0]};
+$color2: ${hexColors[1]};
+$color3: ${hexColors[2]};
+$color4: ${hexColors[3]};
+`;
     download(colorData, 'colors.scss', '.scss');
   });
 }
