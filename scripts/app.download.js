@@ -1,14 +1,9 @@
+import { hexToRgb } from './app.colors';
 
 // Function to download data to a file
 // ------------------------------------
 
 export default function downloadColors() {
-  const downloadButton = document.querySelector('.download-button');
-
-  downloadButton.addEventListener('click', () => {
-  });
-
-
   function download(data, filename, type) {
     var file = new Blob([data], { type: type });
     if (window.navigator.msSaveOrOpenBlob) // IE10+
@@ -27,20 +22,45 @@ export default function downloadColors() {
     }
   }
 
+  const downloadButton = document.querySelector('.download-button');
   const swatches = document.querySelectorAll('.swatch');
 
-  const style = swatches[3].style.backgroundColor;
+  downloadButton.addEventListener('click', () => {
+    const hexColors = [];
+    const rgbaColors = [];
+    const hslColors = [];
 
-  console.log(style);
+    for (let i = 0; i <= 3; i += 1) {
+      const swatchHexColor = swatches[i].textContent;
+      hexColors.push(swatchHexColor);
+      rgbaColors.push(hexToRgb(swatchHexColor));
+    }
 
+    const colorData = `
+    @charset 'utf-8';
+    
+    // HSLA
+    // -------------------------
+    $color1: ${hexColors[0]};
+    $color2: ${hexColors[1]};
+    $color3: ${hexColors[2]};
+    $color4: ${hexColors[3]};
+    
 
-  // var colorData = `
-  // /* RGB */
-  // $color1: ${colors[0]};
-  // $color2: ${colors[1]};
-  // $color3: ${colors[2]};
-  // $color4: ${colors[3]};
-  // `
+    // RGBA
+    // -------------------------
+    $color1: ${rgbaColors[0].r}, ${rgbaColors[0].g}, ${rgbaColors[0].b}, ${1};
+    $color2: ${rgbaColors[1].r}, ${rgbaColors[1].g}, ${rgbaColors[1].b}, ${1};
+    $color3: ${rgbaColors[2].r}, ${rgbaColors[2].g}, ${rgbaColors[2].b}, ${1};
+    $color4: ${rgbaColors[3].r}, ${rgbaColors[3].g}, ${rgbaColors[3].b}, ${1};
 
-  // download(colorData, 'colors.scss', ".scss")
+    // RGB
+    // -------------------------
+    $color1: ${hexColors[0]};
+    $color2: ${hexColors[1]};
+    $color3: ${hexColors[2]};
+    $color4: ${hexColors[3]};
+    `;
+    download(colorData, 'colors.scss', '.scss');
+  });
 }
