@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './scripts/app.js',
-  mode: 'production',
+  mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
@@ -12,17 +12,17 @@ module.exports = {
     new webpack.ProvidePlugin({
       randomColor: 'randomcolor',
     }),
+    new webpack.ProvidePlugin({
+      convert: 'color-convert',
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
         },
       },
     ],

@@ -2,7 +2,6 @@ import { hexToRgb } from './app.colors';
 
 // Function to download data to a file
 // ------------------------------------
-
 export default function downloadColors() {
   function download(data, filename, type) {
     var file = new Blob([data], { type: type });
@@ -25,10 +24,12 @@ export default function downloadColors() {
   const downloadButton = document.querySelector('.download-button');
   const swatches = document.querySelectorAll('.swatch');
 
+  console.log(convert.rgb.hsl(140, 200, 100));
+
   downloadButton.addEventListener('click', () => {
     const hexColors = [];
     const rgbaColors = [];
-    const hslColors = [];
+    // const hslColors = [];
 
     for (let i = 0; i <= 3; i += 1) {
       const swatchHexColor = swatches[i].textContent;

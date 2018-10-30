@@ -42,7 +42,6 @@ export default function generateColors() {
       swatches[i].style.boxShadow = `0 -1px 30px rgba(${hexval.r}, ${hexval.g}, ${hexval.b}, 0.7)`;
     }
   }
-  console.log(convert.hex.rgb(140, 200, 100));
 
   // Listens for spacebar press to change color
   // ------------------------------

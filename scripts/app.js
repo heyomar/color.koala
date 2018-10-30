@@ -1,7 +1,7 @@
 // DEPENDENCIES
 // ------------------------------
 import randomcolor from 'randomcolor';
-import colorConvert from 'color-convert';
+import conversions from '../node_modules/color-convert/conversions';
 
 
 // CUSTOM JS
@@ -11,10 +11,9 @@ import copyToClipBoard from './app.copy';
 import downloadColors from './app.download';
 
 
-// // INITIALIZE
-// // ------------------------------
-randomcolor();
-colorConvert();
+// INITIALIZE
+// ------------------------------
 generateColors();
 copyToClipBoard();
 downloadColors();
+
