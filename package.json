@@ -34,6 +34,7 @@
     "start": "npm-run-all --parallel css-watch js-watch watch"
   },
   "dependencies": {
+    "color-convert": "^1.9.3",
     "randomcolor": "^0.5.3"
   }
 }
