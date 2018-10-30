@@ -1,7 +1,7 @@
 // DEPENDENCIES
 // ------------------------------
 import randomcolor from 'randomcolor';
-import conversions from '../node_modules/color-convert/conversions';
+import conversions from 'color-convert/conversions';
 
 
 // CUSTOM JS
@@ -16,4 +16,3 @@ import downloadColors from './app.download';
 generateColors();
 copyToClipBoard();
 downloadColors();
-

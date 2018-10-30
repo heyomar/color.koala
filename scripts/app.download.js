@@ -1,5 +1,3 @@
-import { hexToRgb } from './app.colors';
-
 // Function to download data to a file
 // ------------------------------------
 export default function downloadColors() {
@@ -24,38 +22,36 @@ export default function downloadColors() {
   const downloadButton = document.querySelector('.download-button');
   const swatches = document.querySelectorAll('.swatch');
 
-  console.log(convert.rgb.hsl(140, 200, 100));
-
   downloadButton.addEventListener('click', () => {
     const hexColors = [];
-    const rgbaColors = [];
-    // const hslColors = [];
+    const hslColors = [];
 
     for (let i = 0; i <= 3; i += 1) {
       const swatchHexColor = swatches[i].textContent;
       hexColors.push(swatchHexColor);
-      rgbaColors.push(hexToRgb(swatchHexColor));
+      hslColors.push(convert.hex.hsl(swatchHexColor));
     }
+
 
     const colorData = `
     @charset 'utf-8';
     
     // HSLA
     // -------------------------
-    $color1: ${hexColors[0]};
-    $color2: ${hexColors[1]};
-    $color3: ${hexColors[2]};
-    $color4: ${hexColors[3]};
+    $color1: hsla(${hslColors[0][0]}, ${hslColors[0][1]}%, ${hslColors[0][2]}%, 1);
+    $color2: hsla(${hslColors[1][0]}, ${hslColors[1][1]}%, ${hslColors[1][2]}%, 1);
+    $color3: hsla(${hslColors[2][0]}, ${hslColors[2][1]}%, ${hslColors[2][2]}%, 1);
+    $color4: hsla(${hslColors[3][0]}, ${hslColors[3][1]}%, ${hslColors[3][2]}%, 1);
     
 
     // RGBA
     // -------------------------
-    $color1: ${rgbaColors[0].r}, ${rgbaColors[0].g}, ${rgbaColors[0].b}, ${1};
-    $color2: ${rgbaColors[1].r}, ${rgbaColors[1].g}, ${rgbaColors[1].b}, ${1};
-    $color3: ${rgbaColors[2].r}, ${rgbaColors[2].g}, ${rgbaColors[2].b}, ${1};
-    $color4: ${rgbaColors[3].r}, ${rgbaColors[3].g}, ${rgbaColors[3].b}, ${1};
+    $color1: rgba(${convert.hex.rgb(hexColors[0])}, 1);
+    $color2: rgba(${convert.hex.rgb(hexColors[1])}, 1);
+    $color3: rgba(${convert.hex.rgb(hexColors[2])}, 1);
+    $color4: rgba(${convert.hex.rgb(hexColors[3])}, 1);
 
-    // RGB
+    // HEX
     // -------------------------
     $color1: ${hexColors[0]};
     $color2: ${hexColors[1]};
