@@ -28,10 +28,9 @@
     "css-postcss": "postcss --use autoprefixer --output styles/app.scss dist/app.css",
     "css-watch": "npm run css-build -- --watch",
     "deploy": "npm run css-deploy && npm run js-build",
-    "js-build": "webpack --display-modules",
-    "js-watch": "npm run js-build -- --watch",
-    "watch": "browser-sync start -s --port '4000' --index 'index.html' --watch '*.html dist/app.css dist/app.js'",
-    "start": "npm-run-all --parallel css-watch js-watch watch"
+    "js-build": "webpack --display-modules --watch",
+    "watch": "browser-sync start -s --port '4000' --index 'index.html' --watch '*.html' 'dist/app.css' 'dist/app.js'",
+    "start": "npm-run-all --parallel css-watch js-build watch"
   },
   "dependencies": {
     "color-convert": "^1.9.3",
