@@ -33,7 +33,7 @@ export default function downloadColors() {
     }
 
 
-const colorData = `@charset 'utf-8';
+    const colorData = `@charset 'utf-8';
 
 // HSLA
 // ------------------------------

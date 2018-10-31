@@ -9,6 +9,7 @@ import conversions from 'color-convert/conversions';
 import generateColors from './app.colors';
 import copyToClipBoard from './app.copy';
 import downloadColors from './app.download';
+import emailColors from './app.email';
 
 
 // INITIALIZE
@@ -16,3 +17,4 @@ import downloadColors from './app.download';
 generateColors();
 copyToClipBoard();
 downloadColors();
+emailColors();
