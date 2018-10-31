@@ -6526,7 +6526,12 @@ label.panel-block {
 
 html,
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 5px solid #7C81FF; }
+
+a:hover {
+  text-decoration: underline;
+  color: #fff; }
 
 .swatch {
   text-align: center;
@@ -6543,6 +6548,16 @@ body {
   text-transform: uppercase;
   padding-top: 50px;
   font-size: 20px; }
+  .swatch:before {
+    content: '';
+    position: relative;
+    display: block;
+    background-image: url("/static/icon__copy.svg");
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    right: -170px;
+    bottom: -210px; }
   .swatch:hover {
     bottom: -25px; }
 
@@ -6561,17 +6576,20 @@ body {
   border-radius: 10px;
   box-shadow: 0 8px 30px rgba(192, 192, 192, 0.555);
   min-width: 200px;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
   display: inline-block;
-  padding: 20px; }
-
-.il {
-  background-image: url("/static/undraw_outer_space_3v6n.svg");
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: center; }
+  font-weight: bold;
+  margin: 0 40px;
+  color: #fff;
+  background: linear-gradient(90deg, #546bfc 0, #a337ff); }
 
 .download-button {
   cursor: pointer; }
+
+.hero-foot {
+  padding-bottom: 40px; }
 
 .is-ninesixty {
   max-width: 960px;
