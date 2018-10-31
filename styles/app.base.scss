@@ -1,4 +1,12 @@
 html,
 body {
   overflow: hidden;
+  border-top: 5px solid #7C81FF;
+}
+
+a {
+  &:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
 }
