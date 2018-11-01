@@ -4,7 +4,7 @@
 .swatch {
   text-align: center;
   max-width: 225px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   height: 300px;
   border-radius: 20px;
   outline: none;
@@ -35,7 +35,7 @@
   }
 
   &:hover {
-    bottom: -25px;
+    bottom: -40px;
   }
   
 }
@@ -56,7 +56,7 @@
 
 
 .action-box {
-  border-radius: 10px;
+  border-radius: 100px;
   box-shadow: 0 8px 30px rgba(192, 192, 192, 0.555);
   min-width: 200px;
   height: 50px;
