@@ -12,11 +12,13 @@
   bottom: -70px;
   cursor: pointer;
 
-  color:rgba(255, 255, 255, 0.85);
+
+  color:rgba(255, 255, 255, 0.90);
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 50px;
-  font-size: 20px;
+  font-size: 26px;
+
 
   &:before{
     content:'';
@@ -24,10 +26,12 @@
     display: block;
     background-image: url('/static/icon__copy.svg');
     background-repeat: no-repeat;
-    height: 20px;
-    width: 20px;
-    right: -170px;
-    bottom: -210px;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    right: -175px;
+    top: -30px;
+    opacity: .7;
   }
 
   &:hover {
@@ -71,4 +75,8 @@
 
 .hero-foot {
   padding-bottom: 40px;
+}
+
+.title {
+  font-family: 'uni_sansheavy_caps', sans-serif;
 }
