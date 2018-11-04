@@ -37,6 +37,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
 
+
   <!-- TODO - add google analytics  -->
 
 </head>
@@ -55,7 +56,10 @@
           <div id="navbarMenuHeroC" class="navbar-menu">
             <div class="navbar-end">
               <a href="" class="navbar-item is-active">
-                <strong>About</strong>
+                About
+              </a>
+              <a href="" class="navbar-item">
+                Thanks!
               </a>
             </div>
           </div>
@@ -75,9 +79,11 @@
         <br>
         <div class="has-text-centered">
           <div class="action-box download-button">
+            <span class="svg svg--btn--icon"><i data-eva="download"></i></span>
             .SCSS
           </div>
           <a class="action-box email-button" href="">
+            <span class="svg svg--btn--icon"><i data-eva="email"></i></span>
             Email
           </a>
         </div>
@@ -106,13 +112,20 @@
     <div class="hero-foot">
       <div class="content has-text-centered">
         <p>
-          Made with ❤️by <a class="has-text-weight-bold	" href="http://figureout.life">Omar Rasool</a>
+          Made with <span class="svg heart"><i data-eva="heart"></i></span> by <a class="has-text-weight-bold" href="http://figureout.life">Omar Rasool</a>
         </p>
       </div>
   </section>
 
   <!-- SCRIPTS -->
   <script src="dist/app.js" defer></script>
+
+  <!-- ICONS -->
+  <script src="https://unpkg.com/eva-icons"></script>
+  
+  <script>
+    eva.replace();
+  </script> 
 </body>
 
 </html>

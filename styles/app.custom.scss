@@ -64,9 +64,17 @@
   white-space: nowrap;
   display: inline-block;
   font-weight: bold;
+  font-size: 20px;
   margin:0 40px;
   color: #fff;
   background: linear-gradient(90deg,#546bfc 0,#a337ff);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+
+  &:hover {
+    box-shadow: rgba(101, 41, 255, 0.25) 0px 20px 40px;
+    transform: translateY(-3px);
+    color: #fff;
+  }
 }
 
 .download-button {
@@ -79,4 +87,22 @@
 
 .title {
   font-family: 'uni_sansheavy_caps', sans-serif;
+}
+
+
+.svg {
+  height: 25px;
+  width: 25px;
+
+  svg {
+    margin-bottom: -4px;
+  }
+
+  &.svg--btn--icon {
+    fill: #fff;
+  }
+
+  &.heart{
+    fill: hsl(348, 100%, 61%);
+  }
 }
