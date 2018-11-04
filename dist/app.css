@@ -146,7 +146,7 @@ body {
   border-top: 5px solid #7C81FF; }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #fff; }
 
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
@@ -6711,9 +6711,15 @@ label.panel-block {
   white-space: nowrap;
   display: inline-block;
   font-weight: bold;
+  font-size: 20px;
   margin: 0 40px;
   color: #fff;
-  background: linear-gradient(90deg, #546bfc 0, #a337ff); }
+  background: linear-gradient(90deg, #546bfc 0, #a337ff);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s; }
+  .action-box:hover {
+    box-shadow: rgba(101, 41, 255, 0.25) 0px 20px 40px;
+    transform: translateY(-3px);
+    color: #fff; }
 
 .download-button {
   cursor: pointer; }
@@ -6723,6 +6729,16 @@ label.panel-block {
 
 .title {
   font-family: 'uni_sansheavy_caps', sans-serif; }
+
+.svg {
+  height: 25px;
+  width: 25px; }
+  .svg svg {
+    margin-bottom: -4px; }
+  .svg.svg--btn--icon {
+    fill: #fff; }
+  .svg.heart {
+    fill: #ff3860; }
 
 .is-ninesixty {
   max-width: 960px;
