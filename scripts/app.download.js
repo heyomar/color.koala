@@ -26,7 +26,7 @@ export default function downloadColors() {
     const hexColors = [];
     const hslColors = [];
 
-    for (let i = 0; i <= 3; i += 1) {
+    for (let i = 0; i <= 4; i += 1) {
       const swatchHexColor = swatches[i].textContent;
       hexColors.push(swatchHexColor);
       hslColors.push(convert.hex.hsl(swatchHexColor));
@@ -41,6 +41,7 @@ $color1: hsla(${hslColors[0][0]}, ${hslColors[0][1]}%, ${hslColors[0][2]}%, 1);
 $color2: hsla(${hslColors[1][0]}, ${hslColors[1][1]}%, ${hslColors[1][2]}%, 1);
 $color3: hsla(${hslColors[2][0]}, ${hslColors[2][1]}%, ${hslColors[2][2]}%, 1);
 $color4: hsla(${hslColors[3][0]}, ${hslColors[3][1]}%, ${hslColors[3][2]}%, 1);
+$color5: hsla(${hslColors[4][0]}, ${hslColors[4][1]}%, ${hslColors[4][2]}%, 1);
 
 
 // RGBA
@@ -49,6 +50,7 @@ $color1: rgba(${convert.hex.rgb(hexColors[0])}, 1);
 $color2: rgba(${convert.hex.rgb(hexColors[1])}, 1);
 $color3: rgba(${convert.hex.rgb(hexColors[2])}, 1);
 $color4: rgba(${convert.hex.rgb(hexColors[3])}, 1);
+$color5: rgba(${convert.hex.rgb(hexColors[4])}, 1);
 
 // HEX
 // ------------------------------
@@ -56,6 +58,7 @@ $color1: ${hexColors[0]};
 $color2: ${hexColors[1]};
 $color3: ${hexColors[2]};
 $color4: ${hexColors[3]};
+$color4: ${hexColors[4]};
 `;
     download(colorData, 'colors.scss', '.scss');
   });

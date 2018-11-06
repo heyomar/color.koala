@@ -3,20 +3,30 @@ export default function generateColors() {
   // Variables
   // ------------------------------
   const swatches = document.querySelectorAll('.swatch');
+  const darkToggle = document.querySelector('.darkToggle');
+  let hueOfColors;
 
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
   function setBackground() {
+    // darkToggle.addEventListener('change', () => {
+    //   if (this.checked === true) {
+    //     hueOfColors = 'dark';
+    //   } else {
+    //     hueOfColors = 'light';
+    //   }
+    // });
+
     const color = randomColor({
-      count: 6,
-      luminosity: 'light',
+      count: 5,
+      luminosity: hueOfColors,
     });
 
     // - Print color values into div
     // - set the backgrounf color to random color
     // - convert hex to rgb
     // - add the box shadow
-    for (let i = 0; i <= 3; i += 1) {
+    for (let i = 0; i <= 4; i += 1) {
       swatches[i].textContent = color[i];
       swatches[i].style.background = color[i];
       const hexval = convert.hex.rgb(color[i]);
