@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon__copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon__copy" transform="translate(-3.000000, -3.000000)">
+            <rect id="Rectangle" fill="#000000" opacity="0" x="0" y="0" width="24" height="24"></rect>
+            <path d="M18,21 L12,21 C10.3431458,21 9,19.6568542 9,18 L9,12 C9,10.3431458 10.3431458,9 12,9 L18,9 C19.6568542,9 21,10.3431458 21,12 L21,18 C21,19.6568542 19.6568542,21 18,21 Z M12,11 C11.4477153,11 11,11.4477153 11,12 L11,18 C11,18.5522847 11.4477153,19 12,19 L18,19 C18.5522847,19 19,18.5522847 19,18 L19,12 C19,11.4477153 18.5522847,11 18,11 L12,11 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M9.73,15 L5.67,15 C4.19767707,14.9945164 3.00548357,13.8023229 3,12.33 L3,5.67 C3.00548357,4.19767707 4.19767707,3.00548357 5.67,3 L12.33,3 C13.8023229,3.00548357 14.9945164,4.19767707 15,5.67 L15,9.4 L13,9.4 L13,5.67 C13,5.29996922 12.7000308,5 12.33,5 L5.67,5 C5.29996922,5 5,5.29996922 5,5.67 L5,12.33 C5,12.7000308 5.29996922,13 5.67,13 L9.73,13 L9.73,15 Z" id="Path" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
