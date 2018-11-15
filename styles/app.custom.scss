@@ -1,14 +1,20 @@
+
+// Hero
+.hero-body {
+  padding-top: 0;
+}
+
 // ---
 // SWATCHES
 // -------------------------
 .swatch--container {
-  padding-top: 50px;
+  // padding-top: 10px;
 }
 .swatch {
   text-align: center;
   transition: all 0.3s ease;
   height: 250px;
-  border-radius: 15px;
+  border-radius: 10px 10px 0 10px;
   outline: none;
   position: relative;
   bottom: 0px;
@@ -20,6 +26,7 @@
   text-transform: uppercase;
   padding-top: 50px;
   font-size: 26px;
+
 
 
   &:before{
@@ -46,7 +53,7 @@
 @media screen and (max-width:768px){
   .swatch {
     font-size: 35px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 10px;
     height:100px;
     padding: 0;
     bottom: 0;
@@ -67,16 +74,16 @@
 
 
 .action-box {
-  border-radius: 100px;
+  border-radius: 10px;
   box-shadow: 0 8px 30px rgba(192, 192, 192, 0.555);
-  min-width: 200px;
+  min-width: 100px;
   height: 50px;
   line-height: 50px;
   white-space: nowrap;
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
-  margin:0 40px;
+  // margin:10px 40px;
   color: #fff;
   background: linear-gradient(90deg,#546bfc 0,#a337ff);
   transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
