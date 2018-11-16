@@ -1,7 +1,5 @@
 // -> Swatch
 // =========================
-
-
 .swatch {
   text-align: center;
   transition: all 0.3s ease;
@@ -21,8 +19,7 @@
     content:'';
     position: absolute;
     display: block;
-    background-image: url('/static/icon__copy.svg');
-    background-repeat: no-repeat;
+    background-image: url('/static/icon__copy.svg') no-repeat;
     background-size: contain;
     height: 20px;
     width: 20px;
@@ -74,6 +71,7 @@
   color: rgb(20, 20, 20);
   background: #fff;
   transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+  margin: 20px;
 
   &:hover {
     box-shadow: rgba(83, 83, 83, 0.25) 0px 20px 40px;
@@ -81,27 +79,58 @@
   }
 }
 
-.download-button {
-  cursor: pointer;
+.svg {
+  height: 25px;
+  width: 25px;
+  
+  &.svg--btn--icon {
+    fill: #000;
+  }
+}
+
+@media screen and (max-width:768px){ 
+  .action-box {
+    margin: 5px;
+    padding-top: 10px;
+    min-width: 60px;
+    height: 60px;
+  }
+}
+
+// -> Content Container
+// =========================
+.content--container {
+  padding-bottom: 70px;
+
+  .svg svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .title {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width:768px){ 
+  .content--container {
+    padding-bottom: 40px;
+  }
+}
+
+
+// -> Bulma Components
+// =========================
+.hero-body {
+  padding-bottom: 0;
 }
 
 .hero-foot {
   padding-bottom: 40px;
 }
 
-.svg {
-  height: 25px;
-  width: 25px;
-
-  svg {
-    margin-bottom: -4px;
-  }
-
-  &.svg--btn--icon {
-    fill: #fff;
-  }
-
-  &.heart{
-    fill: hsl(348, 100%, 61%);
+@media screen and (max-width:768px){ 
+  .hero-body {
+    padding-bottom: 40px;
   }
 }

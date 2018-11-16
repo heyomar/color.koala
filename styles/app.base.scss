@@ -1,10 +1,11 @@
-html,
-body {
-}
-
 a {
   &:hover {
     text-decoration: none;
     color: #fff;
+    background-color: #fff !important;
   }
+}
+
+svg {
+  margin-bottom: -4px;
 }
