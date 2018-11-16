@@ -6857,15 +6857,18 @@ label.panel-block {
 
 .content--container {
   padding-bottom: 70px; }
-  .content--container .svg svg {
-    height: 40px;
-    width: 40px; }
   .content--container .title {
     padding-bottom: 30px; }
 
 @media screen and (max-width: 768px) {
   .content--container {
-    padding-bottom: 40px; } }
+    padding-bottom: 40px; }
+    .content--container .svg svg {
+      height: 40px;
+      width: 40px; } }
+
+.navbar-item img {
+  max-height: 3.2rem; }
 
 .hero-body {
   padding-bottom: 0; }
