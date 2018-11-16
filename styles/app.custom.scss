@@ -102,11 +102,6 @@
 .content--container {
   padding-bottom: 70px;
 
-  .svg svg {
-    height: 40px;
-    width: 40px;
-  }
-
   .title {
     padding-bottom: 30px;
   }
@@ -115,12 +110,20 @@
 @media screen and (max-width:768px){ 
   .content--container {
     padding-bottom: 40px;
+
+    .svg svg {
+      height: 40px;
+      width: 40px;
+    }
   }
 }
 
 
 // -> Bulma Components
 // =========================
+.navbar-item img {
+  max-height: 3.2rem;
+}
 .hero-body {
   padding-bottom: 0;
 }
