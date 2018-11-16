@@ -20,7 +20,11 @@ $primary-invert: $pink-invert;
 */
 a:hover {
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  background-color: #fff !important; }
+
+svg {
+  margin-bottom: -4px; }
 
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
@@ -6794,8 +6798,7 @@ label.panel-block {
     content: '';
     position: absolute;
     display: block;
-    background-image: url("/static/icon__copy.svg");
-    background-repeat: no-repeat;
+    background-image: url("/static/icon__copy.svg") no-repeat;
     background-size: contain;
     height: 20px;
     width: 20px;
@@ -6833,23 +6836,49 @@ label.panel-block {
   font-size: 20px;
   color: #141414;
   background: #fff;
-  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s; }
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+  margin: 20px; }
   .action-box:hover {
     box-shadow: rgba(83, 83, 83, 0.25) 0px 20px 40px;
     transform: translateY(-3px); }
 
-.download-button {
-  cursor: pointer; }
+.svg {
+  height: 25px;
+  width: 25px; }
+  .svg.svg--btn--icon {
+    fill: #000; }
+
+@media screen and (max-width: 768px) {
+  .action-box {
+    margin: 5px;
+    padding-top: 10px;
+    min-width: 60px;
+    height: 60px; } }
+
+.content--container {
+  padding-bottom: 70px; }
+  .content--container .svg svg {
+    height: 40px;
+    width: 40px; }
+  .content--container .title {
+    padding-bottom: 30px; }
+
+@media screen and (max-width: 768px) {
+  .content--container {
+    padding-bottom: 40px; } }
+
+.hero-body {
+  padding-bottom: 0; }
 
 .hero-foot {
   padding-bottom: 40px; }
 
-.svg {
-  height: 25px;
-  width: 25px; }
-  .svg svg {
-    margin-bottom: -4px; }
-  .svg.svg--btn--icon {
-    fill: #fff; }
-  .svg.heart {
-    fill: #ff3860; }
+@media screen and (max-width: 768px) {
+  .hero-body {
+    padding-bottom: 40px; } }
+
+.cursor\.pointer {
+  cursor: pointer; }
+
+.fill\.danger {
+  fill: #ff3860; }
