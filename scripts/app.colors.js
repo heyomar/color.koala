@@ -9,13 +9,6 @@ export default function generateColors() {
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
   function setBackground() {
-    // darkToggle.addEventListener('change', () => {
-    //   if (this.checked === true) {
-    //     hueOfColors = 'dark';
-    //   } else {
-    //     hueOfColors = 'light';
-    //   }
-    // });
 
     const color = randomColor({
       count: 5,

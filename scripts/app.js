@@ -1,6 +1,6 @@
 // DEPENDENCIES
 // ------------------------------
-import randomcolor from 'randomcolor';
+var randomColor = require('randomcolor');
 import conversions from 'color-convert/conversions';
 
 

@@ -5,7 +5,9 @@ npm-debug.log
 .vscode
 
 # Folders
+dist
 .idea/
+.cache/
 .sass-cache
 _gh_pages
 _site
