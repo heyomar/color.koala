@@ -1,9 +1,6 @@
 export default function generateColors() {
 
-  // Variables
-  // ------------------------------
   const swatches = document.querySelectorAll('.swatch');
-  const darkToggle = document.querySelector('.darkToggle');
   let hueOfColors;
 
   // Sets the background color to the value returned from the getColor() function
