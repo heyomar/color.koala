@@ -15,8 +15,7 @@
   },
   "scripts": {
     "dev": "sudo parcel index.html",
-    "build": "parcel build index.html",
-    "start": "browser-sync start --proxy 'localhost:1234' --watch --files '*.html,  styles/*.scss, scripts/*.js'"
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "bulma": "^0.7.2",

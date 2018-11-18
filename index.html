@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="icon" type="image/png" id="favicon" href="./static/site__favicon.png" />
   <base href="">
@@ -14,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- TWITTER META -->
-  
+
 
   <!-- FACEBOOK META -->
   <meta property="og:url" content="" />
@@ -28,7 +29,8 @@
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
 
 
   <!-- TODO - add google analytics  -->
@@ -36,65 +38,96 @@
 </head>
 
 <body>
-  <section class="hero is-fullheight is-ninesixty">
+  <section class="hero is-fullheight lock.desktop">
     <!-- Hero head: will stick at the top -->
-    <div class="hero-head">
-      <header class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item">
-              <img src="./static/site__logo@2x.svg" alt="Logo">
-            </a>
-          </div>
-          <div id="navbarMenuHeroC" class="navbar-menu">
-            <div class="navbar-end">
-              <a href="" class="navbar-item">
-                <strong>Credits</strong>
+    <div class="hero-head ">
+        <nav class="navbar is-transparent">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="./static/site__logo@2x.svg" alt="logo" width="200" height="28">
               </a>
-
-              <div class="navbar-item">
-                  <div class="select">
-                      <select class="colorSelectBox">
-                        <option value="light">Light Colors</option>
-                        <option value="bright">Bright Colors</option>
-                        <option value="dark">Dark Colors</option>
-                      </select>
-                    </div>
+              <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
-          </div>
-        </div>
-      </header>
+          
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+              <div class="navbar-start">
+                
+                
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item has-dropdown">
+                    <div class="navbar-link" >
+                      Good Peoples
+                    </div>
+                    <div class="navbar-dropdown is-boxed">
+                      <a class="navbar-item" href="">
+                        <strong>Thank 🤓 You: </strong>
+                      </a>
+                      <a class="navbar-item is-active" href="https://thenounproject.com/">
+                          Parkjisun | Noun Project
+                      </a>
+                      <a class="navbar-item is-active" href="https://github.com/davidmerfield">
+                        David Merfield | randomColor
+                      </a>
+
+                      <a class="navbar-item is-active" href="https://www.behance.net/gallery/17414961/Uni-Sans-Free&">
+                        Radomir Tinkov | Uni Sans
+                      </a>
+
+                    </div>
+                  </div>
+                  <div class="navbar-item">
+                      <div class="select">
+                        <select class="colorSelectBox">
+                          <option value="light">Light Colors</option>
+                          <option value="bright">Bright Colors</option>
+                          <option value="dark">Dark Colors</option>
+                        </select>
+                      </div>
+                    </div>
+                  
+                
+              </div>
+            </div>
+          </nav>
     </div>
 
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container">
         <div class="content--container">
-          <div class="">
-            <h1 class="title is-4">Hi there! Color Koala is a quick palette generator for your side projects. <span class="is-hidden-mobile">Hit Spacebar to give it a go!</span></h1>
+          <div class="has-text-centered">
+            <h1 class="title is-1 is-size-4-mobile">Hello! Color Koala is a quick <br> palette generator for all of your side projects. </h1>
+            <div class="subtitle is-4">Press the <strong>Spacebar</strong> or <strong>"Go!"</strong> to get started! </div>
           </div>
 
-            <div class="has-text-centered">
-              <div class="action-box download-button has-text-centered cursor.pointer">
-                <span class="svg svg--btn--icon">
-                  <i data-eva="download"></i><span class="is-hidden-mobile"> Gimme!</span>
-                </span>
-              </div>
 
-              <div class="action-box generate-button has-text-centered cursor.pointer">
-                <span class="svg svg--btn--icon">
-                  <i data-eva="refresh"></i><span class="is-hidden-mobile"> Go!</span>
-                </span>
-              </div>
-  
-  
-              <a class="action-box email-button has-text-centered" href="">
-                <span class="svg svg--btn--icon">
-                  <i data-eva="email"></i><span class="is-hidden-mobile"> Give!</span>
-                </span>
-              </a>
+
+          <div class="has-text-centered">
+            <div class="action-box download-button has-text-centered cursor.pointer">
+              <span class="svg svg--btn--icon">
+                <i data-eva="download"></i><span class="is-hidden-mobile"> Gimme!</span>
+              </span>
             </div>
+
+            <div class="action-box generate-button has-text-centered cursor.pointer">
+              <span class="svg svg--btn--icon">
+                <i data-eva="refresh"></i><span class="is-hidden-mobile"> Go!</span>
+              </span>
+            </div>
+
+
+            <a class="action-box email-button has-text-centered" href="">
+              <span class="svg svg--btn--icon">
+                <i data-eva="email"></i><span class="is-hidden-mobile"> Give!</span>
+              </span>
+            </a>
+          </div>
         </div>
 
         <div class="swatch--container">
@@ -112,7 +145,7 @@
               <div class="swatch"></div>
             </div>
             <div class="column">
-                <div class="swatch"></div>
+              <div class="swatch"></div>
             </div>
           </div>
         </div>
@@ -124,9 +157,12 @@
     <div class="hero-foot">
       <div class="content has-text-centered">
         <p>
-          Made with <span class="svg fill.danger"><i data-eva="heart"></i></span> by <a class="has-text-weight-bold" href="http://omarrasool.com" target="_blank">Omar Rasool</a>
+          Made with <span class="svg fill.danger"><i data-eva="heart"></i></span> by <a class="has-text-weight-bold"
+            href="http://omarrasool.com" target="_blank">Omar Rasool</a>
+
         </p>
       </div>
+
   </section>
 
   <!-- SCRIPTS -->
@@ -134,6 +170,9 @@
 
   <!-- ICONS -->
   <script src="https://unpkg.com/eva-icons"></script>
-  <script>eva.replace();</script> 
+  <script>
+    eva.replace();
+  </script>
 </body>
+
 </html>
