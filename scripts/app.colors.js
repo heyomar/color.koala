@@ -12,8 +12,6 @@ export default function generateColors() {
     setBackground();
   })
   
-
-
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
   function setBackground() {
