@@ -1,7 +1,18 @@
 export default function generateColors() {
 
   const swatches = document.querySelectorAll('.swatch');
-  let hueOfColors;
+  const colorSelectBox = document.querySelector('.colorSelectBox');
+  let luminosity = '';
+  colorSelectBox.addEventListener('change', () => {
+      luminosity = colorSelectBox.options[colorSelectBox.selectedIndex].value;
+      setBackground();
+  })
+
+  document.querySelector('.generate-button').addEventListener('click', () => {
+    setBackground();
+  })
+  
+
 
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
@@ -9,7 +20,7 @@ export default function generateColors() {
 
     const color = randomColor({
       count: 5,
-      luminosity: hueOfColors,
+      luminosity: luminosity,
     });
 
     // - Print color values into div
