@@ -19,7 +19,8 @@
     content:'';
     position: absolute;
     display: block;
-    background-image: url('/static/icon__copy.svg') no-repeat;
+    background-image: url('/static/icon__copy.svg');
+    background-repeat: no-repeat;
     background-size: contain;
     height: 20px;
     width: 20px;
@@ -102,7 +103,7 @@
 .content--container {
   padding-bottom: 70px;
 
-  .title {
+  .subtitle {
     padding-bottom: 30px;
   }
 }
@@ -110,6 +111,10 @@
 @media screen and (max-width:768px){ 
   .content--container {
     padding-bottom: 40px;
+    
+    .title, .subtitle {
+      text-align: left !important;
+    }
 
     .svg svg {
       height: 40px;
@@ -136,4 +141,12 @@
   .hero-body {
     padding-bottom: 40px;
   }
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #cacaca;
+}
+
+.select, select {
+  width: 100%;
 }
