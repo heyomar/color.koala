@@ -16,6 +16,9 @@ import helpers from './app.helpers';
 import darkmode from './app.dark';
 import makerwidget from './app.plugins';
 
+
+// Run it!
+// ------------------------------
 generateColors();
 copyToClipBoard();
 downloadColors();

@@ -8,7 +8,8 @@ export default function generateColors() {
       setBackground();
   })
 
-  document.querySelector('.generate-button').addEventListener('click', () => {
+  document.querySelector('.generate-button').addEventListener('click', (e) => {
+    e.preventDefault();
     setBackground();
   })
   

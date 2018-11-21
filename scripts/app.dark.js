@@ -6,6 +6,5 @@ export default function() {
     document.querySelector('.title').classList.toggle('has-text-white');
     document.querySelector('.subtitle').classList.toggle('has-text-white');
     document.querySelector('.hero-foot').classList.toggle('has-text-white');
-    document.querySelector('.bold').classList.toggle('has-text-white');
   });
 }
