@@ -13,10 +13,14 @@ import copyToClipBoard from './app.copy';
 import downloadColors from './app.download';
 import emailColors from './app.email';
 import helpers from './app.helpers';
+import darkmode from './app.dark';
+import makerwidget from './app.plugins';
 
 generateColors();
 copyToClipBoard();
 downloadColors();
 emailColors();
 helpers();
+darkmode();
+makerwidget();
 

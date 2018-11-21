@@ -1,3 +1,8 @@
+body {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
 a {
   &:hover {
     text-decoration: none;

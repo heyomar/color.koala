@@ -154,3 +154,26 @@
 .select, select {
   width: 100%;
 }
+
+
+.darkmode {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+@media screen and (max-width:768px){ 
+  .darkmode {
+    right: 50px;
+    top: 20px;
+  }
+}
+
+
+.dark-light {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.day-light {
+  background-color: rgba(255, 255, 255, 1);
+}
