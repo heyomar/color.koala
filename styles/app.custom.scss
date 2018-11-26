@@ -111,10 +111,6 @@
 @media screen and (max-width:768px){ 
   .content--container {
     padding-bottom: 40px;
-    
-    .title, .subtitle {
-      text-align: left !important;
-    }
 
     .svg svg {
       height: 40px;
@@ -176,4 +172,12 @@
 
 .day-light {
   background-color: rgba(255, 255, 255, 1);
+}
+
+// Greeting
+.greeting {
+  background-color: #f4f4f4;
+  padding: 8px;
+  text-align: center;
+  display: none;
 }
