@@ -3,8 +3,8 @@ export default function() {
 
   darkButton.addEventListener('click', function(){
     document.body.classList.toggle('dark-light');
-    document.querySelector('.title').classList.toggle('has-text-white');
-    document.querySelector('.subtitle').classList.toggle('has-text-white');
+    document.querySelector('.body-title').classList.toggle('has-text-white');
+    document.querySelector('.body-subtitle').classList.toggle('has-text-white');
     document.querySelector('.hero-foot').classList.toggle('has-text-white');
   });
 }
