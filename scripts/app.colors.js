@@ -2,10 +2,19 @@ export default function generateColors() {
 
   const swatches = document.querySelectorAll('.swatch');
   const colorSelectBox = document.querySelector('.colorSelectBox');
+  const hueSelectBox = document.querySelector('.hueSelectBox');
   let luminosity = '';
+  let hue = '';
+  
+
   colorSelectBox.addEventListener('change', () => {
       luminosity = colorSelectBox.options[colorSelectBox.selectedIndex].value;
       setBackground();
+  })
+
+  hueSelectBox.addEventListener('change', () => {
+    hue = hueSelectBox.options[hueSelectBox.selectedIndex].value;
+    setBackground();
   })
 
   document.querySelector('.generate-button').addEventListener('click', (e) => {
@@ -20,6 +29,7 @@ export default function generateColors() {
     const color = randomColor({
       count: 5,
       luminosity: luminosity,
+      hue: hue
     });
 
     // - Print color values into div
@@ -36,7 +46,6 @@ export default function generateColors() {
 
   // Listens for spacebar press to change color
   // ------------------------------
-  
   document.body.onkeydown = (e) =>{
     if (e.keyCode === 32) {
       e.preventDefault();
