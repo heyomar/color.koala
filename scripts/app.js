@@ -15,6 +15,7 @@ import emailColors from './app.email';
 import helpers from './app.helpers';
 import darkmode from './app.dark';
 import makerwidget from './app.plugins';
+// import history from './app.history';
 // import url from './app.url';
 
 
@@ -27,5 +28,6 @@ emailColors();
 helpers();
 darkmode();
 makerwidget();
+// history();
 // url();
 
