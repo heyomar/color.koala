@@ -36,11 +36,18 @@ export default function generateColors() {
 
   // Listens for spacebar press to change color
   // ------------------------------
-  document.body.onkeyup = (e) => {
+  
+  document.body.onkeydown = (e) =>{
+    if (e.keyCode === 32) {
+      e.preventDefault();
+    }
+  }
+
+  document.body.onkeyup = (e) =>{
     if (e.keyCode === 32) {
       setBackground();
     }
-  };
+  }
 
   document.addEventListener('DOMContentLoaded', () => {
     setBackground();
