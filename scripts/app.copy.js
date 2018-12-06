@@ -1,5 +1,6 @@
 export default function copyToClipoard() {
   const swatches = document.querySelectorAll('.swatch');
+  const colorbox = document.querySelectorAll('.color-box')
 
   // Copy to clipboard
   // ------------------------

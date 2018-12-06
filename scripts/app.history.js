@@ -13,7 +13,7 @@ export default function () {
         let hex = document.createTextNode(element.textContent)
         
         colorBox.appendChild(hex)
-        colorBox.className = "color-box "
+        colorBox.className = "color-box"
         colorBox.style.backgroundColor = element.textContent
         
         paletteContainer.appendChild(colorBox)
