@@ -25,7 +25,6 @@ export default function generateColors() {
   // Sets the background color to the value returned from the getColor() function
   // ------------------------------
   function setBackground() {
-
     const color = randomColor({
       count: 5,
       luminosity: luminosity,

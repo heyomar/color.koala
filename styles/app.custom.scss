@@ -185,3 +185,38 @@
 .about {
   background-color: #f5f7fa;
 }
+
+
+// History
+.color-history {
+  padding-bottom: 20px;
+}
+.palette-container {
+  background-color: #fff;
+  text-align: center;
+  margin: 20px 10px;
+}
+
+.color-box {
+  color: #fff;
+  margin: 5px 0px;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  display: inline-block;
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
