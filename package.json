@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "bulma": "^0.7.2",
+    "clipboard": "^2.0.4",
     "color-convert": "^1.9.3",
     "randomcolor": "^0.5.3"
   }
