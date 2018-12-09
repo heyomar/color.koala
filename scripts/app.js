@@ -9,9 +9,9 @@ import meta from "./app.meta";
 
 // Run it!
 // ------------------------------
-genColors();
-copyToClipBoard();
-downloadColors();
-emailColors();
-helpers();
-meta();
+// genColors();
+// copyToClipBoard();
+// downloadColors();
+// emailColors();
+// helpers();
+// meta();

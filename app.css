@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-@import "./styles/app.vars";
-@import "./styles/app.base";
-
-@import "bulma";
-
-@import "./styles/app.swatch";
-@import "./styles/app.helpers";
