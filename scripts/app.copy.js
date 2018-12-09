@@ -1,16 +1,10 @@
 export default function() {
-  var clipboard = new ClipboardJS(".column");
-
+  const clipboard = new ClipboardJS(".column");
   clipboard.on("success", function(e) {
-    console.info("Action:", e.action);
-    console.info("Text:", e.text);
-    console.info("Trigger:", e.trigger);
-
+    e.trigger.firstElementChild.innerHTML = "Copied!";
+    setTimeout(() => {
+      e.trigger.firstElementChild.innerHTML = e.text;
+    }, 450);
     e.clearSelection();
-  });
-
-  clipboard.on("error", function(e) {
-    console.error("Action:", e.action);
-    console.error("Trigger:", e.trigger);
   });
 }

@@ -1,13 +1,13 @@
 import * as v from "./app.variables";
 
 export default function generateColors() {
+  // Variables for randomColor options
   let luminosity = "";
   let hue = "";
-
   document.addEventListener("DOMContentLoaded", () => {
     setBackground();
   });
-
+  // Main event listener for selection boxes
   document.addEventListener("change", e => {
     if (e.target.classList.contains("colorSelectBox")) {
       luminosity = e.target.options[e.target.selectedIndex].value;
@@ -16,12 +16,10 @@ export default function generateColors() {
     }
     setBackground();
   });
-
   document.querySelector(".generate-button").addEventListener("click", e => {
     e.preventDefault();
     setBackground();
   });
-
   // Run randomColor function and set colors
   function setBackground() {
     const color = randomColor({
@@ -29,7 +27,6 @@ export default function generateColors() {
       luminosity: luminosity,
       hue: hue
     });
-
     // Set colors, convert hex to rgb,add the box shadow
     for (let i = 0; i <= 4; i += 1) {
       const hex = convert.hex.rgb(color[i]);
@@ -40,14 +37,12 @@ export default function generateColors() {
       }, 0.7)`;
     }
   }
-
   // Listens for spacebar press to change color
   document.body.onkeydown = e => {
     if (e.keyCode === 32) {
       e.preventDefault();
     }
   };
-
   document.body.onkeyup = e => {
     if (e.keyCode === 32) {
       setBackground();
