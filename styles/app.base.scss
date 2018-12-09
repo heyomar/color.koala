@@ -1,11 +1,6 @@
-body {
-  position: relative;
-  transition: all 0.3s ease;
-}
 
-a {
-  &:hover {
-    text-decoration: none;
-    color: #fff;
-  }
+$rubik:'Rubik',sans-serif;
+body {
+  transition: all 0.3s ease;
+  font-family: $rubik;
 }
