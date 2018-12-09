@@ -4,12 +4,14 @@ var convert = require("color-convert");
 import * as v from "./app.variables";
 
 export default () => {
+  // Variables for color history
+  const colorHistorySection = document.querySelector('.color-history')
+  let paletteContainer = document.createElement("div")
+  let count = 0
   // Variables for randomColor options
   let luminosity = "";
   let hue = "";
-  document.addEventListener("DOMContentLoaded", () => {
-    setBackground();
-  });
+  
   // Main event listener for selection boxes
   document.addEventListener("change", e => {
     if (e.target.classList.contains("colorSelectBox")) {
@@ -51,4 +53,28 @@ export default () => {
       setBackground();
     }
   };
+  // COLOR HISTORY //
+  function addToHistoryPalettes() {
+    v.swatches.forEach(element => {
+      let colorBox = document.createElement("div")
+      let hex = document.createTextNode(element.textContent)
+
+      colorBox.appendChild(hex)
+      colorBox.className = "color-box"
+      colorBox.style.backgroundColor = element.textContent
+
+      paletteContainer.appendChild(colorBox)
+      paletteContainer.className = 'palette-container column is-3'
+
+      count += 1
+      if (count == 5) {
+        colorHistorySection.appendChild(paletteContainer)
+        colorHistorySection.insertBefore(paletteContainer, colorHistorySection.childNodes[0])
+      }
+    })
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setBackground();
+  });
 }

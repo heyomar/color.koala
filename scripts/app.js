@@ -7,7 +7,6 @@ import emailColors from "./app.email";
 import helpers from "./app.helpers";
 import darkmode from "./app.dark";
 import meta from "./app.meta";
-import history from "./app.history";
 
 // Run it!
 // ------------------------------
@@ -18,4 +17,3 @@ emailColors();
 helpers();
 darkmode();
 meta();
-history();
