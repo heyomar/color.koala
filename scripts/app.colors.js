@@ -1,6 +1,9 @@
+var randomColor = require("randomcolor");
+var convert = require("color-convert");
+
 import * as v from "./app.variables";
 
-export default function generateColors() {
+export default () => {
   // Variables for randomColor options
   let luminosity = "";
   let hue = "";

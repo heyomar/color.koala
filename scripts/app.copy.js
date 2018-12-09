@@ -1,4 +1,6 @@
-export default function() {
+var ClipboardJS = require("clipboard");
+
+export default () =>{
   const clipboard = new ClipboardJS(".column");
   clipboard.on("success", function(e) {
     e.trigger.firstElementChild.innerHTML = "Copied!";
