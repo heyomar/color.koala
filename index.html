@@ -91,10 +91,17 @@
   </head>
 
   <body>
-    <section class="hero">
+    <section>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <img class="logo" src="./static/site__logo@2x.svg" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="hero is-full-height">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head ">
-        <div class="columns has-text-centered navv">
+        <div class="columns has-text-centered">
           <div class="column is-paddingless">
             <div class="select">
               <select class="hueSelectBox">
@@ -121,21 +128,24 @@
             </div>
           </div>
           <div class="column is-paddingless">
-            <a
+            <!-- <a
               href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fcolorkoala.xyz&via=whimandwind&text=I%27m%20really%20loving%20this%20color%20palette%20generator%21%20%3A%29%20&hashtags=%23designtools%20%23colors%20%23colorkoala"
               target="_blank"
               class="button is-link"
             >
               <span class="icon"> <i class="fab fa-twitter"></i> </span>
               <span>Twitter</span>
-            </a>
+            </a> -->
+            <div class="">
+                <input class="input" type="text">
+              </div>
           </div>
         </div>
       </div>
 
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
-        <div class="container">
+        <div class="container cta--container">
           <div class="columns has-text-centered">
             <div class="column">
               <div class="action-box is-hidden-mobile download-button has-text-centered cursor.pointer">
@@ -156,6 +166,7 @@
             </div>
 
             <div class="column">
+              
               <a class="action-box email-button has-text-centered" href="">
                 <span class="svg svg--btn--icon">
                   <i data-eva="email" data-eva-fill="#3366FF"></i
@@ -188,9 +199,9 @@
       </div>
     </section>
 
-    <span class="darkmode cursor.pointer"
+    <!-- <span class="darkmode cursor.pointer"
       ><i data-eva-fill="rgba(196,196,196,.95)" data-eva="moon"></i
-    ></span>
+    ></span> -->
 
     <!-- SCRIPTS -->
     <script src="./scripts/app.js" defer></script>

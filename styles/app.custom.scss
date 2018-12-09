@@ -220,3 +220,19 @@
       transform: translateY(0);
   }
 }
+
+.select select {
+  height: 70px;
+  text-align: center !important;
+  padding: 10px;
+  font-size: 25px;
+  text-align-last:center;
+  border-radius: 0;
+  border: 1px solid #c9c9c9;
+  font-weight: bold;
+}
+
+.logo {
+  padding: 20px;
+  height: 100px;
+}
