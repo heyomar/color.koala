@@ -4,49 +4,25 @@
     <!-- META -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Color Koala is a quick palette generator, creating gorgeous colors for all of your side projects."
-    />
-    <title>
-      Color Koala - The Koala-ty color palette generator, creating gorgeous
-      colors for all of your side projects.
-    </title>
-    <!-- <base href="https://colorkoala.xyz"> -->
+    <meta name="description" content="Color Koala is a quick palette generator, creating gorgeous colors for all of your side projects."/>
+    <title> Color Koala - The Koala-ty color palette generator, creating gorgeous colors for all of your side projects.</title>
 
     <!-- FAVICON -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/meta/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/meta/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/meta/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/meta/site.webmanifest" />
-    <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#3366ff" />
-    <link rel="shortcut icon" href="/meta/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#3366ff" />
-    <meta name="msapplication-config" content="/meta/browserconfig.xml" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png"/>
+    <link rel="manifest" href="/meta/site.webmanifest"/>
+    <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#3366ff"/>
+    <link rel="shortcut icon" href="/meta/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#3366ff"/>
+    <meta name="msapplication-config" content="/meta/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
 
     <!-- TWITTER -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://colorkoala.xyz" />
     <meta property="twitter:title" content="Color Koala by Omar Rasool" />
-    <meta
-      property="twitter:description"
-      content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects."
-    />
+    <meta property="twitter:description" content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects."/>
     <meta property="twitter:image" content="meta/tw-thumb.png" />
 
     <!-- FACEBOOK -->
@@ -54,26 +30,15 @@
     <meta property="og:image:width" content="279" />
     <meta property="og:image:height" content="279" />
     <meta property="og:title" content="Color Koala" />
-    <meta
-      property="og:description"
-      content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects."
-    />
+    <meta property="og:description" content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects."/>
     <meta property="og:url" content="colorkoala.xyz" />
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:500,700" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" rel="text/css" href="./app.css" />
-
-    <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
+    
 
     <!-- GOOGLE -->
     <script
@@ -89,17 +54,9 @@
       gtag("config", "UA-129756303-1");
     </script>
   </head>
-
   <body>
-    <section>
-      <div class="columns">
-        <div class="column has-text-centered">
-          <img class="logo" src="./static/site__logo@2x.svg" alt="">
-        </div>
-      </div>
-    </section>
-    <section class="hero is-full-height">
-      <!-- Hero head: will stick at the top -->
+
+    <section class="is-full-height">
       <div class="hero-head ">
         <div class="columns has-text-centered">
           <div class="column is-paddingless">
@@ -118,98 +75,17 @@
           </div>
           <div class="column is-paddingless">
             <div class="select">
-              <div class="select">
-                <select class="colorSelectBox">
-                  <option value="light">Light Colors</option>
-                  <option value="bright">Bright Colors</option>
-                  <option value="dark">Dark Colors</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="column is-paddingless">
-            <!-- <a
-              href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fcolorkoala.xyz&via=whimandwind&text=I%27m%20really%20loving%20this%20color%20palette%20generator%21%20%3A%29%20&hashtags=%23designtools%20%23colors%20%23colorkoala"
-              target="_blank"
-              class="button is-link"
-            >
-              <span class="icon"> <i class="fab fa-twitter"></i> </span>
-              <span>Twitter</span>
-            </a> -->
-            <div class="">
-                <input class="input" type="text">
-              </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero content: will be in the middle -->
-      <div class="hero-body">
-        <div class="container cta--container">
-          <div class="columns has-text-centered">
-            <div class="column">
-              <div class="action-box is-hidden-mobile download-button has-text-centered cursor.pointer">
-                <span class="svg svg--btn--icon">
-                  <i data-eva="code-download" data-eva-fill="#3366FF"></i
-                  ><span class="is-hidden-mobile"> Gimme!</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="column">
-              <a href="" class="action-box generate-button has-text-centered cursor.pointer">
-                <span class="svg svg--btn--icon">
-                  <i data-eva="refresh" data-eva-fill="#3366FF"></i
-                  ><span class="is-hidden-mobile"> Go!</span>
-                </span>
-              </a>
-            </div>
-
-            <div class="column">
-              
-              <a class="action-box email-button has-text-centered" href="">
-                <span class="svg svg--btn--icon">
-                  <i data-eva="email" data-eva-fill="#3366FF"></i
-                  ><span class="is-hidden-mobile"> Give!</span>
-                </span>
-              </a>
+              <select class="colorSelectBox">
+                <option value="light">Light Colors</option>
+                <option value="bright">Bright Colors</option>
+                <option value="dark">Dark Colors</option>
+              </select>
             </div>
           </div>
         </div>
-
-
-          <div class="columns">
-            <div class="column" data-clipboard-target="#color1">
-              <div id="color1" class="swatch"></div>
-            </div>
-            <div class="column" data-clipboard-target="#color2">
-              <div id="color2" class="swatch"></div>
-            </div>
-            <div class="column" data-clipboard-target="#color3">
-              <div id="color3" class="swatch"></div>
-            </div>
-            <div class="column" data-clipboard-target="#color4">
-              <div id="color4" class="swatch"></div>
-            </div>
-            <div class="column" data-clipboard-target="#color5">
-              <div id="color5" class="swatch"></div>
-            </div>
-          </div>
-
       </div>
-    </section>
-
-    <!-- <span class="darkmode cursor.pointer"
-      ><i data-eva-fill="rgba(196,196,196,.95)" data-eva="moon"></i
-    ></span> -->
 
     <!-- SCRIPTS -->
     <script src="./scripts/app.js" defer></script>
-
-    <!-- ICONS -->
-    <script src="https://unpkg.com/eva-icons"></script>
-    <script>
-      eva.replace();
-    </script>
   </body>
 </html>
