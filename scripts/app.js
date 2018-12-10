@@ -9,7 +9,7 @@ import meta from "./app.meta";
 
 // Run it!
 // ------------------------------
-// genColors();
+genColors();
 // copyToClipBoard();
 // downloadColors();
 // emailColors();

@@ -21,10 +21,10 @@ export default () => {
     }
     setBackground();
   });
-  document.querySelector(".generate-button").addEventListener("click", e => {
-    e.preventDefault();
-    setBackground();
-  });
+  // document.querySelector(".generate-button").addEventListener("click", e => {
+  //   e.preventDefault();
+  //   setBackground();
+  // });
   // Run randomColor function and set colors
   function setBackground() {
     const color = randomColor({
@@ -37,9 +37,6 @@ export default () => {
       const hex = convert.hex.rgb(color[i]);
       v.swatches[i].textContent = color[i];
       v.swatches[i].style.background = color[i];
-      v.swatches[i].style.boxShadow = `0 -1px 30px rgba(${hex[0]}, ${hex[1]}, ${
-        hex[2]
-      }, 0.7)`;
     }
   }
   // Listens for spacebar press to change color
