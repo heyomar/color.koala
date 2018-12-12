@@ -11,7 +11,8 @@
     "@babel/preset-env": "^7.1.6",
     "autoprefixer": "^7.1.5",
     "node-sass": "^4.5.3",
-    "parcel-bundler": "^1.10.3"
+    "parcel-bundler": "^1.10.3",
+    "sass": "^1.15.2"
   },
   "scripts": {
     "dev": "parcel index.html",
