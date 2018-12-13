@@ -1,65 +1,58 @@
-// Function to download data to a file
-// ------------------------------------
+import FileSaver from 'file-saver'
+import convert from 'color-convert'
+import * as v from "./app.variables";
+import { log } from 'util';
+
+
 export default function downloadColors() {
-  function download(data, filename, type) {
-    var file = new Blob([data], { type: type });
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-      window.navigator.msSaveOrOpenBlob(file, filename);else {
-      // Others
-      var a = document.createElement("a"),
-          url = URL.createObjectURL(file);
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(function () {
-        document.body.removeChild(a);
-        window.URL.revokeObjectURL(url);
-      }, 0);
+  const downloadButton = document.querySelector('.download');
+
+  downloadButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const hexColors = []
+    const hslColors = []
+    const Hsl = []
+    for(let i = 0; i <= 4; i += 1){
+      const hexcolor = v.swatches[i].textContent
+      hexColors.push(hexcolor)
+      Hsl.push(convert.hex.hsl(hexcolor))
     }
-  }
-
-  const downloadButton = document.querySelector('.download-button');
-  const swatches = document.querySelectorAll('.swatch');
-
-  downloadButton.addEventListener('click', () => {
-    const hexColors = [];
-    const hslColors = [];
-
-    for (let i = 0; i <= 4; i += 1) {
-      const swatchHexColor = swatches[i].textContent;
-      hexColors.push(swatchHexColor);
-      hslColors.push(convert.hex.hsl(swatchHexColor));
+    
+    const scssVarNames = []
+    for(let i = 1; i <= 5; i += 1){
+      scssVarNames.push("$color" + i + ": ")
     }
 
-
-    const colorData = `@charset 'utf-8';
-
-// HSLA
-// ------------------------------
-$color1: hsla(${hslColors[0][0]}, ${hslColors[0][1]}%, ${hslColors[0][2]}%, 1);
-$color2: hsla(${hslColors[1][0]}, ${hslColors[1][1]}%, ${hslColors[1][2]}%, 1);
-$color3: hsla(${hslColors[2][0]}, ${hslColors[2][1]}%, ${hslColors[2][2]}%, 1);
-$color4: hsla(${hslColors[3][0]}, ${hslColors[3][1]}%, ${hslColors[3][2]}%, 1);
-$color5: hsla(${hslColors[4][0]}, ${hslColors[4][1]}%, ${hslColors[4][2]}%, 1);
+    let one = {}
 
 
-// RGBA
-// ------------------------------
-$color1: rgba(${convert.hex.rgb(hexColors[0])}, 1);
-$color2: rgba(${convert.hex.rgb(hexColors[1])}, 1);
-$color3: rgba(${convert.hex.rgb(hexColors[2])}, 1);
-$color4: rgba(${convert.hex.rgb(hexColors[3])}, 1);
-$color5: rgba(${convert.hex.rgb(hexColors[4])}, 1);
+    scssVarNames.forEach((element,i) => {
+      one[element] = `hsla(${Hsl[0][0]},${Hsl[0][1]}%,${Hsl[0][2]}%,1)`
+    });
+
+    console.log(one);
+    
+    
+    
+
+  const colorData =`
+@charset 'utf-8';
 
 // HEX
 // ------------------------------
-$color1: ${hexColors[0]};
-$color2: ${hexColors[1]};
-$color3: ${hexColors[2]};
-$color4: ${hexColors[3]};
-$color4: ${hexColors[4]};
+${scssVarNames.map((value, index) => `${value}${hexColors[index]};`).join('\n')}
+
+// RGBA
+// ------------------------------
+${scssVarNames.map((value, index) => `${value}rgba(${convert.hex.rgb(hexColors[index])}, 1);`).join('\n')}
+
+// HSLA
+// ------------------------------
+${Object.keys(one).map((value, index) => one[value])}
 `;
-    download(colorData, 'colors.scss', '.scss');
+
+  let blob = new Blob([colorData], {type: "text/scss;charset=utf-8"});
+  FileSaver.saveAs(blob, "palette.scss");
   });
 }

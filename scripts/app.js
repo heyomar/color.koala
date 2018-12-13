@@ -13,7 +13,7 @@ import data from "./app.data";
 genColors();
 data();
 // copyToClipBoard();
-// downloadColors();
+downloadColors();
 // emailColors();
 // helpers();
 // meta();
