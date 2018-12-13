@@ -1,58 +1,42 @@
 import FileSaver from 'file-saver'
 import convert from 'color-convert'
 import * as v from "./app.variables";
-import { log } from 'util';
 
-
-export default function downloadColors() {
+export default function() {
   const downloadButton = document.querySelector('.download');
-
   downloadButton.addEventListener('click', (e) => {
     e.preventDefault()
 
     const hexColors = []
-    const hslColors = []
-    const Hsl = []
-    for(let i = 0; i <= 4; i += 1){
-      const hexcolor = v.swatches[i].textContent
-      hexColors.push(hexcolor)
-      Hsl.push(convert.hex.hsl(hexcolor))
-    }
-    
+    const hsl = []
     const scssVarNames = []
-    for(let i = 1; i <= 5; i += 1){
-      scssVarNames.push("$color" + i + ": ")
-    }
 
-    let one = {}
-
-
-    scssVarNames.forEach((element,i) => {
-      one[element] = `hsla(${Hsl[0][0]},${Hsl[0][1]}%,${Hsl[0][2]}%,1)`
+    v.swatches.forEach((e,i) => {
+      const hexcolor = e.textContent
+      hexColors.push(hexcolor)
+      hsl.push(convert.hex.hsl(hexcolor))
+      scssVarNames.push(`$color${i+1}: `)
     });
 
-    console.log(one);
+    const hsla = {}
+    scssVarNames.forEach((e,i) => {
+      hsla[e] = `hsla(${hsl[i][0]},${hsl[i][1]}%,${hsl[i][2]}%, 1)`
+    });
     
-    
-    
-
-  const colorData =`
-@charset 'utf-8';
-
+const colorData =` @charset 'utf-8';
 // HEX
 // ------------------------------
-${scssVarNames.map((value, index) => `${value}${hexColors[index]};`).join('\n')}
+${scssVarNames.map((val, i) => `${val}${hexColors[i]};`).join('\n')}
 
 // RGBA
 // ------------------------------
-${scssVarNames.map((value, index) => `${value}rgba(${convert.hex.rgb(hexColors[index])}, 1);`).join('\n')}
+${scssVarNames.map((val, i) => `${val}rgba(${convert.hex.rgb(hexColors[i])}, 1);`).join('\n')}
 
 // HSLA
 // ------------------------------
-${Object.keys(one).map((value, index) => one[value])}
-`;
-
-  let blob = new Blob([colorData], {type: "text/scss;charset=utf-8"});
-  FileSaver.saveAs(blob, "palette.scss");
+${Object.entries(hsla).map((val, i) => `${val.join("")};`).join('\n')}`;
+    // Create the file, pass in the data
+    let blob = new Blob([colorData], {type: "text/scss;charset=utf-8"});
+    FileSaver.saveAs(blob, "palette.scss");
   });
 }
