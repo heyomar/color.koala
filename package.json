@@ -23,6 +23,7 @@
     "clipboard": "^2.0.4",
     "color-convert": "^1.9.3",
     "file-saver": "^2.0.0",
+    "mailto-link": "^1.0.0",
     "randomcolor": "^0.5.3"
   }
 }

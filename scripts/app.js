@@ -12,4 +12,4 @@ genColors();
 data();
 copyToClipBoard();
 downloadColors();
-// emailColors();
+emailColors();
