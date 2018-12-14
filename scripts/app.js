@@ -1,4 +1,4 @@
-// Import custom js
+// Import JS
 // ------------------------------
 import genColors from "./app.colors";
 import copyToClipBoard from "./app.copy";
@@ -9,7 +9,7 @@ import data from "./app.data";
 // Run it!
 // ------------------------------
 genColors();
-data();
 copyToClipBoard();
 downloadColors();
 emailColors();
+data();
