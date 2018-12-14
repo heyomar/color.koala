@@ -109,20 +109,20 @@
       <!-- SWATCHES -->
       <div class="column is-half-desktop">
         <div class="columns is-multiline">
-          <div class="column is-paddingless is-full">
-            <div class="swatch swatch--ctn"></div>
+          <div data-clipboard-target="#color1" class="column is-paddingless is-full">
+            <div id="color1" class="swatch swatch--ctn"></div>
           </div>
-          <div class="column is-paddingless is-full">
-            <div class="swatch swatch--ctn"></div>
+          <div data-clipboard-target="#color2"class="column is-paddingless is-full">
+            <div id="color2" class="swatch swatch--ctn"></div>
           </div>
-          <div class="column is-paddingless is-full">
-            <div class="swatch swatch--ctn"></div>
+          <div data-clipboard-target="#color3" class="column is-paddingless is-full">
+            <div id="color3" class="swatch swatch--ctn"></div>
           </div>
-          <div class="column is-paddingless is-full">
-            <div class="swatch swatch--ctn"></div>
+          <div data-clipboard-target="#color4" class="column is-paddingless is-full">
+            <div id="color4" class="swatch swatch--ctn"></div>
           </div>
-          <div class="column is-paddingless is-full">
-            <div class="swatch swatch--ctn"></div>
+          <div data-clipboard-target="#color5" class="column is-paddingless is-full">
+            <div id="color5" class="swatch swatch--ctn"></div>
           </div>
         </div>
       </div>
@@ -137,6 +137,20 @@
   </footer>
 
   <!-- SCRIPTS -->
+  <script>
+      (function(d, h, m){
+          var js, fjs = d.getElementsByTagName(h)[0];
+          if (d.getElementById(m)){return;}
+          js = d.createElement(h); js.id = m;
+          js.onload = function(){
+              window.makerWidgetComInit({
+              position: "left",          
+              widget: "577isvdytlurer38-viwabkg2r9ndtln4-vskqwgewdclfiotg"                
+          })};
+          js.src = "https://makerwidget.com/js/embed.js";
+          fjs.parentNode.insertBefore(js, fjs)
+      }(document, "script", "dhm"))
+  </script>
   <script src="./scripts/app.js" defer></script>
 </body>
 
