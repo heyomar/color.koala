@@ -4,7 +4,6 @@ import genColors from "./app.colors";
 import copyToClipBoard from "./app.copy";
 import downloadColors from "./app.download";
 import emailColors from "./app.email";
-import helpers from "./app.helpers";
 import data from "./app.data";
 
 // Run it!
@@ -14,4 +13,3 @@ data();
 copyToClipBoard();
 downloadColors();
 // emailColors();
-// helpers();
