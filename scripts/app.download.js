@@ -3,8 +3,8 @@ import convert from 'color-convert'
 import * as v from "./app.variables";
 
 export default function() {
-  const downloadButton = document.querySelector('.download');
-  downloadButton.addEventListener('click', (e) => {
+
+  document.querySelector('.download').addEventListener('click', (e) => {
     e.preventDefault()
 
     const hexColors = []

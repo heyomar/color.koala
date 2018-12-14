@@ -3,14 +3,8 @@ var convert = require("color-convert")
 import * as v from "./app.variables"
 
 export default () => {
-  // Variables for color history
-  const colorHistorySection = document.querySelector('.color-history')
-  const paletteContainer = document.createElement("div")
-
-  // Variables for randomColor options
   let luminosity = ""
   let hue = ""
-  
   // Main event listener for selection boxes
   document.addEventListener("change", e => {
     if (e.target.classList.contains("colorSelectBox")) {
@@ -45,6 +39,8 @@ export default () => {
   document.body.onkeyup = e => {if (e.keyCode === 32) {setColors()}}
 
   // COLOR HISTORY //
+  const colorHistorySection = document.querySelector('.color-history')
+  const paletteContainer = document.createElement("div")
   function addToHistoryPalettes() {
     v.swatches.forEach(element => {
       let colorBox = document.createElement("div")
