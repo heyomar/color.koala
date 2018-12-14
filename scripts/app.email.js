@@ -1,4 +1,4 @@
-var mailtoLink = require('mailto-link')
+const mailtoLink = require('mailto-link')
 import * as v from "./app.variables"
 
 export default function emailColors() {

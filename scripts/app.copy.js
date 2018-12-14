@@ -1,4 +1,4 @@
-var ClipboardJS = require("clipboard");
+const ClipboardJS = require("clipboard");
 
 export default () =>{
   const clipboard = new ClipboardJS(".column");
