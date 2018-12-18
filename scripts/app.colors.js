@@ -2,8 +2,37 @@ const randomColor = require("randomcolor")
 import * as v from "./app.variables"
 
 export default () => {
+
+	let num = 0
+	document.querySelector('.remove-swatch').addEventListener('click', (e)=>{
+		e.preventDefault
+
+		
+		const container = document.querySelector('.swatch--column')
+		
+		container.removeChild(container.lastChild)
+		
+		document.querySelectorAll('.swatch').forEach(e => {
+			let i = document.querySelectorAll('.swatch').length
+			let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			e.style.height = `${h / (i)}px`
+			e.style.lineHeight = `${h / (i)}px`
+		});
+		
+		num -= 1
+		document.querySelector('.log').textContent = `${num}`
+
+	})
+
+	
 	document.querySelector('.add-swatch').addEventListener('click',(e)=>{
 		e.preventDefault()
+		if(num < 5){
+			document.querySelector('.log').textContent = `${num += 1}`
+		} else if (num >= 5){
+			num = 0
+			document.querySelector('.log').textContent = `${num}`
+		}
 		let i = document.querySelectorAll('.swatch').length
 
 		if(i > 4 && i <= 9){
@@ -13,11 +42,13 @@ export default () => {
 
 			parentNode.setAttribute('data-clipboard-target', `#color${i + 1}`)
 			parentNode.classList = 'column is-paddingless is-full'
+
+			let color = randomColor({count: 1,})
 			
 			childNode.id = `color${i + 1}`
 			childNode.classList = 'swatch'
-			childNode.style.background = randomColor({count: 1,})
-			childNode.textContent = 'hello'
+			childNode.style.background = color[0]
+			childNode.textContent = color[0]
 			
 			parentNode.appendChild(childNode)
 			swatchesContainer.appendChild(parentNode)

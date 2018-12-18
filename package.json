@@ -10,13 +10,16 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "autoprefixer": "^7.1.5",
+    "netlify-lambda": "^1.1.1",
     "node-sass": "^4.5.3",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.15.2"
   },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html --no-source-maps"
+    "build": "parcel build index.html --no-source-maps",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
   },
   "dependencies": {
     "bulma": "^0.7.2",

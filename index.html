@@ -57,7 +57,7 @@
   <main>
     <div class="columns is-multiline">
       <div class="column is-half-desktop is-12-tablet">
-        <div class="columns is-centered">
+        <div class="columns is-centered is-mobile">
           <div class="column is-9">
             <div class="pt1">
               <img class="logo" src="./static/site--logo-v2.svg" alt="">
@@ -65,16 +65,16 @@
           </div>
         </div>
 
-        <div class="columns is-centered is-fluid">
+        <div class="columns is-centered is-mobile ">
           <div class="column is-9">
-              <h1 class="title is-2">Lets get you started on your project!</h1>
+            <h1 class="title is-2">Lets get you started on your project!</h1>
             <div class="action">
               <select class="colorSelectBox">
                 <option value="light">Light Colors</option>
                 <option value="bright">Bright Colors</option>
                 <option value="dark">Dark Colors</option>
               </select>
-              <span class="text has-text-grey-light">with a</span>
+              <span class="text has-text-grey-light is-hidden-mobile">with a</span>
               <select class="hueSelectBox">
                 <option value="random">Random Hue</option>
                 <option value="red">Red Hue</option>
@@ -90,13 +90,31 @@
           </div>
         </div>
 
-        <div class="columns is-centered">
-          <div class="column is-9">
-            <div class="action title is-3 has-text-grey-light">
-              <div>Spacebarbar to <a class="generate" href="">Generate</a></div>
-              <div>Click to <a class="add-swatch" href="">Add Swatch</a></div>
-              <div class="">Click to <a class="download" href="">Download</a></div>
-              <div>Click to <a class="email" href="">Email</a></div>
+        <div class="columns is-centered is-mobile">
+          <div class="column is-9 ">
+            <div class="action has-text-grey-light">
+              <div>
+                <span class="is-hidden-mobile">Spacebar</span>
+                <span class="is-hidden-desktop">Tap</span> to
+                <a role="button" tabindex="0" class="generate">Generate</a>
+              </div>
+              <div>
+                <span class="is-hidden-desktop">Tap</span>
+                <span class="is-hidden-mobile">Click</span> to
+                <a role="button" tabindex="0" class="add-swatch">+</a>
+                <a role="button" tabindex="0" class="remove-swatch">-</a>
+                (<span class="log">0</span>/5)
+              </div>
+              <div>
+                <span class="is-hidden-desktop">Tap</span>
+                <span class="is-hidden-mobile">Click</span> to
+                <a class="download" href="">Download</a>
+              </div>
+              <div>
+                <span class="is-hidden-desktop">Tap</span>
+                <span class="is-hidden-mobile">Click</span> to
+                <a class="email" href="">Email</a>
+              </div>
             </div>
             <div class="palette">
               <span class="text has-text-grey-light">Color palettes generated:</span>
@@ -104,18 +122,18 @@
             </div>
           </div>
         </div>
-        
+
       </div>
-      
-      
+
+
       <!-- SWATCHES -->
       <div class="column is-half-desktop">
         <div class="columns swatch--column is-multiline">
-          
+
           <div data-clipboard-target="#color1" class="column is-paddingless is-full">
             <div id="color1" class="swatch"></div>
           </div>
-          <div data-clipboard-target="#color2"class="column is-paddingless is-full">
+          <div data-clipboard-target="#color2" class="column is-paddingless is-full">
             <div id="color2" class="swatch"></div>
           </div>
           <div data-clipboard-target="#color3" class="column is-paddingless is-full">
@@ -131,30 +149,31 @@
       </div>
     </div>
   </main>
-  <div  class="footer">
-      <div class="content has-text-centered">
-        <br>
-        <h1>Color History</h1>
-        <br>
-        <div class="columns is-multiline color-history">
-        </div>
+  <div class="footer">
+    <div class="content has-text-centered">
+      <br>
+      <h1>History</h1>
+      <br>
+      <div class="columns is-multiline color-history">
       </div>
+    </div>
   </div>
 
   <!-- SCRIPTS -->
   <script>
-      (function(d, h, m){
-          var js, fjs = d.getElementsByTagName(h)[0];
-          if (d.getElementById(m)){return;}
-          js = d.createElement(h); js.id = m;
-          js.onload = function(){
-              window.makerWidgetComInit({
-              position: "left",          
-              widget: "577isvdytlurer38-viwabkg2r9ndtln4-vskqwgewdclfiotg"                
-          })};
-          js.src = "https://makerwidget.com/js/embed.js";
-          fjs.parentNode.insertBefore(js, fjs)
-      }(document, "script", "dhm"))
+    (function (d, h, m) {
+      var js, fjs = d.getElementsByTagName(h)[0];
+      if (d.getElementById(m)) { return; }
+      js = d.createElement(h); js.id = m;
+      js.onload = function () {
+        window.makerWidgetComInit({
+          position: "left",
+          widget: "577isvdytlurer38-viwabkg2r9ndtln4-vskqwgewdclfiotg"
+        })
+      };
+      js.src = "https://makerwidget.com/js/embed.js";
+      fjs.parentNode.insertBefore(js, fjs)
+    }(document, "script", "dhm"))
   </script>
   <script src="./scripts/app.js" defer></script>
 </body>
