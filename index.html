@@ -67,14 +67,17 @@
 
         <div class="columns is-centered is-mobile ">
           <div class="column is-9">
-            <h1 class="title is-2">Lets get you started on your project!</h1>
+            <h1 class="title is-2">Hi friend! Lets get you started on your project!</h1>
+            <h2 class="subtitle">Press the Spacebar or click "Go!" to create a palette!</h2>
+            <hr class="hr">
             <div class="action">
+              <span class="text has-text-grey-light">I would like</span>
               <select class="colorSelectBox">
                 <option value="light">Light Colors</option>
                 <option value="bright">Bright Colors</option>
                 <option value="dark">Dark Colors</option>
               </select>
-              <span class="text has-text-grey-light is-hidden-mobile">with a</span>
+              <span class="text has-text-grey-light">with a</span>
               <select class="hueSelectBox">
                 <option value="random">Random Hue</option>
                 <option value="red">Red Hue</option>
@@ -86,36 +89,26 @@
                 <option value="pink">Pink Hue</option>
                 <option value="monochrome">Monochrome Hue</option>
               </select>
+              <span class="text has-text-grey-light">please.</span>
             </div>
           </div>
         </div>
 
         <div class="columns is-centered is-mobile">
           <div class="column is-9 ">
-            <div class="action has-text-grey-light">
-              <div>
-                <span class="is-hidden-mobile">Spacebar</span>
-                <span class="is-hidden-desktop">Tap</span> to
-                <a role="button" tabindex="0" class="generate">Generate</a>
+
+            <div class="columns is-gapless is-mobile">
+              <div class="column">
+                <a class="generate action-btn" tabindex="0" role="button">Go!</a>
               </div>
-              <div>
-                <span class="is-hidden-desktop">Tap</span>
-                <span class="is-hidden-mobile">Click</span> to
-                <a role="button" tabindex="0" class="add-swatch">+</a>
-                <a role="button" tabindex="0" class="remove-swatch">-</a>
-                (<span class="log">0</span>/5)
+              <div class="column">
+                <a class="download action-btn" tabindex="0" role="button">.SCSS</a>
               </div>
-              <div>
-                <span class="is-hidden-desktop">Tap</span>
-                <span class="is-hidden-mobile">Click</span> to
-                <a class="download" tabindex="0" role="button">Download</a>
-              </div>
-              <div>
-                <span class="is-hidden-desktop">Tap</span>
-                <span class="is-hidden-mobile">Click</span> to
-                <a class="email" tabindex="0" role="button">Email</a>
+              <div class="column">
+                <a class="email action-btn" tabindex="0" role="button">Email</a>
               </div>
             </div>
+
             <div class="palette">
               <span class="text has-text-grey-light">Color palettes generated:</span>
               <div class="title count">0</div>
