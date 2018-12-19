@@ -1,10 +1,10 @@
 const mailtoLink = require('mailto-link')
-import * as v from './app.variables'
+import * as vars from './app.variables'
 
 export default function emailColors() {
 	function createMailToLink() {
 		const hexColors = []
-		v.swatches.forEach((e, i) => {
+		vars.swatches.forEach((e, i) => {
 			hexColors.push(v.swatches[i].textContent)
 		})
 

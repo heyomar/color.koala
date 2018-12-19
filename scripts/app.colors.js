@@ -1,43 +1,8 @@
 const randomColor = require('randomcolor')
-import * as v from './app.variables'
+import * as vars from './app.variables'
 
 export default () => {
 	//||----------------[FUNCTIONS]----------------||
-
-	document.querySelector('.add-swatch').addEventListener('click', e => {
-		e.preventDefault()
-
-		let i = document.querySelectorAll('.swatch').length
-
-		if (i > 4 && i <= 9) {
-			const swatchesContainer = document.querySelector('.swatch--column')
-			const parentNode = document.createElement('div')
-			const childNode = document.createElement('div')
-
-			parentNode.setAttribute('data-clipboard-target', `#color${i + 1}`)
-			parentNode.classList = 'column is-paddingless is-full'
-
-			let color = randomColor({ count: 1 })
-
-			childNode.id = `color${i + 1}`
-			childNode.classList = 'swatch'
-			childNode.style.background = color[0]
-			childNode.textContent = color[0]
-
-			parentNode.appendChild(childNode)
-			swatchesContainer.appendChild(parentNode)
-
-			document.querySelectorAll('.swatch').forEach(e => {
-				let h = Math.max(
-					document.documentElement.clientHeight,
-					window.innerHeight || 0
-				)
-				e.style.height = `${h / (i + 1)}px`
-				e.style.lineHeight = `${h / (i + 1)}px`
-			})
-		}
-	})
-
 	let hue = ''
 	let luminosity = ''
 	document.addEventListener('change', e => {
@@ -63,7 +28,7 @@ export default () => {
 			hue: hue
 		})
 
-		v.swatches.forEach((e, i) => {
+		vars.swatches.forEach((e, i) => {
 			e.textContent = color[i]
 			e.style.background = color[i]
 
