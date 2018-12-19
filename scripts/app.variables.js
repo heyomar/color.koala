@@ -1,3 +1,3 @@
-const swatches = document.querySelectorAll(".swatch");
+const swatches = document.querySelectorAll('.swatch')
 
-export { swatches };
+export { swatches }
