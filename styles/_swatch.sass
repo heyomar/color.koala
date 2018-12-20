@@ -1,49 +1,69 @@
 .swatch
-	height: calc(100vh / 4.93)
-	line-height: calc(100vh / 4.94)
-	text-align: center
-	text-transform: uppercase
-	color: $white
-	font-weight: 700
-	font-size: 40px
-	transition: all 0.2s ease
-	cursor: pointer
-	position: relative
+  height: calc(100vh / 4.93)
+  line-height: calc(100vh / 4.94)
+  text-align: center
+  text-transform: uppercase
+  color: $white
+  font-weight: 700
+  font-size: 40px
+  transition: all 0.2s ease
+  cursor: pointer
+  position: relative
 
-	&:hover:after
-		height: 20px
-		width: 20px
-		position: absolute
-		left: 30px
-		top: 30px
-		content: ' '
-		background-image: url('../static/icon__copy.svg')
-		background-repeat: no-repeat
-		background-size: contain
+  &:hover:after
+    height: 20px
+    width: 20px
+    position: absolute
+    left: 30px
+    top: 30px
+    content: ' '
+    background-image: url('../static/icon__copy.svg')
+    background-repeat: no-repeat
+    background-size: contain
+
 
 @media screen and (max-width:768px)
-	.swatch
-		height: 70px
-		line-height: 70px
+  .swatch
+    height: 70px
+    line-height: 70px
 
 .block
-	border-radius: 8px 8px 0 8px
-	height: 90px
-	line-height: 90px
-	color: $white
-	text-transform: uppercase
-	transition: box-shadow 0.3s ease
-	cursor: pointer
-	animation: slide-up 0.4s ease
+  font-size: 25px
+  border-radius: 8px 8px 0 8px
+  height: 150px
+  line-height: 150px
+  color: $white
+  text-transform: uppercase
+  cursor: pointer
+  animation: slide-up .70s cubic-bezier(0.17, 4.0, 0.58, .7)
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s
+  &:hover
+    transform: translateY(-15px)
 
-	&:hover
-		box-shadow: 0 10px 10px #ccc
+  &:hover:after
+    height: 20px
+    width: 20px
+    position: absolute
+    left: 25px
+    top: 25px
+    content: ' '
+    background-image: url('../static/icon__copy.svg')
+    background-repeat: no-repeat
+    background-size: contain
+
+
+@media screen and (max-width:768px)
+  .block
+    height: 60px
+    line-height: 60px
+    font-size: 25px
+  
 
 
 @keyframes slide-up 
-	0%
-		opacity: 0
-		transform: translateY(20px)
-	100%
-		opacity: 1
-		transform: translateY(0)
+  0%
+    opacity: 0
+    transform: translateY(50px)
+  100%
+    opacity: 1
+    transform: translateY(0px)

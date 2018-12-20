@@ -1,5 +1,6 @@
 import * as vars from './app.variables'
 import randomColor from 'randomcolor'
+import convert from 'color-convert'
 
 export default () => {
   // ||----------------[FUNCTIONS]----------------||
@@ -28,6 +29,11 @@ export default () => {
       hue: hue
     })
 
+    const columns = document.createElement('div')
+    const hr = document.createElement('hr')
+    hr.className = 'hr'
+    columns.className = 'columns is-multiline is-centered'
+
     vars.swatches.forEach((e, i) => {
       e.textContent = color[i]
       e.style.background = color[i]
@@ -38,13 +44,19 @@ export default () => {
 
       colorBox.appendChild(hexValue)
       colorBox.className = 'block'
+      colorBox.id = `color${i + 6}`
       colorBox.style.backgroundColor = e.textContent
+      colorBox.style.boxShadow = `rgba(${convert.hex.rgb(e.textContent)},.7) 0px -1px 40px`
+      colorBox.style.fontWeight = '700'
 
       column.appendChild(colorBox)
-      column.className = 'column is-2'
+      column.className = 'column is-one-fifth'
+      column.setAttribute('data-clipboard-target', `#color${i + 6}`)
 
-      document.querySelector('.color-history').appendChild(column)
+      columns.appendChild(column)
     })
+    document.querySelector('.color-history').appendChild(columns)
+    document.querySelector('.color-history').appendChild(hr)
     document.querySelector(
       '.count'
     ).textContent = (colorCount += 1).toLocaleString()
