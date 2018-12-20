@@ -16,16 +16,13 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "netlify-lambda": "^1.1.1",
     "node-sass": "^4.5.3",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.15.2"
   },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html --no-source-maps",
-    "lambda-serve": "netlify-lambda serve functions",
-    "lambda-build": "netlify-lambda build functions"
+    "build": "parcel build index.html --no-source-maps"
   },
   "dependencies": {
     "bulma": "^0.7.2",
