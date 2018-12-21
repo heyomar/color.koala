@@ -1,6 +1,7 @@
 import * as vars from './app.variables'
 import randomColor from 'randomcolor'
 import convert from 'color-convert'
+import { getCount, updateCount } from './app.data'
 
 export default () => {
   // ||----------------[FUNCTIONS]----------------||
@@ -35,6 +36,7 @@ export default () => {
     vars.swatches.forEach((e, i) => {
       e.textContent = color[i]
       e.style.background = color[i]
+      e.style.boxShadow = `0 -1px 30px rgba(${convert.hex.rgb(color[i])},0.7)`
 
       const column = document.createElement('div')
       const colorBox = document.createElement('div')
@@ -44,7 +46,7 @@ export default () => {
       colorBox.className = 'block'
       colorBox.id = `color${i + 6}`
       colorBox.style.backgroundColor = e.textContent
-      colorBox.style.boxShadow = `rgba(${convert.hex.rgb(e.textContent)},.7) 0px -1px 40px`
+      colorBox.style.boxShadow = `0px -1px 40px rgba(${convert.hex.rgb(e.textContent)},.7)`
       colorBox.style.fontWeight = '700'
 
       column.appendChild(colorBox)
@@ -58,7 +60,7 @@ export default () => {
 
     // const pagePalettesCount = document.querySelector('.count')
 
-    getCount()
+    
 
   }
 
@@ -66,5 +68,8 @@ export default () => {
   window.onkeydown = e => { if (e.keyCode === 32) { e.preventDefault() } }
   window.onkeyup = e => { if (e.keyCode === 32) { setColors() } }
 
-  document.addEventListener('DOMContentLoaded', setColors)
+  document.addEventListener('DOMContentLoaded', ()=>{
+    getCount()
+    setColors()
+  })
 }

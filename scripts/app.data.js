@@ -1,29 +1,30 @@
 var Airtable = require('airtable')
 
-export default () => {
+let currentNumber
 
+function updateCount () {
   const base = new Airtable({ apiKey: 'keyyM8RnILrJK5LoJ' }).base('app7MHrC2ID2zPNxw')
-  const pagePalettesCount = document.querySelector('.count')
-
-  let currentNumber
-
-  function getCount() {
-    base('Koala').find('recccR0o11Qm99hrl', function(err, record) {
-      if (err) { console.error(err); return; }
-      console.log(record.fields.palettes)
-      currentNumber = record.fields.palettes
-      pagePalettesCount.textContent = record.fields.palettes
-      console.log(currentNumber)
-    })
-  }
   
-  function updateCount() {
-    base('Koala').update('recccR0o11Qm99hrl', {
-      'palettes': (currentNumber + 1)
-    }, function (err, record) {
-      if (err) { console.error(err); return }
-    })
-  }
-  
+  base('Koala').replace('recccR0o11Qm99hrl', {
+    "name": "count",
+    "palettes": () => {
+      let pagePalettesCount = document.querySelector('.count')
 
+      return pagePalettesCount + 1
+    }
+  }, function (err, record) {
+    if (err) { console.error(err); return }
+  })
 }
+
+function getCount () {
+  const base = new Airtable({ apiKey: 'keyyM8RnILrJK5LoJ' }).base('app7MHrC2ID2zPNxw')
+  
+  base('Koala').find('recccR0o11Qm99hrl', function(err, record) {
+    if (err) { console.error(err); return; }
+    let pagePalettesCount = document.querySelector('.count')
+    pagePalettesCount.textContent = record.fields.palettes
+  })
+}
+
+export { updateCount, getCount }
