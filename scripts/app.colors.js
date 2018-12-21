@@ -20,8 +20,6 @@ export default () => {
     setColors()
   })
 
-  let colorCount = 0
-
   function setColors () {
     const color = randomColor({
       count: 5,
@@ -57,9 +55,11 @@ export default () => {
     })
     document.querySelector('.color-history').appendChild(columns)
     document.querySelector('.color-history').appendChild(hr)
-    document.querySelector(
-      '.count'
-    ).textContent = (colorCount += 1).toLocaleString()
+
+    // const pagePalettesCount = document.querySelector('.count')
+
+    getCount()
+
   }
 
   // ||----------------[EVENT LISTENERS]----------------||
