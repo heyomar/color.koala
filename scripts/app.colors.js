@@ -1,6 +1,6 @@
 import randomColor from 'randomcolor'
 import convert from 'color-convert'
-var Airtable = require('airtable')
+const Airtable = require('airtable')
 
 export default () => {
   const base = new Airtable({ apiKey: 'keyyM8RnILrJK5LoJ' }).base('app7MHrC2ID2zPNxw')
