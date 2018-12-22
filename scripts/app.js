@@ -1,13 +1,15 @@
 // Import JS
 // ------------------------------
-import genColors from './app.colors'
-import copyToClipBoard from './app.copy'
-import downloadColors from './app.download'
-import emailColors from './app.email'
+import dotenv from 'dotenv'
+import colors from './app.colors'
+import copy from './app.copy'
+import download from './app.download'
+import email from './app.email'
 
 // Run it!
 // ------------------------------
-genColors()
-copyToClipBoard()
-downloadColors()
-emailColors()
+dotenv.config()
+colors()
+copy()
+download()
+email()
