@@ -1,9 +1,10 @@
-import * as vars from './app.variables'
 import randomColor from 'randomcolor'
 import convert from 'color-convert'
-import { getCount, updateCount } from './app.data'
+var Airtable = require('airtable')
 
 export default () => {
+  const base = new Airtable({ apiKey: 'keyyM8RnILrJK5LoJ' }).base('app7MHrC2ID2zPNxw')
+  const swatches = document.querySelectorAll('.swatch')
   // ||----------------[FUNCTIONS]----------------||
   let hue = ''
   let luminosity = ''
@@ -33,7 +34,7 @@ export default () => {
     hr.className = 'hr'
     columns.className = 'columns is-multiline is-centered'
 
-    vars.swatches.forEach((e, i) => {
+    swatches.forEach((e, i) => {
       e.textContent = color[i]
       e.style.background = color[i]
       e.style.boxShadow = `0 -1px 30px rgba(${convert.hex.rgb(color[i])},0.7)`
@@ -58,18 +59,25 @@ export default () => {
     document.querySelector('.color-history').appendChild(columns)
     document.querySelector('.color-history').appendChild(hr)
 
-    // const pagePalettesCount = document.querySelector('.count')
+    const count = document.querySelector('.count')
 
-    
+    let paletteFromServer
+    base('Koala').find('recccR0o11Qm99hrl', (err, record) => {
+      if (err) { console.error(err); return; }
+      paletteFromServer = record.fields.palettes + 1
 
+      base('Koala').update('recccR0o11Qm99hrl', {
+        'palettes': paletteFromServer
+      }, function (err, record) {
+        if (err) { console.error(err); return; }
+        count.textContent = record.fields.palettes.toLocaleString()
+      })
+    })
   }
 
   // ||----------------[EVENT LISTENERS]----------------||
   window.onkeydown = e => { if (e.keyCode === 32) { e.preventDefault() } }
   window.onkeyup = e => { if (e.keyCode === 32) { setColors() } }
 
-  document.addEventListener('DOMContentLoaded', ()=>{
-    getCount()
-    setColors()
-  })
+  document.addEventListener('DOMContentLoaded', setColors)
 }

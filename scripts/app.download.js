@@ -1,8 +1,8 @@
 import FileSaver from 'file-saver'
 import convert from 'color-convert'
-import * as vars from './app.variables'
 
 export default function () {
+  const swatches = document.querySelectorAll('.swatch')
   document.querySelector('.download').addEventListener('click', e => {
     e.preventDefault()
 
@@ -10,7 +10,7 @@ export default function () {
     const hsl = []
     const scssVarNames = []
 
-    vars.swatches.forEach((e, i) => {
+    swatches.forEach((e, i) => {
       const hexcolor = e.textContent
       hexColors.push(hexcolor)
       hsl.push(convert.hex.hsl(hexcolor))
