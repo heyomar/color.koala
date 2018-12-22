@@ -63,13 +63,13 @@ export default () => {
 
     let paletteFromServer
     base('Koala').find('recccR0o11Qm99hrl', (err, record) => {
-      if (err) { console.error(err); return; }
+      if (err) { console.error(err) }
       paletteFromServer = record.fields.palettes + 1
 
       base('Koala').update('recccR0o11Qm99hrl', {
         'palettes': paletteFromServer
       }, function (err, record) {
-        if (err) { console.error(err); return; }
+        if (err) { console.error(err) }
         count.textContent = record.fields.palettes.toLocaleString()
       })
     })
