@@ -6,7 +6,7 @@ export default function emailColors () {
   function createMailToLink () {
     const hexColors = []
     swatches.forEach((e, i) => {
-      hexColors.push(vars.swatches[i].textContent)
+      hexColors.push(swatches[i].textContent)
     })
 
     emailButton.href = mailtoLink({
