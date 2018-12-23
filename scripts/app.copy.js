@@ -1,37 +1,21 @@
-export default function copyToClipoard() {
-  const swatches = document.querySelectorAll('.swatch');
+import ClipboardJS from 'clipboard'
 
-  // Copy to clipboard
-  // ------------------------
-  swatches.forEach(color => {
-    color.addEventListener('click', () => {
-      const selection = window.getSelection();
-      const range = document.createRange();
-      range.selectNodeContents(color);
-      selection.removeAllRanges();
-      selection.addRange(range);
-  
-      try {
-        document.execCommand('copy');
-        selection.removeAllRanges();
-  
-        const original = color.textContent;
-        color.textContent = 'Copied!';
-        color.classList.add('success');
-  
-        setTimeout(() => {
-          color.textContent = original;
-          color.classList.remove('success');
-        }, 600);
-      } catch (e) {
-        const errorMsg = document.querySelector('.error-msg');
-        errorMsg.classList.add('show');
-  
-        setTimeout(() => {
-          errorMsg.classList.remove('show');
-        }, 600);
-      }
-    });
-  });
+export default () => {
+  const clipboard = new ClipboardJS('.column')
+  clipboard.on('success', function (e) {
+    e.trigger.firstElementChild.innerHTML = 'Copied!'
+    setTimeout(() => {
+      e.trigger.firstElementChild.innerHTML = e.text
+    }, 450)
+    e.clearSelection()
+  })
 
+  const historyClipboard = new ClipboardJS('.color-history')
+  historyClipboard.on('success', function (e) {
+    e.trigger.firstElementChild.innerHTML = 'Copied!'
+    setTimeout(() => {
+      e.trigger.firstElementChild.innerHTML = e.text
+    }, 450)
+    e.clearSelection()
+  })
 }

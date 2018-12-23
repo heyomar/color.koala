@@ -1,16 +1,28 @@
-export default function emailColors() {
-  const swatches = document.querySelectorAll('.swatch');
-  const emailColorsButton = document.querySelector('.email-button');
+import mailtoLink from 'mailto-link'
 
-  emailColorsButton.addEventListener('click', () => {
-    const hexColors = [];
+export default function emailColors () {
+  const swatches = document.querySelectorAll('.swatch')
 
-    for (let i = 0; i <= 3; i += 1) {
-      const swatchHexColor = swatches[i].textContent;
-      hexColors.push(swatchHexColor);
-    }
+  function createMailToLink () {
+    const hexColors = []
+    swatches.forEach((e, i) => {
+      hexColors.push(vars.swatches[i].textContent)
+    })
 
-    emailColorsButton.href = `mailto:?subject=Gorgeous%20Color%20Palette%20from%20Color%20Koala&body=Color%20Palette%0D%0A-----------------%0D%0A${hexColors[0]}%0D%0A${hexColors[1]}%0D%0A${hexColors[2]}%0D%0A${hexColors[3]}%0D%0A%0D%0AKoala-ty%20colors%20courtesy%20of%20Color%20Koala!
-  `;
-  });
+    emailButton.href = mailtoLink({
+      to: '',
+      subject: 'Gorgeous Palette from Color Koala',
+      body: `
+    My Palette
+    ---------------
+    ${hexColors.map(val => val.toUpperCase()).join('\n')}
+    
+    by colorkoala.xyz
+    `
+    })
+  }
+
+  const emailButton = document.querySelector('.email')
+
+  emailButton.addEventListener('click', createMailToLink)
 }
