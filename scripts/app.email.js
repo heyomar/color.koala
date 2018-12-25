@@ -21,8 +21,6 @@ export default function emailColors () {
     `
     })
   }
-
   const emailButton = document.querySelector('.email')
-
   emailButton.addEventListener('click', createMailToLink)
 }
