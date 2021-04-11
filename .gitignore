@@ -3,6 +3,7 @@
 .ruby-version
 npm-debug.log
 .vscode
+.env
 
 # Folders
 dist
