@@ -1,193 +1,186 @@
 // -> Swatch
 // =========================
 .swatch {
-  text-align: center;
-  transition: all 0.3s ease;
-  height: 300px;
-  border-radius: 10px 10px 0 10px;
-  outline: none;
-  position: relative;
-  bottom: 0px;
-  cursor: pointer;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-top: 120px;
-  font-size: 26px;
+	text-align: center;
+	transition: all 0.3s ease;
+	height: 300px;
+	border-radius: 10px 10px 0 10px;
+	outline: none;
+	position: relative;
+	bottom: 0px;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-top: 120px;
+	font-size: 26px;
 
-  &:before{
-    content:'';
-    position: absolute;
-    display: block;
-    background-image: url('/static/icon__copy.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 20px;
-    width: 20px;
-    right: 20px;
-    top: 20px;
-    z-index: 10;
-    opacity: .7;
-  }
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		background-image: url('/static/icon__copy.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 20px;
+		width: 20px;
+		right: 20px;
+		top: 20px;
+		z-index: 10;
+		opacity: 0.7;
+	}
 
-  &:hover {
-    bottom: 20px;
-  }
-  
+	&:hover {
+		bottom: 20px;
+	}
 }
 
 .swatch--container {
-  padding-bottom: 40px;
+	padding-bottom: 40px;
 }
 
+@media screen and (max-width: 768px) {
+	.swatch {
+		font-size: 35px;
+		border-radius: 10px 10px 0 10px;
+		height: 70px;
+		padding: 0;
+		bottom: 0;
+		margin: 0 auto;
+		line-height: 70px;
+		white-space: nowrap;
 
-@media screen and (max-width:768px){
-  .swatch {
-    font-size: 35px;
-    border-radius: 10px 10px 0 10px;
-    height:70px;
-    padding: 0;
-    bottom: 0;
-    margin: 0 auto;
-    line-height: 70px;
-    white-space: nowrap;
+		&:before {
+			right: 20px;
+		}
 
-    &:before {
-      right:20px;
-    }
-
-    &:hover {
-      bottom: 0;
-    }
-  }
+		&:hover {
+			bottom: 0;
+		}
+	}
 }
-
 
 .action-box {
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(192, 192, 192, 0.555);
-  min-width: 150px;
-  height: 50px;
-  line-height: 50px;
-  white-space: nowrap;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgb(20, 20, 20);
-  background: #fff;
-  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
-  margin: 20px;
+	border-radius: 10px;
+	box-shadow: 0 8px 30px rgba(192, 192, 192, 0.555);
+	min-width: 150px;
+	height: 50px;
+	line-height: 50px;
+	white-space: nowrap;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgb(20, 20, 20);
+	background: #fff;
+	transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+	margin: 20px;
 
-  &:hover {
-    box-shadow: rgba(83, 83, 83, 0.25) 0px 20px 40px;
-    transform: translateY(-3px);
-  }
+	&:hover {
+		box-shadow: rgba(83, 83, 83, 0.25) 0px 20px 40px;
+		transform: translateY(-3px);
+	}
 }
 
 .svg {
-  height: 25px;
-  width: 25px;
-  
-  &.svg--btn--icon {
-    fill: #000;
-  }
+	height: 25px;
+	width: 25px;
+
+	&.svg--btn--icon {
+		fill: #000;
+	}
 }
 
-@media screen and (max-width:768px){ 
-  .action-box {
-    margin: 5px;
-    padding-top: 10px;
-    min-width: 60px;
-    height: 60px;
-  }
+@media screen and (max-width: 768px) {
+	.action-box {
+		margin: 5px;
+		padding-top: 10px;
+		min-width: 60px;
+		height: 60px;
+	}
 }
 
 // -> Content Container
 // =========================
 .content--container {
-  padding-bottom: 70px;
+	padding-bottom: 70px;
 
-  .subtitle {
-    padding-bottom: 30px;
-  }
+	.subtitle {
+		padding-bottom: 30px;
+	}
 }
 
-@media screen and (max-width:768px){ 
-  .content--container {
-    padding-bottom: 40px;
+@media screen and (max-width: 768px) {
+	.content--container {
+		padding-bottom: 40px;
 
-    .svg svg {
-      height: 40px;
-      width: 40px;
-    }
-  }
+		.svg svg {
+			height: 40px;
+			width: 40px;
+		}
+	}
 }
-
 
 // -> Bulma Components
 // =========================
 .navbar-item img {
-  max-height: 3.2rem;
+	max-height: 3.2rem;
 }
 .hero-body {
-  padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 .hero-foot {
-  padding-bottom: 40px;
+	padding-bottom: 40px;
 }
 
-@media screen and (max-width:768px){ 
-  .hero-body {
-    padding-bottom: 40px;
-  }
+@media screen and (max-width: 768px) {
+	.hero-body {
+		padding-bottom: 40px;
+	}
 }
 
 .navbar-link:not(.is-arrowless)::after {
-  border-color: #cacaca;
+	border-color: #cacaca;
 }
 
 .navbar-burger:hover {
-  background-color: transparent;
+	background-color: transparent;
 }
 
-.select, select {
-  width: 100%;
+.select,
+select {
+	width: 100%;
 }
-
 
 .darkmode {
-  position: absolute;
-  right: 25px;
-  top: 20px;
+	position: absolute;
+	right: 25px;
+	top: 20px;
 }
 
-@media screen and (max-width:1440px){ 
-  .darkmode {
-    right: 15px;
-    top: 60px;
-  }
+@media screen and (max-width: 1440px) {
+	.darkmode {
+		right: 15px;
+		top: 60px;
+	}
 }
-
 
 .dark-light {
-  background-color: rgba(0, 0, 0, 0.95);
+	background-color: rgba(0, 0, 0, 0.95);
 }
 
 .day-light {
-  background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 // Greeting
 .greeting {
-  background-color: #f4f4f4;
-  padding: 8px;
-  text-align: center;
-  display: none;
+	background-color: #f4f4f4;
+	padding: 8px;
+	text-align: center;
+	display: none;
 }
 
 .about {
-  background-color: #f5f7fa;
+	background-color: #f5f7fa;
 }
-
-

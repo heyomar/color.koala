@@ -1,0 +1,27 @@
+html,
+body {
+	font-family: $rubik;
+	font-weight: 400;
+}
+
+select {
+	appearance: none;
+	font-family: $rubik;
+	font-size: 25px;
+	font-weight: 500;
+	background-color: $white;
+	padding: 9px;
+	cursor: pointer;
+	overflow: hidden;
+	width: 180px;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	transition: all 0.2s ease;
+	box-shadow: 0 8px 30px hsla(0, 0%, 75.3%, 0.555);
+
+	&:hover {
+		box-shadow: 0 10px 30px rgba(83, 83, 83, 0.25);
+		color: $pink;
+	}
+}

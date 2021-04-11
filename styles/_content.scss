@@ -1,0 +1,86 @@
+.action {
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 35px;
+}
+
+.palette {
+	text-align: center;
+	font-size: 25px;
+
+	.count {
+		text-align: center;
+		font-size: 89px;
+		background: linear-gradient(-45deg, #ef83ff 0%, #34c6ff 50%, #27ff7d 100%);
+		background-size: 400% 400%;
+		animation: Gradient 12s ease infinite;
+	}
+
+	.text {
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: bold;
+	}
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.palette .count {
+		font-size: 60px;
+	}
+}
+
+.action-btn {
+	border-radius: 10px;
+	height: 50px;
+	line-height: 50px;
+	white-space: nowrap;
+	display: block;
+	font-weight: 700;
+	font-size: 20px;
+	color: #141414;
+	margin: 0 5px 20px 5px;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #eee;
+
+	&:hover {
+		box-shadow: 0 10px 30px rgba(83, 83, 83, 0.25);
+		transform: translateY(-3px);
+	}
+}
