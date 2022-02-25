@@ -7,7 +7,15 @@
     "author": "Omar Rasool",
     "license": "MIT",
     "devDependencies": {
-        "parcel": "^2.3.2"
+        "@parcel/packager-raw-url": "^2.3.2",
+        "@parcel/packager-xml": "^2.3.2",
+        "@parcel/transformer-sass": "^2.3.2",
+        "@parcel/transformer-webmanifest": "^2.3.2",
+        "@parcel/transformer-xml": "^2.3.2",
+        "os-browserify": "^0.3.0",
+        "parcel": "^2.3.2",
+        "path-browserify": "^1.0.1",
+        "process": "^0.11.10"
     },
     "scripts": {
         "dev": "parcel index.html",
@@ -18,9 +26,9 @@
         "bulma": "^0.9.3",
         "clipboard": "^2.0.10",
         "color-convert": "^2.0.1",
+        "dotenv": "^16.0.0",
         "file-saver": "^2.0.5",
         "mailto-link": "^2.0.0",
-        "randomcolor": "^0.6.2",
-        "dotenv": "^16.0.0"
+        "randomcolor": "^0.6.2"
     }
 }
