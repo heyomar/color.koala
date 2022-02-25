@@ -11,6 +11,7 @@ dist
 .idea/
 .cache/
 .sass-cache
+.parcel-cache
 _gh_pages
 _site
 node_modules

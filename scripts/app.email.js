@@ -11,14 +11,12 @@ export default function emailColors() {
 
 		emailButton.href = mailtoLink({
 			to: '',
-			subject: 'Gorgeous Palette from Color Koala',
+			subject: 'Gorgeous Color Palette from Color Koala',
 			body: `
-    My Palette
-    ---------------
-    ${hexColors.map((val) => val.toUpperCase()).join('\n')}
-    
-    by colorkoala.xyz
-    `,
+Color Palette
+---------------
+${hexColors.map(val => val.toUpperCase()).join('\n')}    
+by Hyperbolic.link`
 		})
 	}
 	const emailButton = document.querySelector('.email')
