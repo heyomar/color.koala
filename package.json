@@ -8,6 +8,12 @@
     "engines": {
         "node": ">=16.14.0"
     },
+    "targets": {
+        "global": {
+            "context": "browser",
+            "outputFormat": "global"
+        }
+    },
     "devDependencies": {
         "@parcel/packager-raw-url": "^2.3.2",
         "@parcel/packager-xml": "^2.3.2",
