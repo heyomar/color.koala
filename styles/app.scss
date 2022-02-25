@@ -2,18 +2,15 @@
 
 // BULMA COLUMNS
 // =============||
-@import '../node_modules/bulma/bulma';
+@import "bulma";
 
 // CUSTOM
 // =============||
-@import './vars';
-@import './basics';
-@import './navigation';
-@import './content';
-@import './swatch';
-@import './helpers';
-@import './cover';
-@import './custom';
-
-
-I made this change on master
+@import "./vars";
+@import "./basics";
+@import "./navigation";
+@import "./content";
+@import "./swatch";
+@import "./helpers";
+@import "./cover";
+@import "./custom";
