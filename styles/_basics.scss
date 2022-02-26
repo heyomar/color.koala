@@ -1,15 +1,9 @@
-html,
-body {
-    font-family: $rubik;
-    font-weight: 400;
-}
-
 select {
     appearance: none;
-    font-family: $rubik;
+    font-family: "Rubik", sans-serif;
     font-size: 25px;
     font-weight: 500;
-    background-color: $white;
+    background-color: white;
     padding: 9px;
     cursor: pointer;
     overflow: hidden;

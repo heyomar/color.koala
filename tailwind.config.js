@@ -1,7 +1,14 @@
 module.exports = {
-    content: ["./index.html"],
+    content: ['./index.html'],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                rubik: 'Rubik, sans-serif'
+            },
+            colors: {
+                pink: '#f794ab',
+            }
+        },
     },
     plugins: [],
 }
