@@ -1,16 +1,11 @@
 @charset "utf-8";
 
-// BULMA COLUMNS
-// =============||
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
-// CUSTOM
-// =============||
 @import "./vars";
 @import "./basics";
 @import "./navigation";
 @import "./content";
 @import "./swatch";
 @import "./helpers";
-@import "./cover";
 @import "./custom";

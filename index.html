@@ -95,7 +95,10 @@
                 <div class="columns is-centered is-mobile ">
                     <div class="column is-9">
                         <h1 class="title is-2">Hi there!</h1>
-                        <h2 class="is-size-4">Press the <strong>Spacebar</strong> or click <strong>'Colors!'</strong> to
+                        <h2 class="is-size-4">Press the <strong>Spacebar</strong> or click <strong><a
+                                    class="generate action-btn"
+                                    tabindex="0"
+                                    role="button">Generate Colors</a></strong> to
                             create a palette.</h2>
                         <hr class="hr">
                         <div class="action">
@@ -105,19 +108,22 @@
                                 <option value="bright">Bright Colors</option>
                                 <option value="dark">Dark Colors</option>
                             </select>
-                            <span class="text has-text-grey-light">with a</span>
-                            <select class="hueSelectBox">
-                                <option value="random">Random Hue</option>
-                                <option value="red">Red Hue</option>
-                                <option value="green">Green Hue</option>
-                                <option value="blue">Blue Hue</option>
-                                <option value="orange">Orange Hue</option>
-                                <option value="yellow">Yellow Hue</option>
-                                <option value="purple">Purple Hue</option>
-                                <option value="pink">Pink Hue</option>
-                                <option value="monochrome">Monochrome Hue</option>
-                            </select>
-                            <span class="text has-text-grey-light">please.</span>
+                            <div class="text has-text-grey-light">with a
+
+                                <select class="hueSelectBox">
+                                    <option value="random">Random Hue</option>
+                                    <option value="red">Red Hue</option>
+                                    <option value="green">Green Hue</option>
+                                    <option value="blue">Blue Hue</option>
+                                    <option value="orange">Orange Hue</option>
+                                    <option value="yellow">Yellow Hue</option>
+                                    <option value="purple">Purple Hue</option>
+                                    <option value="pink">Pink Hue</option>
+                                    <option value="monochrome">Monochrome Hue</option>
+                                </select>
+                                please.
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,11 +132,6 @@
                     <div class="column is-9 ">
 
                         <div class="columns is-gapless is-mobile">
-                            <div class="column">
-                                <a class="generate action-btn"
-                                    tabindex="0"
-                                    role="button">Colors!</a>
-                            </div>
                             <div class="column">
                                 <a class="download action-btn"
                                     tabindex="0"
@@ -188,7 +189,7 @@
         <hr class="hr">
         <div class="columns is-fluid">
             <div class="column">
-                <div class="content has-text-centered pad30">
+                <div class="content has-text-centered colorHistory__container">
                     <h1 class="title is-1">History</h1><br>
                     <div class="color-history"></div>
                 </div>

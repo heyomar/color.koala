@@ -21,6 +21,16 @@ select {
 
     &:hover {
         box-shadow: 0 10px 30px rgba(83, 83, 83, 0.25);
-        color: $pink;
     }
+}
+
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+a {
+    color: #000;
+    transition: all 0.2s ease;
 }
