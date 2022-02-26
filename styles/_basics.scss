@@ -24,13 +24,7 @@ select {
     }
 }
 
-.footer {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 12px;
-}
-
 a {
-    color: #000;
+    @apply text-black;
     transition: all 0.2s ease;
 }

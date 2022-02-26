@@ -76,6 +76,7 @@
         rel="text/css"
         href="./styles/app.scss" />
 
+
 </head>
 
 <body>
@@ -96,19 +97,19 @@
                     <div class="column is-9">
                         <h1 class="title is-2">Hi there!</h1>
                         <h2 class="is-size-4">Press the <strong>Spacebar</strong> or click <strong><a
-                                    class="generate action-btn"
+                                    class="generate action-btn inline"
                                     tabindex="0"
                                     role="button">Generate Colors</a></strong> to
                             create a palette.</h2>
                         <hr class="hr">
                         <div class="action">
-                            <span class="text has-text-grey-light">I would like</span>
+                            <span class="uppercase text-base text-gray-200">I would like</span>
                             <select class="colorSelectBox">
                                 <option value="light">Light Colors</option>
                                 <option value="bright">Bright Colors</option>
                                 <option value="dark">Dark Colors</option>
                             </select>
-                            <div class="text has-text-grey-light">with a
+                            <div class="uppercase text-base text-gray-200">with a
 
                                 <select class="hueSelectBox">
                                     <option value="random">Random Hue</option>
@@ -189,15 +190,15 @@
         <hr class="hr">
         <div class="columns is-fluid">
             <div class="column">
-                <div class="content has-text-centered colorHistory__container">
+                <div class="content has-text-centered p-5">
                     <h1 class="title is-1">History</h1><br>
                     <div class="color-history"></div>
                 </div>
             </div>
         </div>
     </main>
-    <div class="footer">
-        <div class="has-text-centered">
+    <div class="bg-white p-5 mt-3">
+        <div class="text-center">
             <a target="_blank"
                 rel="noopener"
                 class="by"
