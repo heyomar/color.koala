@@ -15,17 +15,17 @@
     transition: all 0.3s ease;
     &:hover {
         right: 20px;
-    }
-    &:hover:after {
-        height: 20px;
-        width: 20px;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        content: " ";
-        background-image: url("../static/icon__copy.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
+        &:after {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            content: " ";
+            background-image: url("../static/icon__copy.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
 }
 
