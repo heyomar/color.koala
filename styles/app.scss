@@ -8,6 +8,7 @@
 
 @layer components {
     .action__button {
+        cursor: pointer;
         border-radius: 10px;
         height: 50px;
         line-height: 50px;
@@ -16,10 +17,12 @@
         font-weight: 700;
         font-size: 20px;
         color: #141414;
-        margin: 0 5px 20px 5px;
+        padding: 0 5px 20px 5px;
         background: theme("colors.white");
         text-align: center;
         border: 1px solid #eee;
+        transition: all 0.2s ease;
+        min-width: 200px;
 
         &:hover {
             box-shadow: 0 10px 30px rgba(83, 83, 83, 0.25);

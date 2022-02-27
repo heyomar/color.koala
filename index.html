@@ -96,22 +96,22 @@
                 <div class="columns is-centered is-mobile ">
                     <div class="column is-9">
                         <h1 class="title is-2">Hi there!</h1>
-                        <h2 class="is-size-4">Press the <strong>Spacebar</strong> or click <strong><a
-                                    class="generate action__button inline-block px-3"
-                                    tabindex="0"
-                                    role="button">Generate Colors</a></strong> to
+                        <h2 class="text-2xl leading-2">Press the Spacebar or click<a
+                                class="generate action__button inline-block px-3"
+                                tabindex="0"
+                                role="button">Generate Colors</a> to
                             create a palette.</h2>
                         <hr class="hr">
                         <div class="text-2xl font-medium leading-9">
                             <span class="text-gray-400">I would like</span>
-                            <select class="colorSelectBox">
+                            <select class="colorSelectBox action__button inline-block">
                                 <option value="light">Light Colors</option>
                                 <option value="bright">Bright Colors</option>
                                 <option value="dark">Dark Colors</option>
                             </select>
                             <div class="text-gray-400">with a
 
-                                <select class="hueSelectBox">
+                                <select class="hueSelectBox action__button inline-block">
                                     <option value="random">Random Hue</option>
                                     <option value="red">Red Hue</option>
                                     <option value="green">Green Hue</option>
@@ -132,21 +132,17 @@
                 <div class="columns is-centered is-mobile">
                     <div class="column is-9 ">
 
-                        <div class="columns is-gapless is-mobile">
-                            <div class="column">
-                                <a class="download action__button"
-                                    tabindex="0"
-                                    role="button">.SCSS</a>
-                            </div>
-                            <div class="column">
-                                <a class="email action__button"
-                                    tabindex="0"
-                                    role="button">Email</a>
-                            </div>
+                        <div class="flex gap-x-2 justify-center">
+                            <a class="download action__button"
+                                tabindex="0"
+                                role="button">.SCSS</a>
+                            <a class="email action__button"
+                                tabindex="0"
+                                role="button">Email</a>
                         </div>
 
                         <div class="palette">
-                            <span class="text has-text-grey-light">Color palettes generated:</span>
+                            <span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
                             <div class="title count"></div>
                         </div>
                     </div>
