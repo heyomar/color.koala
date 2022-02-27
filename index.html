@@ -93,9 +93,9 @@
                     </div>
                 </div>
 
-                <div class="columns is-centered is-mobile ">
-                    <div class="column is-9">
-                        <h1 class="title is-2">Hi there!</h1>
+                <div class="justify-center flex px-5">
+                    <div class="max-w-screen-sm">
+                        <h1 class="text-5xl">Hi there!</h1>
                         <h2 class="text-2xl leading-2">Press the Spacebar or click<a
                                 class="generate action__button inline-block px-3"
                                 tabindex="0"
@@ -109,42 +109,37 @@
                                 <option value="bright">Bright Colors</option>
                                 <option value="dark">Dark Colors</option>
                             </select>
-                            <div class="text-gray-400">with a
+                            with a
+                            <select class="hueSelectBox action__button inline-block">
+                                <option value="random">Random Hue</option>
+                                <option value="red">Red Hue</option>
+                                <option value="green">Green Hue</option>
+                                <option value="blue">Blue Hue</option>
+                                <option value="orange">Orange Hue</option>
+                                <option value="yellow">Yellow Hue</option>
+                                <option value="purple">Purple Hue</option>
+                                <option value="pink">Pink Hue</option>
+                                <option value="monochrome">Monochrome Hue</option>
+                            </select>
+                            please.
 
-                                <select class="hueSelectBox action__button inline-block">
-                                    <option value="random">Random Hue</option>
-                                    <option value="red">Red Hue</option>
-                                    <option value="green">Green Hue</option>
-                                    <option value="blue">Blue Hue</option>
-                                    <option value="orange">Orange Hue</option>
-                                    <option value="yellow">Yellow Hue</option>
-                                    <option value="purple">Purple Hue</option>
-                                    <option value="pink">Pink Hue</option>
-                                    <option value="monochrome">Monochrome Hue</option>
-                                </select>
-                                please.
-
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="columns is-centered is-mobile">
-                    <div class="column is-9 ">
+                <div class="border">
+                    <div class="flex gap-x-2 justify-center">
+                        <a class="download action__button"
+                            tabindex="0"
+                            role="button">.SCSS</a>
+                        <a class="email action__button"
+                            tabindex="0"
+                            role="button">Email</a>
+                    </div>
 
-                        <div class="flex gap-x-2 justify-center">
-                            <a class="download action__button"
-                                tabindex="0"
-                                role="button">.SCSS</a>
-                            <a class="email action__button"
-                                tabindex="0"
-                                role="button">Email</a>
-                        </div>
-
-                        <div class="palette">
-                            <span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
-                            <div class="title count"></div>
-                        </div>
+                    <div class="palette">
+                        <span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
+                        <div class="title count"></div>
                     </div>
                 </div>
 
