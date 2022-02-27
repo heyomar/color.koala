@@ -81,53 +81,49 @@
 
 <body class="font-rubik font-medium">
     <main>
-        <div class=" flex flex-row max-w-screen-lg m-auto">
-            <div class="flex flex-col w-1/2">
-                <div class="flex justify-start max-w-screen-sm">
-                    <div class="pt1">
-                        <img class="h-20 p-3 pl-0 w-[75px]"
-                            src="./static/site__logo-v2.svg"
-                            alt="koala smiling logo">
-                    </div>
+        <div class=" flex flex-col lg:flex-row max-w-screen-lg m-auto">
+            <div class="flex flex-col w-full lg:w-1/2">
+                <div class="flex justify-start w-full">
+
+                    <img class="h-20 p-3 pl-0 w-[75px]"
+                        src="./static/site__logo-v2.svg"
+                        alt="koala smiling logo">
 
                 </div>
 
-                <div class="justify-center flex px-5">
-                    <div class="max-w-screen-sm">
-                        <h1 class="text-5xl">Hi there!</h1>
-                        <h2 class="text-2xl leading-2">Press the Spacebar or click<a
-                                class="generate action__button inline-block px-3"
-                                tabindex="0"
-                                role="button">Generate Colors</a> to
-                            create a palette.</h2>
-                        <hr class="hr">
-                        <div class="text-2xl font-medium leading-9">
-                            <span class="text-gray-400">I would like</span>
-                            <select class="colorSelectBox action__button inline-block">
-                                <option value="light">Light Colors</option>
-                                <option value="bright">Bright Colors</option>
-                                <option value="dark">Dark Colors</option>
-                            </select>
-                            with a
-                            <select class="hueSelectBox action__button inline-block">
-                                <option value="random">Random Hue</option>
-                                <option value="red">Red Hue</option>
-                                <option value="green">Green Hue</option>
-                                <option value="blue">Blue Hue</option>
-                                <option value="orange">Orange Hue</option>
-                                <option value="yellow">Yellow Hue</option>
-                                <option value="purple">Purple Hue</option>
-                                <option value="pink">Pink Hue</option>
-                                <option value="monochrome">Monochrome Hue</option>
-                            </select>
-                            please.
+                <div class="justify-center flex-col flex px-5 mb-5 max-w-screen-sm">
 
-                        </div>
+                    <h1 class="text-5xl">Hi there!</h1>
+                    <h2 class="text-2xl leading-2">Press the Spacebar or click<a
+                            class="generate action__button inline-block px-3"
+                            tabindex="0"
+                            role="button">Generate Colors</a> to
+                        create a palette.</h2>
+                    <hr class="hr">
+                    <div class="text-2xl font-medium leading-9 mb-8">
+                        <span class="text-gray-400">I would like</span>
+                        <select class="colorSelectBox action__button inline-block">
+                            <option value="light">Light Colors</option>
+                            <option value="bright">Bright Colors</option>
+                            <option value="dark">Dark Colors</option>
+                        </select>
+                        with a
+                        <select class="hueSelectBox action__button inline-block">
+                            <option value="random">Random Hue</option>
+                            <option value="red">Red Hue</option>
+                            <option value="green">Green Hue</option>
+                            <option value="blue">Blue Hue</option>
+                            <option value="orange">Orange Hue</option>
+                            <option value="yellow">Yellow Hue</option>
+                            <option value="purple">Purple Hue</option>
+                            <option value="pink">Pink Hue</option>
+                            <option value="monochrome">Monochrome Hue</option>
+                        </select>
+                        please.
+
                     </div>
-                </div>
 
-                <div class="border">
-                    <div class="flex gap-x-2 justify-center">
+                    <div class="flex gap-x-2 justify-center mb-8">
                         <a class="download action__button"
                             tabindex="0"
                             role="button">.SCSS</a>
@@ -140,8 +136,8 @@
                         <span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
                         <div class="title count"></div>
                     </div>
-                </div>
 
+                </div>
             </div>
 
 
