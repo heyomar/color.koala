@@ -20,6 +20,8 @@
         "@parcel/transformer-sass": "^2.3.2",
         "@parcel/transformer-webmanifest": "^2.3.2",
         "@parcel/transformer-xml": "^2.3.2",
+        "@tailwindcss/forms": "^0.4.0",
+        "autoprefixer": "^10.4.2",
         "os-browserify": "^0.3.0",
         "parcel": "^2.3.2",
         "path-browserify": "^1.0.1",
@@ -32,11 +34,8 @@
         "build": "parcel build index.html --no-source-maps"
     },
     "dependencies": {
-        "@tailwindcss/forms": "^0.4.0",
         "airtable": "^0.11.2",
-        "autoprefixer": "^10.4.2",
         "clipboard": "^2.0.10",
-        "color-convert": "^2.0.1",
         "dotenv": "^16.0.0",
         "file-saver": "^2.0.5",
         "mailto-link": "^2.0.0",
