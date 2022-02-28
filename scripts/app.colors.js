@@ -1,5 +1,4 @@
 import randomColor from 'randomcolor';
-import convert from 'color-convert';
 import Airtable from 'airtable';
 
 export default () => {
@@ -35,7 +34,6 @@ export default () => {
         swatches.forEach((e, i) => {
             e.textContent = color[i];
             e.style.background = color[i];
-            e.style.boxShadow = `0 -1px 30px rgba(${convert.hex.rgb(color[i])},0.4)`;
 
             const colorHistory = document.querySelector('.color-history');
             const colorBox = document.createElement('div');
@@ -45,13 +43,9 @@ export default () => {
             colorBox.className = 'swatch-block';
             colorBox.id = `color${i + 6}`;
             colorBox.style.backgroundColor = e.textContent;
-            colorBox.style.boxShadow = `0px -1px 40px rgba(${convert.hex.rgb(e.textContent)},0)`;
-            colorBox.style.fontWeight = '700';
 
             colorHistory.appendChild(colorBox);
             colorBox.setAttribute('data-clipboard-target', `#color${i + 6}`);
-
-
         });
 
         const count = document.querySelector('.count');
