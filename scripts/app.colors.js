@@ -37,7 +37,7 @@ export default () => {
             e.style.background = color[i];
             e.style.boxShadow = `0 -1px 30px rgba(${convert.hex.rgb(color[i])},0.4)`;
 
-            const column = document.createElement('div');
+            const colorHistory = document.querySelector('.color-history');
             const colorBox = document.createElement('div');
             const hexValue = document.createTextNode(e.textContent);
 
@@ -48,13 +48,11 @@ export default () => {
             colorBox.style.boxShadow = `0px -1px 40px rgba(${convert.hex.rgb(e.textContent)},0)`;
             colorBox.style.fontWeight = '700';
 
-            column.appendChild(colorBox);
-            column.className = 'column is-one-fifth';
-            column.setAttribute('data-clipboard-target', `#color${i + 6}`);
+            colorHistory.appendChild(colorBox);
+            colorBox.setAttribute('data-clipboard-target', `#color${i + 6}`);
 
-            columns.appendChild(column);
+
         });
-        document.querySelector('.color-history').appendChild(columns);
 
         const count = document.querySelector('.count');
 
