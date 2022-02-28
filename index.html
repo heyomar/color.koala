@@ -4,66 +4,38 @@
 <head>
     <!-- META -->
     <meta charset="utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1" />
-    <meta name="title"
-        content="Color Koala">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="Color Koala">
     <meta name="description"
         content="Color Koala is a quick palette generator, creating gorgeous colors for all of your side projects." />
     <title> Color Koala | The Koala-ty color palette generator, creating gorgeous colors for all of your side projects.
     </title>
 
     <!-- FAVICON -->
-    <link rel="apple-touch-icon"
-        sizes="180x180"
-        href="static/meta/apple-touch-icon.png">
-    <link rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="static/meta/favicon-32x32.png">
-    <link rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="static/meta/favicon-16x16.png">
-    <link rel="manifest"
-        href="static/meta/site.webmanifest">
-    <link rel="mask-icon"
-        href="static/meta/safari-pinned-tab.svg"
-        color="#f794ab">
-    <link rel="shortcut icon"
-        href="static/meta/favicon.ico">
-    <meta name="msapplication-TileColor"
-        content="#ffc40d">
-    <meta name="msapplication-config"
-        content="static/meta/browserconfig.xml">
-    <meta name="theme-color"
-        content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/meta/favicon-16x16.png">
+    <link rel="manifest" href="static/meta/site.webmanifest">
+    <link rel="mask-icon" href="static/meta/safari-pinned-tab.svg" color="#f794ab">
+    <link rel="shortcut icon" href="static/meta/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="static/meta/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- TWITTER -->
-    <meta property="twitter:card"
-        content="summary">
-    <meta name="twitter:creator"
-        content="@wayshere">
-    <meta property="twitter:url"
-        content="https://colorkoala.xyz">
-    <meta property="twitter:title"
-        content="Color Koala">
+    <meta property="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@wayshere">
+    <meta property="twitter:url" content="https://colorkoala.xyz">
+    <meta property="twitter:title" content="Color Koala">
     <meta property="twitter:description"
         content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects.">
-    <meta property="twitter:image"
-        content="https://i.ibb.co/zfBTJvH/social-thumb-2x.png">
-
+    <meta property="twitter:image" content="https://i.ibb.co/zfBTJvH/social-thumb-2x.png">
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet"
-        rel="text/css"
-        href="./styles/app.scss" />
-
-
+    <link rel="stylesheet" rel="text/css" href="./styles/app.scss" />
 </head>
 
 <body class="font-rubik font-medium pt-4">
@@ -72,14 +44,13 @@
             <div class="flex flex-col w-full mx-auto lg:w-1/2">
 
                 <div class="justify-start flex-col flex mb-5 max-w-screen-md relative h-full">
-                    <img class="h-20 p-3 -ml-3 w-[75px]"
-                        src="./static/site__logo-v2.svg"
-                        alt="koala smiling logo">
+                    <!-- Logo -->
+                    <img class="h-20 p-3 -ml-3 w-[75px]" src="./static/site__logo-v2.svg" alt="koala smiling logo">
+                    <!-- Start Main Content -->
                     <h1 class="text-5xl">Hi there!</h1>
                     <h2 class="text-2xl leading-2">Press the Spacebar or click<a
-                            class="generate action__button inline-block px-3"
-                            tabindex="0"
-                            role="button">Generate Colors</a> to
+                            class="generate action__button inline-block px-3" tabindex="0" role="button">Generate
+                            Colors</a> to
                         create a palette.</h2>
                     <div class="text-2xl font-medium leading-9 mb-10 border-b pb-10">
                         <span class="text-gray-400">I would like</span>
@@ -102,16 +73,14 @@
                         </select>
                         please.
                     </div>
-
+                    <!-- Buttons -->
                     <div class="flex gap-x-8 justify-center mb-8">
-                        <a class="download action__button w-1/2"
-                            aria-role="button">
+                        <a class="download action__button w-1/2" aria-role="button">
                             Get SCSS
                         </a>
-                        <a class="email action__button w-1/2"
-                            aria-role="button">Email Colors</a>
+                        <a class="email action__button w-1/2" aria-role="button">Email Colors</a>
                     </div>
-
+                    <!-- Color Palette Counter -->
                     <div class="palette absolute bottom-0 mx-auto w-full">
                         <span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
                         <div class="font-bold count"></div>
@@ -119,39 +88,27 @@
                 </div>
             </div>
 
-
             <!-- SWATCHES -->
             <div class="max-w-screen-sm flex flex-col mx-auto w-full lg:w-1/2">
 
-                <div data-clipboard-target="#color1"
-                    class="copyable">
-                    <div id="color1"
-                        class="swatch"></div>
+                <div data-clipboard-target="#color1" class="copyable">
+                    <div id="color1" class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color2"
-                    class="copyable">
-                    <div id="color2"
-                        class="swatch"></div>
+                <div data-clipboard-target="#color2" class="copyable">
+                    <div id="color2" class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color3"
-                    class="copyable">
-                    <div id="color3"
-                        class="swatch"></div>
+                <div data-clipboard-target="#color3" class="copyable">
+                    <div id="color3" class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color4"
-                    class="copyable">
-                    <div id="color4"
-                        class="swatch"></div>
+                <div data-clipboard-target="#color4" class="copyable">
+                    <div id="color4" class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color5"
-                    class="copyable">
-                    <div id="color5"
-                        class="swatch"></div>
+                <div data-clipboard-target="#color5" class="copyable">
+                    <div id="color5" class="swatch"></div>
                 </div>
             </div>
         </div>
-
-
+        <!-- Color History -->
         <div class="text-center max-w-screen-xl mx-auto border-t-2">
             <div class="color-history grid grid-cols-5 py-8"></div>
         </div>
@@ -160,10 +117,7 @@
     </main>
     <div class="bg-white p-5 mt-3">
         <div class="text-center">
-            <a target="_blank"
-                rel="noopener"
-                class="by"
-                href="https://instagram.com/wayshere">
+            <a target="_blank" rel="noopener" class="by" href="https://instagram.com/wayshere">
                 Made by @wayshere
             </a>
         </div>
@@ -171,9 +125,7 @@
 
 
     <!-- SCRIPTS -->
-    <script type="module"
-        src="./scripts/app.js"
-        defer></script>
+    <script type="module" src="./scripts/app.js" defer></script>
 </body>
 
 </html>
