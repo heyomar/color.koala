@@ -39,7 +39,7 @@
     cursor: pointer;
     animation: slide-up 0.7s cubic-bezier(0.17, 4, 0.58, 0.7);
     transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
-    @apply flex-1;
+    @apply mb-20;
 
     &:hover {
         transform: translateY(-15px);
