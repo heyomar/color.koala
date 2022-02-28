@@ -30,9 +30,7 @@ export default () => {
         });
 
         const columns = document.createElement('div');
-        const hr = document.createElement('hr');
-        hr.className = 'hr';
-        columns.className = 'columns is-multiline is-centered';
+        columns.className = 'flex flex-row';
 
         swatches.forEach((e, i) => {
             e.textContent = color[i];
@@ -44,10 +42,10 @@ export default () => {
             const hexValue = document.createTextNode(e.textContent);
 
             colorBox.appendChild(hexValue);
-            colorBox.className = 'block';
+            colorBox.className = 'swatch-block shadow';
             colorBox.id = `color${i + 6}`;
             colorBox.style.backgroundColor = e.textContent;
-            colorBox.style.boxShadow = `0px -1px 40px rgba(${convert.hex.rgb(e.textContent)},.4)`;
+            colorBox.style.boxShadow = `0px -1px 40px rgba(${convert.hex.rgb(e.textContent)},0)`;
             colorBox.style.fontWeight = '700';
 
             column.appendChild(colorBox);
@@ -57,7 +55,6 @@ export default () => {
             columns.appendChild(column);
         });
         document.querySelector('.color-history').appendChild(columns);
-        document.querySelector('.color-history').appendChild(hr);
 
         const count = document.querySelector('.count');
 

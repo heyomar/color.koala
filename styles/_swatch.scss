@@ -29,11 +29,11 @@
     }
 }
 
-.block {
+.swatch-block {
     font-size: 25px;
-    border-radius: 8px 8px 0 8px;
-    height: 150px;
-    line-height: 150px;
+    height: 120px;
+    min-width: 200px;
+    line-height: 120px;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
@@ -63,7 +63,7 @@
             right: 0;
         }
     }
-    .block {
+    .swatch-block {
         height: 60px;
         line-height: 60px;
         font-size: 25px;
@@ -86,12 +86,12 @@
 }
 
 .action__button {
+    @apply text-center hover:shadow-md rounded-lg border border-gray-300
+        cursor-pointer whitespace-nowrap block font-bold text-xl text-black;
     height: 50px;
     line-height: 50px;
     padding: 0 5px 20px 5px;
+    color: black;
     transition: all 0.2s ease;
     min-width: 200px;
-
-    @apply text-center hover:shadow-md rounded-lg border border-gray-300
-        cursor-pointer whitespace-nowrap block font-bold text-xl text-black;
 }

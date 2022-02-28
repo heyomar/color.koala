@@ -68,10 +68,10 @@
 
 <body class="font-rubik font-medium pt-4">
     <main>
-        <div class="flex flex-col lg:flex-row max-w-screen-lg mx-auto px-5 mb-10">
+        <div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto px-5 mb-10">
             <div class="flex flex-col w-full mx-auto lg:w-1/2">
 
-                <div class="justify-start flex-col flex mb-5 max-w-screen-sm mx-auto relative h-full">
+                <div class="justify-start flex-col flex mb-5 max-w-screen-md relative h-full">
                     <img class="h-20 p-3 -ml-3 w-[75px]"
                         src="./static/site__logo-v2.svg"
                         alt="koala smiling logo">
@@ -103,11 +103,13 @@
                         please.
                     </div>
 
-                    <div class="flex gap-x-2 justify-center mb-8">
-                        <a class="download action__button"
-                            aria-role="button">.SCSS</a>
-                        <a class="email action__button"
-                            aria-role="button">Email</a>
+                    <div class="flex gap-x-8 justify-center mb-8">
+                        <a class="download action__button w-1/2"
+                            aria-role="button">
+                            Get SCSS
+                        </a>
+                        <a class="email action__button w-1/2"
+                            aria-role="button">Email Colors</a>
                     </div>
 
                     <div class="palette absolute bottom-0 mx-auto w-full">
@@ -119,25 +121,30 @@
 
 
             <!-- SWATCHES -->
-            <div class=" max-w-screen-sm flex flex-col mx-auto w-full lg:w-1/2">
+            <div class="max-w-screen-sm flex flex-col mx-auto w-full lg:w-1/2">
 
-                <div data-clipboard-target="#color1">
+                <div data-clipboard-target="#color1"
+                    class="copyable">
                     <div id="color1"
                         class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color2">
+                <div data-clipboard-target="#color2"
+                    class="copyable">
                     <div id="color2"
                         class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color3">
+                <div data-clipboard-target="#color3"
+                    class="copyable">
                     <div id="color3"
                         class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color4">
+                <div data-clipboard-target="#color4"
+                    class="copyable">
                     <div id="color4"
                         class="swatch"></div>
                 </div>
-                <div data-clipboard-target="#color5">
+                <div data-clipboard-target="#color5"
+                    class="copyable">
                     <div id="color5"
                         class="swatch"></div>
                 </div>
@@ -145,8 +152,8 @@
         </div>
 
 
-        <div class="text-center p-5 max-w-screen-lg mx-auto border-t-2">
-            <h1 class="">History</h1><br>
+        <div class="text-center max-w-screen-lg mx-auto border-t-2">
+            <h1 class="">Palette History</h1><br>
             <div class="color-history grid"></div>
         </div>
 
