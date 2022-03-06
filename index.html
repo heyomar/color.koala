@@ -40,15 +40,15 @@
 	<link rel="stylesheet" rel="text/css" href="./styles/app.scss" />
 </head>
 
-<body class="font-rubik font-medium pt-4">
-	<main>
+<body class="font-rubik font-medium pt-4 relative">
+	<main class="mt-20 md:mt-14">
 		<div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto px-5 mb-10">
 			<div class="flex flex-col w-full mx-auto lg:w-1/2">
 				<div class="max-w-screen-sm flex flex-col mx-auto lg:max-w-screen-md w-full mb-5 relative h-full">
 					<!-- Logo -->
 					<img class="h-20 p-3 -ml-3 w-[75px]" src="./static/site__logo-v2.svg" alt="koala smiling logo" />
 					<!-- Start Main Content -->
-					<h1 class="text-5xl">Hello,</h1>
+					<h1 class="text-5xl">Hey!</h1>
 					<h2 class="text-2xl leading-2 mb-5">
 						Press the Spacebar or click<a class="generate action__button inline-block px-3" tabindex="0"
 							role="button">Generate Colors</a>
@@ -111,16 +111,26 @@
 		</div>
 		<!-- Color History -->
 		<div class="text-center max-w-screen-xl mx-auto border-t-2">
-			<div class="color-history grid grid-cols-5 py-8"></div>
+			<div class="color-history grid grid-cols-2 lg:grid-cols-5 py-8 px-6"></div>
 		</div>
-	</main>
-	<div class="bg-white p-5 mt-3">
-		<div class="text-center">
-			<a target="_blank" rel="noopener" class="by" href="https://instagram.com/wayshere">
-				Made by @wayshere
+		<!-- Footer -->
+		<footer
+			class="absolute bg-black w-full text-white py-3 text-center top-0 flex flex-col sm:flex-row items-center justify-center md:space-x-3 space-y-2 md:space-y-0">
+			<a class="flex flex-row justify-center" target="_blank" rel="noopener" href="https://instagram.com/wayshere">
+				made with
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mx-1" viewBox="0 0 20 20"
+					fill="currentColor">
+					<path fill-rule="evenodd"
+						d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+						clip-rule="evenodd" />
+				</svg>
+				by @wayshere
 			</a>
-		</div>
-	</div>
+			<a href="https://www.buymeacoffee.com/heyyomar" target="_blank"><img
+					src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+					style="height: 35px !important;width: 135px !important;"></a>
+		</footer>
+	</main>
 
 	<!-- SCRIPTS -->
 	<script type="module" src="./scripts/app.js" defer></script>
