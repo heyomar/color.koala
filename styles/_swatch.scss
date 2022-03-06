@@ -1,98 +1,97 @@
 .swatch {
-    height: calc(100vh / 5.9);
-    line-height: calc(100vh / 5.9);
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 700;
-    font-size: 40px;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    position: relative;
-    margin: 10px 30px;
-    border-radius: 10px 10px 0 10px;
-    right: 0;
-    transition: all 0.3s ease;
-    &:hover {
-        right: 20px;
-        &:after {
-            height: 20px;
-            width: 20px;
-            position: absolute;
-            left: 20px;
-            top: 20px;
-            content: " ";
-            background-image: url("../static/icon__copy.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-    }
+	height: calc(100vh / 5.9);
+	line-height: calc(100vh / 5.9);
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 700;
+	font-size: 40px;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	position: relative;
+	margin: 10px 30px;
+	border-radius: 10px 10px 0 10px;
+	left: 0;
+	transition: all 0.3s ease;
+	&:hover {
+		left: 20px;
+		&:after {
+			height: 20px;
+			width: 20px;
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			content: ' ';
+			background-image: url('../static/icon__copy.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
 }
 
 .swatch-block {
-    font-size: 25px;
-    height: 120px;
-    min-width: 200px;
-    line-height: 120px;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    animation: slide-up 0.7s cubic-bezier(0.17, 4, 0.58, 0.7);
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
-    @apply mb-20;
+	font-size: 25px;
+	height: 120px;
+	min-width: 200px;
+	line-height: 120px;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	animation: slide-up 0.7s cubic-bezier(0.17, 4, 0.58, 0.7);
+	transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+	@apply mb-20;
 
-    &:hover {
-        transform: translateY(-15px);
-    }
-    &:hover:after {
-        height: 20px;
-        width: 20px;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        content: " ";
-        background-image: url("../static/icon__copy.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+	&:hover {
+		transform: translateY(-15px);
+	}
+	&:hover:after {
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		content: ' ';
+		background-image: url('../static/icon__copy.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 }
 @media screen and (max-width: 768px) {
-    .swatch {
-        height: 70px;
-        line-height: 70px;
-        &:hover {
-            right: 0;
-        }
-    }
-    .swatch-block {
-        height: 60px;
-        line-height: 60px;
-        font-size: 25px;
+	.swatch {
+		height: 70px;
+		line-height: 70px;
+		&:hover {
+			right: 0;
+		}
+	}
+	.swatch-block {
+		height: 60px;
+		line-height: 60px;
+		font-size: 25px;
 
-        &:hover {
-            transform: none;
-        }
-    }
+		&:hover {
+			transform: none;
+		}
+	}
 
-    @keyframes slide-up {
-        0% {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
+	@keyframes slide-up {
+		0% {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
 }
 
 .action__button {
-    @apply text-center hover:shadow-md rounded-lg border border-gray-300
-        cursor-pointer whitespace-nowrap block font-bold text-xl text-black;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 5px 20px 5px;
-    color: black;
-    transition: all 0.2s ease;
-    min-width: 200px;
+	@apply text-center hover:shadow-md rounded-lg border border-gray-300
+        cursor-pointer whitespace-nowrap font-bold text-xl text-black m-2;
+	height: 50px;
+	padding: 10px 10px;
+	color: black;
+	transition: all 0.2s ease;
+	min-width: 200px;
 }

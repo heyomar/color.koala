@@ -36,6 +36,7 @@
     "dependencies": {
         "airtable": "^0.11.2",
         "clipboard": "^2.0.10",
+        "color-convert": "^2.0.1",
         "dotenv": "^16.0.0",
         "file-saver": "^2.0.5",
         "mailto-link": "^2.0.0",
