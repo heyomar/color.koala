@@ -42,7 +42,7 @@ export default () => {
 			const hexValue = document.createTextNode(e.textContent)
 
 			colorBox.appendChild(hexValue)
-			colorBox.className = 'swatch-block'
+			colorBox.className = 'swatch-block shadow-md'
 			colorBox.id = `color${i + 6}`
 			colorBox.style.backgroundColor = e.textContent
 

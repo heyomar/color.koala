@@ -31,15 +31,16 @@
 
 .swatch-block {
 	font-size: 25px;
-	height: 120px;
-	min-width: 200px;
-	line-height: 120px;
+	height: 150px;
+	width: 180px;
+	line-height: 150px;
 	color: white;
 	text-transform: uppercase;
 	cursor: pointer;
 	animation: slide-up 0.7s cubic-bezier(0.17, 4, 0.58, 0.7);
 	transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
-	@apply mb-12;
+	border-radius: 10px 10px 0 10px;
+	@apply mb-10;
 
 	&:hover {
 		transform: translateY(-15px);
@@ -58,15 +59,15 @@
 }
 @media screen and (max-width: 768px) {
 	.swatch {
-		height: 70px;
-		line-height: 70px;
+		height: calc(100vh / 8);
+		line-height: calc(100vh / 8);
 		&:hover {
 			right: 0;
 		}
 	}
 	.swatch-block {
-		height: 80px;
-		line-height: 80px;
+		height: 150px;
+		line-height: 150px;
 		font-size: 25px;
 
 		&:hover {
@@ -87,10 +88,15 @@
 }
 
 .action__button {
-	@apply text-center hover:shadow-md rounded-lg border border-gray-300
-        cursor-pointer whitespace-nowrap font-bold text-xl text-black m-2;
+	@apply text-center hover:shadow-md rounded-lg border border-gray-300 cursor-pointer whitespace-nowrap font-bold text-xl text-black m-2;
 	height: 50px;
-	padding: 10px 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	color: black;
 	transition: all 0.2s ease;
+}
+
+footer {
+	background-color: #151515;
+	background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffd300' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
