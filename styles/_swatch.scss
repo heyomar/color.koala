@@ -88,7 +88,7 @@
 }
 
 .action__button {
-	@apply text-center hover:shadow-md rounded-lg border border-gray-300 cursor-pointer whitespace-nowrap font-bold text-xl text-black;
+	@apply text-center hover:shadow-md rounded-lg border border-gray-300 cursor-pointer whitespace-nowrap font-medium text-xl text-black;
 	height: 50px;
 	padding-top: 10px;
 	padding-bottom: 10px;

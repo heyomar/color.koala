@@ -1,8 +1,8 @@
-.palette {
+.PaletteCount {
 	text-align: center;
 	font-size: 25px;
 
-	.count {
+	.PaletteCount__Counter {
 		text-align: center;
 		font-size: 89px;
 		background: linear-gradient(-45deg, #ef83ff 0%, #34c6ff 50%, #27ff7d 100%);
@@ -10,6 +10,7 @@
 		background-clip: text;
 		color: transparent;
 		animation: Gradient 12s ease infinite;
+
 		@keyframes Gradient {
 			0% {
 				background-position: 0% 50%;

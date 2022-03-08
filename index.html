@@ -48,18 +48,18 @@
 					<!-- Logo -->
 					<img class="h-20 p-3 -ml-3 w-[75px]" src="./static/site__logo-v2.svg" alt="koala smiling logo" />
 					<!-- Start Main Content -->
-					<h1 class="text-2xl leading-2 mb-5 text-center mt-12">
+					<h1 class="text-2xl leading-2 mb-5 text-center mt-8 font-bold">
 						Press the Spacebar or Click
 					</h1>
 					<a class="generate action__button block px-3 mb-6" tabindex="0" aria-role="button">Generate Colors</a>
 
 					<div class="text-2xl mb-10 border-b pb-10 flex gap-6">
-						<select class="colorSelectBox action__button px-8 flex-1">
+						<select class="colorSelectBox action__button flex-1">
 							<option value="light">Light Colors</option>
 							<option value="bright">Bright Colors</option>
 							<option value="dark">Dark Colors</option>
 						</select>
-						<select class="hueSelectBox action__button flex-1">
+						<select class="hueSelectBox action__button flex-1 overflow-hidden max-w-xs">
 							<option value="random">Random Hue</option>
 							<option value="red">Red Hue</option>
 							<option value="green">Green Hue</option>
@@ -79,9 +79,9 @@
 						<a class="email action__button w-1/2" aria-role="button">Email Colors</a>
 					</div>
 					<!-- Color Palette Counter -->
-					<div class="palette lg:absolute bottom-0 mx-auto w-full">
+					<div class="PaletteCount lg:absolute bottom-0 mx-auto w-full">
 						<span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
-						<div class="font-bold count"></div>
+						<div class="font-bold PaletteCount__Counter"></div>
 					</div>
 				</div>
 			</div>

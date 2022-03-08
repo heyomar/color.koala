@@ -50,7 +50,7 @@ export default () => {
 			colorBox.setAttribute('data-clipboard-target', `#color${i + 6}`)
 		})
 
-		const count = document.querySelector('.count')
+		const count = document.querySelector('.PaletteCount__Counter')
 
 		let paletteFromServer
 		base('Koala').find('recccR0o11Qm99hrl', (err, record) => {
