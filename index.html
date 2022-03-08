@@ -48,21 +48,18 @@
 					<!-- Logo -->
 					<img class="h-20 p-3 -ml-3 w-[75px]" src="./static/site__logo-v2.svg" alt="koala smiling logo" />
 					<!-- Start Main Content -->
-					<h1 class="text-5xl">Hey!</h1>
-					<h2 class="text-2xl leading-2 mb-5">
-						Press the Spacebar or click<a class="generate action__button inline-block px-3" tabindex="0"
-							role="button">Generate Colors</a>
-						<span class="block">to create a palette.</span>
-					</h2>
-					<div class="text-2xl font-medium leading-9 mb-10 border-b pb-10">
-						Make
-						<select class="colorSelectBox action__button inline-block px-8">
+					<h1 class="text-2xl leading-2 mb-5 text-center mt-12">
+						Press the Spacebar or Click
+					</h1>
+					<a class="generate action__button block px-3 mb-6" tabindex="0" aria-role="button">Generate Colors</a>
+
+					<div class="text-2xl mb-10 border-b pb-10 flex gap-6">
+						<select class="colorSelectBox action__button px-8 flex-1">
 							<option value="light">Light Colors</option>
 							<option value="bright">Bright Colors</option>
 							<option value="dark">Dark Colors</option>
 						</select>
-						with a
-						<select class="hueSelectBox action__button inline-block text-ellipsis">
+						<select class="hueSelectBox action__button flex-1">
 							<option value="random">Random Hue</option>
 							<option value="red">Red Hue</option>
 							<option value="green">Green Hue</option>
@@ -73,7 +70,6 @@
 							<option value="pink">Pink Hue</option>
 							<option value="monochrome">Monochrome Hue</option>
 						</select>
-						please.
 					</div>
 					<!-- Buttons -->
 					<div class="flex gap-x-8 justify-center mb-8">
@@ -110,6 +106,7 @@
 			</div>
 		</div>
 		<!-- Color History -->
+		<h2 class="text-center py-3 text-3xl">History</h2>
 		<div class="text-center max-w-screen-xl mx-auto border-t-2">
 			<div class="color-history grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 py-8 px-6 place-items-center"></div>
 		</div>
