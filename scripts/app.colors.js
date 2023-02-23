@@ -2,9 +2,40 @@ import randomColor from 'randomcolor'
 import Airtable from 'airtable'
 
 export default () => {
-	const base = new Airtable({ apiKey: process.env.API_KEY }).base(
-		'app7MHrC2ID2zPNxw'
-	)
+	let paletteFromServer
+	var Airtable = require('airtable')
+	var base = new Airtable({
+		apiKey:
+			'pat6CkjBcJYbWrdnj.9a28b592f20858c7fd4a9c6efb38eb3f9d8f904709b2a802960db1cd765bd234',
+	}).base('app7MHrC2ID2zPNxw')
+
+	base('Koala')
+		.select({
+			// Selecting the first 3 records in Grid view:
+			maxRecords: 3,
+			view: 'Grid view',
+		})
+		.eachPage(
+			function page(records, fetchNextPage) {
+				// This function (`page`) will get called for each page of records.
+
+				records.forEach(function (record) {
+					paletteFromServer = record.get('palettes')
+				})
+
+				// To fetch the next page of records, call `fetchNextPage`.
+				// If there are more records, `page` will get called again.
+				// If there are no more records, `done` will get called.
+				fetchNextPage()
+			},
+			function done(err) {
+				if (err) {
+					console.error(err)
+					return
+				}
+			}
+		)
+
 	const swatches = document.querySelectorAll('.swatch')
 	//----------------[FUNCTIONS]----------------//
 	let hue = ''
@@ -52,7 +83,6 @@ export default () => {
 
 		const count = document.querySelector('.PaletteCount__Counter')
 
-		let paletteFromServer
 		base('Koala').find('recccR0o11Qm99hrl', (err, record) => {
 			if (err) {
 				console.error(err)
