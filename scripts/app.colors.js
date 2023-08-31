@@ -3,38 +3,27 @@ import Airtable from 'airtable'
 
 export default () => {
 	let paletteFromServer
-	var Airtable = require('airtable')
-	var base = new Airtable({
-		apiKey:
-			'pat6CkjBcJYbWrdnj.9a28b592f20858c7fd4a9c6efb38eb3f9d8f904709b2a802960db1cd765bd234',
-	}).base('app7MHrC2ID2zPNxw')
+
+	Airtable.configure({
+		endpointUrl: 'https://api.airtable.com',
+		apiKey: process.env.CK_TOKEN,
+	})
+	let base = Airtable.base('app7MHrC2ID2zPNxw')
 
 	base('Koala')
 		.select({
-			// Selecting the first 3 records in Grid view:
-			maxRecords: 3,
 			view: 'Grid view',
 		})
-		.eachPage(
-			function page(records, fetchNextPage) {
-				// This function (`page`) will get called for each page of records.
-
+		.firstPage(function (err, records) {
+			if (err) {
+				console.error(err)
+				return
+			} else {
 				records.forEach(function (record) {
-					paletteFromServer = record.get('palettes')
+					console.log('Retrieved', record.get('name'))
 				})
-
-				// To fetch the next page of records, call `fetchNextPage`.
-				// If there are more records, `page` will get called again.
-				// If there are no more records, `done` will get called.
-				fetchNextPage()
-			},
-			function done(err) {
-				if (err) {
-					console.error(err)
-					return
-				}
 			}
-		)
+		})
 
 	const swatches = document.querySelectorAll('.swatch')
 	//----------------[FUNCTIONS]----------------//
@@ -55,18 +44,36 @@ export default () => {
 	})
 
 	function setColors() {
-		const color = randomColor({
+		const colors = randomColor({
 			count: 5,
 			luminosity: luminosity,
 			hue: hue,
 		})
 
+		// save colors const to browser local storage, if the key 'colors' already exists then add 1 to the end of the key
+		let i = 0
+		while (localStorage.getItem(`colors${i}`)) {
+			i++
+		}
+		localStorage.setItem(`colors${i}`, JSON.stringify(colors))
+
+		// check if local storage has colors, if so then add them to the color history
+		for (let i = 0; i < localStorage.length; i++) {
+			const key = localStorage.key(i)
+			if (key.includes('colors')) {
+				const colorHistory = document.querySelector('.color-history')
+				const colorBox = document.createElement('div')
+				const hexValue = document.createTextNode(
+					JSON.parse(localStorage.getItem(key))[0]
+				)
+			}
+		}
 		const columns = document.createElement('div')
 		columns.className = 'flex flex-row'
 
 		swatches.forEach((e, i) => {
-			e.textContent = color[i]
-			e.style.background = color[i]
+			e.textContent = colors[i]
+			e.style.background = colors[i]
 
 			const colorHistory = document.querySelector('.color-history')
 			const colorBox = document.createElement('div')
@@ -74,11 +81,11 @@ export default () => {
 
 			colorBox.appendChild(hexValue)
 			colorBox.className = 'swatch-block shadow-md'
-			colorBox.id = `color${i + 6}`
+			colorBox.id = `colors${i + 6}`
 			colorBox.style.backgroundColor = e.textContent
 
 			colorHistory.appendChild(colorBox)
-			colorBox.setAttribute('data-clipboard-target', `#color${i + 6}`)
+			colorBox.setAttribute('data-clipboard-target', `#colors${i + 6}`)
 		})
 
 		const count = document.querySelector('.PaletteCount__Counter')
