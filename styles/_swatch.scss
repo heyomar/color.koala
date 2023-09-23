@@ -48,6 +48,9 @@ $copy-icon-url: url("../static/icon__copy.svg");
   @apply text-center hover:shadow-md rounded-lg border border-gray-300 cursor-pointer whitespace-nowrap font-medium text-xl  py-4 px-10 text-black h-16 transition-all duration-200 ease-in-out;
 }
 
+// -------------------------
+// Media Queries
+// -------------------------
 @media screen and (max-width: 768px) {
   .swatch {
     height: calc(100vh / 8);
