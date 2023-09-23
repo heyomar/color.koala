@@ -19,21 +19,16 @@ export default () => {
   };
 
   // Accessor for elements with class '.copyable'.
-  const copyableElementAccessor = (clipboardEvent) =>
-    clipboardEvent.trigger.firstElementChild;
+  const copyableElementAccessor = (clipboardEvent) => clipboardEvent.trigger.firstElementChild;
 
   // Accessor for elements with class '.swatch-block'.
   const swatchBlockAccessor = (clipboardEvent) => clipboardEvent.trigger;
 
   // Initialize clipboard for '.copyable' elements.
   const copyableClipboard = new ClipboardJS(".copyable");
-  copyableClipboard.on("success", (clipboardEvent) =>
-    handleClipboardSuccess(clipboardEvent, copyableElementAccessor)
-  );
+  copyableClipboard.on("success", (clipboardEvent) => handleClipboardSuccess(clipboardEvent, copyableElementAccessor));
 
   // Initialize clipboard for '.swatch-block' elements.
-  const swatchBlockClipboard = new ClipboardJS(".swatch-block");
-  swatchBlockClipboard.on("success", (clipboardEvent) =>
-    handleClipboardSuccess(clipboardEvent, swatchBlockAccessor)
-  );
+  const swatchBlockClipboard = new ClipboardJS(".history-swatch-block");
+  swatchBlockClipboard.on("success", (clipboardEvent) => handleClipboardSuccess(clipboardEvent, swatchBlockAccessor));
 };
