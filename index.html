@@ -1,146 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="Color Koala" />
+    <meta
+      name="description"
+      content="Color Koala is a quick palette generator, creating gorgeous colors for all of your side projects."
+    />
+    <title>
+      Color Koala | The Koala-ty color palette generator, creating gorgeous colors for all of your side projects.
+    </title>
 
-<head>
-	<!-- META -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="title" content="Color Koala" />
-	<meta name="description"
-		content="Color Koala is a quick palette generator, creating gorgeous colors for all of your side projects." />
-	<title>
-		Color Koala | The Koala-ty color palette generator, creating gorgeous
-		colors for all of your side projects.
-	</title>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/meta/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="static/meta/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="static/meta/favicon-16x16.png" />
+    <link rel="manifest" href="static/meta/site.webmanifest" />
+    <link rel="mask-icon" href="static/meta/safari-pinned-tab.svg" color="#f794ab" />
+    <link rel="shortcut icon" href="static/meta/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="msapplication-config" content="static/meta/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
 
-	<!-- FAVICON -->
-	<link rel="apple-touch-icon" sizes="180x180" href="static/meta/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="static/meta/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="static/meta/favicon-16x16.png" />
-	<link rel="manifest" href="static/meta/site.webmanifest" />
-	<link rel="mask-icon" href="static/meta/safari-pinned-tab.svg" color="#f794ab" />
-	<link rel="shortcut icon" href="static/meta/favicon.ico" />
-	<meta name="msapplication-TileColor" content="#ffc40d" />
-	<meta name="msapplication-config" content="static/meta/browserconfig.xml" />
-	<meta name="theme-color" content="#ffffff" />
+    <!-- TWITTER -->
+    <meta property="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@wayshere" />
+    <meta property="twitter:url" content="https://colorkoala.xyz" />
+    <meta property="twitter:title" content="Color Koala" />
+    <meta
+      property="twitter:description"
+      content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects."
+    />
+    <meta property="twitter:image" content="https://i.ibb.co/zfBTJvH/social-thumb-2x.png" />
 
-	<!-- TWITTER -->
-	<meta property="twitter:card" content="summary" />
-	<meta name="twitter:creator" content="@wayshere" />
-	<meta property="twitter:url" content="https://colorkoala.xyz" />
-	<meta property="twitter:title" content="Color Koala" />
-	<meta property="twitter:description"
-		content="The Koala-ty color palette generator, creating gorgeous colors for all of your side projects." />
-	<meta property="twitter:image" content="https://i.ibb.co/zfBTJvH/social-thumb-2x.png" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet" />
 
-	<!-- FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" rel="text/css" href="./styles/app.scss" />
+  </head>
 
-	<!-- CSS -->
-	<link rel="stylesheet" rel="text/css" href="./styles/app.scss" />
-</head>
+  <body class="font-rubik font-medium pt-4 relative">
+    <main class="mt-20 md:mt-16">
+      <div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto px-5 mb-10 gap-6">
+        <div class="flex flex-col w-full mx-auto lg:w-1/2">
+          <div class="max-w-screen-sm flex flex-col mx-auto lg:max-w-screen-md w-full mb-5 relative h-full">
+            <!-- Logo -->
+            <img class="h-20 p-3 -ml-3 w-[75px]" src="./static/site__logo-v2.svg" alt="koala smiling logo" />
+            <!-- Start Main Content -->
+            <h1 class="text-2xl leading-2 mb-5 text-center mt-8 font-bold">Press the Spacebar or Click 👇</h1>
+            <a class="generate action-button block px-3 mb-6" tabindex="0" aria-role="button">Generate Colors</a>
+            <div class="text-2xl mb-10 border-b pb-10 flex gap-6">
+              <select class="colorSelectBox action-button flex-1">
+                <option value="light">Light Colors</option>
+                <option value="bright">Bright Colors</option>
+                <option value="dark">Dark Colors</option>
+              </select>
+              <select class="hueSelectBox action-button flex-1 overflow-hidden max-w-xs">
+                <option value="random">Random Hue</option>
+                <option value="red">Red Hue</option>
+                <option value="green">Green Hue</option>
+                <option value="blue">Blue Hue</option>
+                <option value="orange">Orange Hue</option>
+                <option value="yellow">Yellow Hue</option>
+                <option value="purple">Purple Hue</option>
+                <option value="pink">Pink Hue</option>
+                <option value="monochrome">Monochrome Hue</option>
+              </select>
+            </div>
+            <!-- Buttons -->
+            <div class="flex gap-x-8 justify-center">
+              <a class="download action-button w-1/2" aria-role="button"> Get SCSS </a>
+              <a class="email action-button w-1/2" aria-role="button">Email Colors</a>
+            </div>
+            <!-- Product Hunt Badge -->
+            <div class="flex justify-center items-center mt-16">
+              <a
+                href="https://www.producthunt.com/posts/color-koala?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-color&#0045;koala"
+                target="_blank"
+                ><img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=140027&theme=light"
+                  alt="Color&#0032;Koala - Koala&#0045;ty&#0032;color&#0032;palettes&#0032;for&#0032;all&#0032;your&#0032;side&#0032;projects&#0033; | Product Hunt"
+                  style="width: 250px; height: 54px"
+                  width="250"
+                  height="54"
+              /></a>
+            </div>
+            <!-- Color Palette Counter -->
+            <div class="PaletteCount lg:absolute bottom-12 mx-auto w-full">
+              <span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
+              <div class="font-bold PaletteCount__Counter"></div>
+            </div>
+          </div>
+        </div>
 
-<body class="font-rubik font-medium pt-4 relative">
-	<main class="mt-20 md:mt-16">
-		<div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto px-5 mb-10">
-			<div class="flex flex-col w-full mx-auto lg:w-1/2">
-				<div class="max-w-screen-sm flex flex-col mx-auto lg:max-w-screen-md w-full mb-5 relative h-full">
-					<!-- Logo -->
-					<img class="h-20 p-3 -ml-3 w-[75px]" src="./static/site__logo-v2.svg" alt="koala smiling logo" />
-					<!-- Start Main Content -->
-					<h1 class="text-2xl leading-2 mb-5 text-center mt-8 font-bold">
-						Press the Spacebar or Click 👇
-					</h1>
-					<a class="generate action__button block px-3 mb-6" tabindex="0" aria-role="button">Generate Colors</a>
-					<div class="text-2xl mb-10 border-b pb-10 flex gap-6">
-						<select class="colorSelectBox action__button flex-1">
-							<option value="light">Light Colors</option>
-							<option value="bright">Bright Colors</option>
-							<option value="dark">Dark Colors</option>
-						</select>
-						<select class="hueSelectBox action__button flex-1 overflow-hidden max-w-xs">
-							<option value="random">Random Hue</option>
-							<option value="red">Red Hue</option>
-							<option value="green">Green Hue</option>
-							<option value="blue">Blue Hue</option>
-							<option value="orange">Orange Hue</option>
-							<option value="yellow">Yellow Hue</option>
-							<option value="purple">Purple Hue</option>
-							<option value="pink">Pink Hue</option>
-							<option value="monochrome">Monochrome Hue</option>
-						</select>
-					</div>
-					<!-- Buttons -->
-					<div class="flex gap-x-8 justify-center">
-						<a class="download action__button w-1/2" aria-role="button">
-							Get SCSS
-						</a>
-						<a class="email action__button w-1/2" aria-role="button">Email Colors</a>
-					</div>
-					<!-- Product Hunt Badge -->
-					<div class="flex justify-center items-center mt-16">
-						<a href="https://www.producthunt.com/posts/color-koala?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-color&#0045;koala"
-							target="_blank"><img
-								src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=140027&theme=light"
-								alt="Color&#0032;Koala - Koala&#0045;ty&#0032;color&#0032;palettes&#0032;for&#0032;all&#0032;your&#0032;side&#0032;projects&#0033; | Product Hunt"
-								style="width: 250px; height: 54px;" width="250" height="54" /></a>
-					</div>
-					<!-- Color Palette Counter -->
-					<div class="PaletteCount lg:absolute bottom-12 mx-auto w-full">
-						<span class="text-sm uppercase text-gray-400 font-bold">Color palettes generated:</span>
-						<div class="font-bold PaletteCount__Counter"></div>
-					</div>
-				</div>
-			</div>
-
-			<!-- SWATCHES -->
-			<div class="max-w-screen-sm flex flex-col mx-auto w-full lg:w-1/2">
-				<div data-clipboard-target="#color1" class="copyable">
-					<div id="color1" class="swatch shadow-md"></div>
-				</div>
-				<div data-clipboard-target="#color2" class="copyable">
-					<div id="color2" class="swatch shadow-md"></div>
-				</div>
-				<div data-clipboard-target="#color3" class="copyable">
-					<div id="color3" class="swatch shadow-md"></div>
-				</div>
-				<div data-clipboard-target="#color4" class="copyable">
-					<div id="color4" class="swatch shadow-md"></div>
-				</div>
-				<div data-clipboard-target="#color5" class="copyable">
-					<div id="color5" class="swatch shadow-md"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Color History -->
-		<h2 class="text-center py-3 text-3xl">History</h2>
-		<div class="text-center max-w-screen-xl mx-auto border-t-2">
-			<div class="color-history grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 py-8 px-6 place-items-center"></div>
-		</div>
-		<!-- Footer -->
-		<footer
-			class="absolute bg-black w-full text-white py-3 text-center top-0 flex flex-col sm:flex-row items-center justify-center md:space-x-3 space-y-2 md:space-y-0">
-			<a class="flex flex-row justify-center" target="_blank" rel="noopener" href="https://twitter.com/santiagonakata">
-				made with
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mx-1" viewBox="0 0 20 20"
-					fill="currentColor">
-					<path fill-rule="evenodd"
-						d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-						clip-rule="evenodd" />
-				</svg>
-				by @santiagonakata
-			</a>
-			<!-- <a href="https://www.buymeacoffee.com/heyyomar" target="_blank"><img
+        <!-- SWATCHES -->
+        <div class="max-w-screen-sm flex flex-col mx-auto w-full lg:w-1/2">
+          <div data-clipboard-target="#color1" class="copyable">
+            <div id="color1" class="swatch shadow-md"></div>
+          </div>
+          <div data-clipboard-target="#color2" class="copyable">
+            <div id="color2" class="swatch shadow-md"></div>
+          </div>
+          <div data-clipboard-target="#color3" class="copyable">
+            <div id="color3" class="swatch shadow-md"></div>
+          </div>
+          <div data-clipboard-target="#color4" class="copyable">
+            <div id="color4" class="swatch shadow-md"></div>
+          </div>
+          <div data-clipboard-target="#color5" class="copyable">
+            <div id="color5" class="swatch shadow-md"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Color History -->
+      <h2 class="text-center py-3 text-3xl">History</h2>
+      <div class="text-center max-w-screen-xl mx-auto border-t-2">
+        <div class="color-history grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 py-8 px-6 place-items-center"></div>
+      </div>
+      <!-- Footer -->
+      <footer
+        class="absolute bg-black w-full text-white py-3 text-center top-0 flex flex-col sm:flex-row items-center justify-center md:space-x-3 space-y-2 md:space-y-0"
+      >
+        <a
+          class="flex flex-row justify-center"
+          target="_blank"
+          rel="noopener"
+          href="https://twitter.com/santiagonakata"
+        >
+          made with
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-red-500 mx-1"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          by @santiagonakata
+        </a>
+        <!-- <a href="https://www.buymeacoffee.com/heyyomar" target="_blank"><img
 					src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
 					style="height: 35px !important;width: 135px !important;"></a> -->
-			<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-			<script
-				type='text/javascript'>kofiwidget2.init('Tip a coffee?', '#F794AB', 'B0B4DWLMS'); kofiwidget2.draw();</script>
-		</footer>
-	</main>
+        <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+        <script type="text/javascript">
+          kofiwidget2.init("Tip a coffee?", "#F794AB", "B0B4DWLMS");
+          kofiwidget2.draw();
+        </script>
+      </footer>
+    </main>
 
-	<!-- SCRIPTS -->
-	<script type="module" src="./scripts/app.js" defer></script>
-</body>
-
+    <!-- SCRIPTS -->
+    <script type="module" src="./scripts/app.js" defer></script>
+  </body>
 </html>
