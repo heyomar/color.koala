@@ -1,102 +1,82 @@
+// -------------------------
+// Variables
+// -------------------------
+$swatch-height: calc(100vh / 7.4);
+$history-swatch-block-height: 150px;
+$copy-icon-url: url("../static/icon__copy.svg");
+
+// -------------------------
+// Mixins
+// -------------------------
+@mixin hover-icon {
+  content: "";
+  background-image: $copy-icon-url;
+  @apply bg-contain bg-no-repeat left-5 top-5 absolute h-5 w-5;
+}
+
+// -------------------------
+// Styles
+// -------------------------
+.swatch,
+.history-swatch-block {
+  @apply uppercase cursor-pointer text-white rounded-lg rounded-br-none flex items-center justify-center transition-all duration-200 ease-in-out;
+
+  &:hover {
+    &:after {
+      @include hover-icon;
+    }
+  }
+}
+
 .swatch {
-	height: calc(100vh / 5.9);
-	line-height: calc(100vh / 5.9);
-	text-align: center;
-	text-transform: uppercase;
-	color: white;
-	font-weight: 700;
-	font-size: 40px;
-	transition: all 0.2s ease;
-	cursor: pointer;
-	position: relative;
-	margin: 10px 30px;
-	border-radius: 10px 10px 0 10px;
-	left: 0;
-	transition: all 0.3s ease;
-	&:hover {
-		left: 20px;
-		&:after {
-			height: 20px;
-			width: 20px;
-			position: absolute;
-			left: 20px;
-			top: 20px;
-			content: ' ';
-			background-image: url('../static/icon__copy.svg');
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
-	}
+  height: $swatch-height;
+  @apply text-center text-5xl relative left-0 mx-4 my-5 font-bold transition-all duration-300 ease-in-out hover:left-5;
 }
 
-.swatch-block {
-	font-size: 25px;
-	height: 150px;
-	width: 180px;
-	line-height: 150px;
-	color: white;
-	text-transform: uppercase;
-	cursor: pointer;
-	animation: slide-up 0.7s cubic-bezier(0.17, 4, 0.58, 0.7);
-	transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
-	border-radius: 10px 10px 0 10px;
-	@apply mb-10;
+.history-swatch-block {
+  height: $history-swatch-block-height;
+  animation: slide-up 0.7s cubic-bezier(0.17, 4, 0.58, 0.7);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+  @apply mb-10 text-2xl w-44;
 
-	&:hover {
-		transform: translateY(-15px);
-	}
-	&:hover:after {
-		height: 20px;
-		width: 20px;
-		position: absolute;
-		left: 20px;
-		top: 20px;
-		content: ' ';
-		background-image: url('../static/icon__copy.svg');
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
+  &:hover {
+    @apply transform -translate-y-4;
+  }
 }
+
+.action-button {
+  @apply text-center hover:shadow-md rounded-lg border border-gray-300 cursor-pointer whitespace-nowrap font-medium text-xl  py-4 px-10 text-black h-16 transition-all duration-200 ease-in-out;
+}
+
 @media screen and (max-width: 768px) {
-	.swatch {
-		height: calc(100vh / 8);
-		line-height: calc(100vh / 8);
-		&:hover {
-			right: 0;
-		}
-	}
-	.swatch-block {
-		height: 150px;
-		line-height: 150px;
-		font-size: 25px;
+  .swatch {
+    height: calc(100vh / 8);
+    line-height: calc(100vh / 8);
 
-		&:hover {
-			transform: none;
-		}
-	}
+    &:hover {
+      @apply right-0;
+    }
+  }
 
-	@keyframes slide-up {
-		0% {
-			opacity: 0;
-			transform: translateY(50px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateY(0px);
-		}
-	}
-}
+  .history-swatch-block {
+    height: $history-swatch-block-height;
+    line-height: $history-swatch-block-height;
+    @apply text-2xl;
 
-.action__button {
-	@apply text-center hover:shadow-md rounded-lg border border-gray-300 cursor-pointer whitespace-nowrap font-medium text-xl text-black;
-	height: 50px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	color: black;
-	transition: all 0.2s ease;
-}
+    &:hover {
+      @apply transform-none;
+    }
+  }
 
-footer {
-	background-color: #151515;
-	// background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffd300' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
