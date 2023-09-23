@@ -21,14 +21,14 @@ export default () => {
   // Accessor for elements with class '.copyable'.
   const copyableElementAccessor = (clipboardEvent) => clipboardEvent.trigger.firstElementChild;
 
-  // Accessor for elements with class '.swatch-block'.
+  // Accessor for elements with class '.history-swatch-block'.
   const swatchBlockAccessor = (clipboardEvent) => clipboardEvent.trigger;
 
   // Initialize clipboard for '.copyable' elements.
   const copyableClipboard = new ClipboardJS(".copyable");
   copyableClipboard.on("success", (clipboardEvent) => handleClipboardSuccess(clipboardEvent, copyableElementAccessor));
 
-  // Initialize clipboard for '.swatch-block' elements.
+  // Initialize clipboard for '.history-swatch-block' elements.
   const swatchBlockClipboard = new ClipboardJS(".history-swatch-block");
   swatchBlockClipboard.on("success", (clipboardEvent) => handleClipboardSuccess(clipboardEvent, swatchBlockAccessor));
 };
